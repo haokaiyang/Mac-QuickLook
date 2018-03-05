@@ -17,8 +17,10 @@ Video         | 显示视频的缩略图和信息
 
 - 相关文章
 >[少数派-加强你的「一指禅」：Mac QuickLook「快速预览」兼容性扩展教程](http://sspai.com/31927)
+
 >[Mac OS X QuickLook 扩展插件](https://www.yclimw.com/mac-os-x-quicklook-extensions/?utm_source=tuicool&utm_medium=referral)
 
 - 更多
 >[QuickLook Plugins List](http://www.quicklookplugins.com/)
+
 >[List of useful Quick Look plugins for developers](https://en.wikipedia.org/wiki/Quick_Look)
