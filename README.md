@@ -3,8 +3,9 @@
 扩展包后缀为 .qlgenerator
 
 - 本仓库中包含插件
-名称          | 描述 |  
-- | - 
+
+|名称 | 描述 |
+|- | - 
 BetterZipQL   | 预览Zip格式文件，列出压缩包中的文件列表
 QLColorCode   | 语法高亮查看源代码
 qlImageSize   | 预览图片的时候显示尺寸及大小
