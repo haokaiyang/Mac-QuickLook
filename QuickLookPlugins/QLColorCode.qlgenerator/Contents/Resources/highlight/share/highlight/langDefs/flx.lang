@@ -1,0 +1,49 @@
+# Felix language definition file
+#
+# Author: André Simon
+#   Mail: andre.simon1@gmx.de
+#   Date: 18.11.2003
+# ------------------------------------------
+# This file is a part of highlight, a free source code converter released under the GPL.
+#
+# The file is used to describe keywords and special symbols of programming languages.
+# See README in the highlight directory for details.
+#
+# New definition files for future releases of highlight are always appreciated ;)
+#
+# ----------
+# andre.simon1@gmx.de
+# http:/www.andre-simon.de/
+
+
+$DESCRIPTION=Felix
+
+$KEYWORDS(kwa)=all and as body call case class code const define elif else endif
+endmatch except export fork fun function functor goto header if in inf
+interface lambda let match module NaN  not of open or proc procedure raise read
+regexp regmatch return struct then to todo type typedef union use val var when
+with header body code open  use endl print include true false not and or lnot
+land lor pow eol
+
+$KEYWORDS(kwb)=tiny short int long vlong utiny ushort uint ulong uvlong int8
+int16 int32 int64 uint8 uint16 uint32 uint64 float double ldouble  float32
+float64 float80 char wchar uchar string wstring ustring void unit bool any
+address byte
+
+$STRINGDELIMITERS=""" ''' " '
+
+$SL_COMMENT=//
+
+$ML_COMMENT=/* */
+
+$ALLOWNESTEDCOMMENTS=true
+
+$IGNORECASE=false
+
+$RAWSTRINGPREFIX=r
+
+$ESCCHAR=regex(\\\d{3}|\\x\p{XDigit}{2}|\\[ntvbrfa\\\?'"])
+
+$DIRECTIVE=#
+
+$SYMBOLS= ( ) [ ] { } , ; : & | < > !  = / *  %  + -

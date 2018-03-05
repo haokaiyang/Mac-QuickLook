@@ -1,0 +1,33 @@
+# Agda language definition file
+#
+# Author: Andre Simon
+#   Mail: andre.simon1@gmx.de
+#   Date: 21.11.2002
+# ------------------------------------------
+# This file is a part of highlight, a free source code converter released under the GPL.
+#
+# The file is used to describe keywords and special symbols of programming languages.
+# See README in the highlight directory for details.
+#
+# New definition files for future releases of highlight are always appreciated ;)
+#
+# ----------
+# andre.simon1@gmx.de
+# http:/www.andre-simon.de/
+
+
+$DESCRIPTION=Agda
+
+$KEYWORDS(kwa)=abstract case concrete data do in interface let module mutual of open native 
+package postulate private public sig struct type use set type
+abstract   data     forall   hiding   import      in         infix     infixl   infixr
+let        module   mutual   open     postulate   primitive  private   public   record
+renaming   using    where    with
+
+$KEYWORDS(kwb)= integer int float double bool char
+$STRINGDELIMITERS="
+$SL_COMMENT=--
+$ML_COMMENT={- -}
+$IGNORECASE=true
+
+$SYMBOLS= ( ) [ ] { } , ; : & | < > !  = / \ *  %  + - '

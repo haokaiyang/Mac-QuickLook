@@ -1,0 +1,136 @@
+# Logtalk language definition file
+#
+# http://logtalk.org/
+#
+#  Author: Paulo Moura
+#    Mail: pmoura@logtalk.org
+#    Date: 05.05.08
+# Version: 1.01
+# ------------------------------------------
+# This file is a part of highlight, a free source code converter released under the GPL.
+#
+# The file is used to describe keywords and special symbols of programming languages.
+# See README in the highlight directory for details.
+
+$DESCRIPTION=Logtalk
+
+# variables
+$KEYWORDS(kwb)=regex((?<!0')[A-Z_]\w*)
+
+# encapsulation directives
+$KEYWORDS(kwa)=regex(^\s*:-\s(category|protocol|object)(?=[(]), 1)
+$KEYWORDS(kwa)=regex(^\s+((extend|i(mp(or|lemen)t|nstantiate)|specialize)s)(?=[(]), 1)
+$KEYWORDS(kwa)=regex(^\s*:-\s(end_(protocol|category|object))(?=\.), 1)
+
+# entity and predicate directives
+$KEYWORDS(kwa)=regex(^\s*:-\s(calls|public|protected|private|encoding|exports|info|initialization|alias|dynamic|discontiguous|meta_predicate|mode|module|multifile|synchronized|op|uses|use_module)(?=[(]), 1)
+$KEYWORDS(kwa)=regex(^\s*:-\s(dynamic|synchronized|threaded)(?=\.), 1)
+
+# event handlers
+$KEYWORDS(kwc)=regex((after|before)(?=[(]), 1)
+# method execution context
+$KEYWORDS(kwc)=regex((parameter|this|se(lf|nder))(?=[(]), 1)
+# reflection
+$KEYWORDS(kwc)=regex((current_predicate|predicate_property)(?=[(]), 1)
+# DCGs
+$KEYWORDS(kwc)=regex((expand_term|(?:goal|term)_expansion|phrase)(?=[(]), 1)
+# entity
+$KEYWORDS(kwc)=regex(((abolish|c(reate|urrent))_(object|protocol|category))(?=[(]), 1)
+$KEYWORDS(kwc)=regex(((object|protocol|category)_property)(?=[(]), 1)
+# entity relations
+$KEYWORDS(kwc)=regex((complements_object)(?=[(]), 1)
+$KEYWORDS(kwc)=regex((extends_(object|protocol|category))(?=[(]), 1)
+$KEYWORDS(kwc)=regex((imp(lements_protocol|orts_category))(?=[(]), 1)
+$KEYWORDS(kwc)=regex(((instantiat|specializ)es_class)(?=[(]), 1)
+# events
+$KEYWORDS(kwc)=regex((current_event|(abolish|define)_events)(?=[(]), 1)
+# flags
+$KEYWORDS(kwc)=regex(((current|set)_logtalk_flag)(?=[(]), 1)
+# compiling, loading, and library paths
+$KEYWORDS(kwc)=regex((logtalk_(compile|l(ibrary_path|oad)))(?=[(]), 1)
+# database
+$KEYWORDS(kwc)=regex((clause|retract(all)?)(?=[(]), 1)
+$KEYWORDS(kwc)=regex((a(bolish|ssert(a|z)))(?=[(]), 1)
+# control
+$KEYWORDS(kwc)=regex((call|catch|throw)(?=[(]), 1)
+$KEYWORDS(kwc)=regex((fail|true), 1)
+# all solutions
+$KEYWORDS(kwc)=regex((bagof|setof|findall|forall)(?=[(]), 1)
+# multi-threading meta-predicates
+$KEYWORDS(kwc)=regex((threaded(_(call|once|ignore|exit|peek|wait|notify))?)(?=[(]), 1)
+# term unification
+$KEYWORDS(kwc)=regex((unify_with_occurs_check)(?=[(]), 1)
+# term creation and decomposition
+$KEYWORDS(kwc)=regex((functor|arg|copy_term)(?=[(]), 1)
+# evaluable functors
+$KEYWORDS(kwc)=regex((rem|mod|abs|sign)(?=[(]), 1)
+$KEYWORDS(kwc)=regex((float(_(integer|fractional)_part)?)(?=[(]), 1)
+$KEYWORDS(kwc)=regex((floor|truncate|round|ceiling)(?=[(]), 1)
+# other arithmetic functors
+$KEYWORDS(kwc)=regex((cos|atan|exp|log|s(in|qrt))(?=[(]), 1)
+# term testing
+$KEYWORDS(kwc)=regex((var|atomic|atom|integer|float|compound|nonvar|number)(?=[(]), 1)
+# stream selection and control
+$KEYWORDS(kwc)=regex(((curren|se)t_(in|out)put)(?=[(]), 1)
+$KEYWORDS(kwc)=regex((open|close)(?=[(]), 1)
+$KEYWORDS(kwc)=regex((flush_output)(?=[(]), 1)
+$KEYWORDS(kwc)=regex((flush_output), 1)
+$KEYWORDS(kwc)=regex((stream_property|at_end_of_stream|set_stream_position)(?=[(]), 1)
+$KEYWORDS(kwc)=regex((at_end_of_stream), 1)
+# character and byte input/output
+$KEYWORDS(kwc)=regex((nl|(get|peek|put)_(byte|char|code))(?=[(]), 1)
+$KEYWORDS(kwc)=regex((nl), 1)
+# term input/output
+$KEYWORDS(kwc)=regex((read(_term)?)(?=[(]), 1)
+$KEYWORDS(kwc)=regex((write(q|_(canonical|term))?)(?=[(]), 1)
+$KEYWORDS(kwc)=regex(((current_)?op)(?=[(]), 1)
+$KEYWORDS(kwc)=regex(((current_)?char_conversion)(?=[(]), 1)
+# atomic term processing
+$KEYWORDS(kwc)=regex((atom_(length|c(hars|o(ncat|des))))(?=[(]), 1)
+$KEYWORDS(kwc)=regex((char_code|sub_atom)(?=[(]), 1)
+$KEYWORDS(kwc)=regex((number_c(har|ode)s)(?=[(]), 1)
+# implementation defined hooks functions
+$KEYWORDS(kwc)=regex(((?:se|curren)t_prolog_flag)(?=[(]), 1)
+$KEYWORDS(kwc)=regex((halt), 1)
+$KEYWORDS(kwc)=regex((halt)(?=[(]), 1)
+# logic and control
+$KEYWORDS(kwc)=regex((once)(?=[(]), 1)
+$KEYWORDS(kwc)=regex((repeat), 1)
+
+# Logtalk message sending operators
+$KEYWORDS(kwd)=regex((::|\^\^|<<|:))
+# Logtalk external-call control construct
+$KEYWORDS(kwd)=regex(([{}]))
+# Prolog operators
+$KEYWORDS(kwd)=regex((\\\+|->|=\.\.|;|!|:-|\^))
+# Prolog arithmetic operators
+$KEYWORDS(kwd)=regex((is|mod|rem|//|[+\-*/]|[*][*]))
+# Prolog arithmetic comparison operators
+$KEYWORDS(kwd)=regex((=<|<|=:=|=\\=|>=|>))
+# Prolog term comparison operators
+$KEYWORDS(kwd)=regex((@<|@=<|==|\\==|@>|@>=))
+# Prolog unification operators
+$KEYWORDS(kwd)=regex((=|\\=))
+# Logtalk mode operators
+$KEYWORDS(kwd)=regex((\?|@))
+# Prolog bitwise operators
+$KEYWORDS(kwd)=regex((/\\|\\/|>>|\\))
+
+$STRINGDELIMITERS=" '
+
+# numbers
+$KEYWORDS(kwc)=regex((0['].), 1)
+$KEYWORDS(kwc)=regex((0b[0-1]+|0o[0-7]+|0x\p{XDigit}+), 1)
+$KEYWORDS(kwc)=regex((\d+(\.\d+)?([eE]([-+])?\d+)?), 1)
+
+$SL_COMMENT=%
+
+$ML_COMMENT=/* */
+
+$ALLOWNESTEDCOMMENTS=false
+
+$IGNORECASE=false
+
+$ESCCHAR=regex(\\[0-7]+\\|\\x\p{XDigit}+\\|\\[abfnrtv\\'"])
+
+$SYMBOLS= ( ) [ ] { } , ; : & | < > !  = / *  + -

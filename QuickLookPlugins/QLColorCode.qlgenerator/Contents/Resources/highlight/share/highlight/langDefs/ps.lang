@@ -1,0 +1,33 @@
+# PostScript language definition file
+#
+# Author: André Simon
+#   Mail: andre.simon1@gmx.de
+#   Date: 08.02.04
+# ------------------------------------------
+# This file is a part of highlight, a free source code converter released under the GPL.
+#
+# The file is used to describe keywords and special symbols of programming languages.
+# See README in the highlight directory for details.
+#
+# New definition files for future releases of highlight are always appreciated ;)
+#
+# ----------
+# andre.simon1@gmx.de
+# http:/www.andre-simon.de/
+
+$DESCRIPTION=PostScript
+
+$KEYWORDS(kwa)= pop exch dup copy roll clear count mark cleartomark counttomark exec if  ifelse for repeat loop exit stop stopped
+countexecstack execstack quit start
+
+$KEYWORDS(kwb)=adddiv idiv mod mul sub abs ned ceiling floor round truncate  sqrt atan cos sin expln log rand srand  rrand true false
+NULL
+
+
+$STRINGDELIMITERS=" '
+
+$SL_COMMENT=%
+
+$IGNORECASE=false
+
+$SYMBOLS= ( ) [ ] { } , ; : & | < > !  = / *  + -

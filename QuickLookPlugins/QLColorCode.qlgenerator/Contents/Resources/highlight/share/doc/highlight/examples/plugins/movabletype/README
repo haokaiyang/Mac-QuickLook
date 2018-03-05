@@ -1,0 +1,35 @@
+Plugin Name: Highlight
+Plugin URI: http://www.andre-simon.de
+Description: Plugin which uses the highlight utility to generate coloured source code
+Author: André  Simon
+Version: 1.2
+Author URI: http://www.andre-simon.de/
+
+== Description ==
+
+The highlight utility converts source code of 120 programming languages to HTML 
+with syntax highlighting. This plugin pipes the content of <highlight>-Tags associated
+with a lang parameter to highlight, and returns the output code which is finally included
+in the MT page.
+
+Usage:
+
+Paste the following in the edit section of the MT blog editing form:
+
+<highlight lang="cpp">#include <stdio.h>
+
+int main (void){
+  printf("This is some random code");
+  return 0;
+}</highlight>
+
+Use the lang parameter to define the programming language (c, php, py, xml, etc).
+See the highlight documentation to learn all possible languages.
+See the syntax.php file for some formatting options (line numbering, code
+indentation, line wrapping etc).
+
+== Installation ==
+
+1. Install highlight (www.andre-simon.de) on your host
+2. Unzip the mt_highlight.zip file and upload the content to the 
+   `plugins/` directory

@@ -1,0 +1,20 @@
+# navy.style
+# This File is part of highlight, a universal source code converter.
+# See README in the highlight directory for documentation.
+
+$DEFAULTCOLOUR=#008bff
+$BGCOLOUR=#000035
+$FONTSIZE=10
+$KW-GROUP(kwa)=#f8c50b bold
+$KW-GROUP(kwb)=#e1e72f
+$KW-GROUP(kwc)=#13d8ef
+$KW-GROUP(kwd)=#ffffff
+$NUMBER=#f87ff4
+$ESCAPECHAR=#66f5ff
+$STRING=#ff7f66
+$STRING-DIRECTIVE=#ffffff
+$COMMENT=#ffbb00 italic
+$DIRECTIVE=#bb00ff
+$LINE=#888888
+$SYMBOL=#ffffff
+$MARK-LINE=#30445a

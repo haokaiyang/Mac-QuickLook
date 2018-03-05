@@ -1,0 +1,32 @@
+# slateGreen.style
+# See README in the highlight directory for documentation.
+
+$DEFAULTCOLOUR=#ffffff
+$BGCOLOUR=#50573F
+$FONTSIZE=11
+# Keywords
+$KW-GROUP(kwa)=#EEA9B8 bold
+# Types
+$KW-GROUP(kwb)=#7FFFD4
+# Kinda unused??  In C it's used for type modifiers and typedef
+$KW-GROUP(kwc)=#5FFCD4 bold
+
+# Objc: C fn call
+$KW-GROUP(kwd)=#B0E0E6
+# Objc: method target, OCaml: module
+$KW-GROUP(callr)=#FFC04B
+$KW-GROUP(fndef)=#FFFF00 bold
+
+
+$NUMBER=#00FF00
+$STRING=#ADFF2F
+$KW-GROUP(str)=#ADFF2F
+$ESCAPECHAR=#00FF00
+$COMMENT=#00EEEE italic
+$DIRECTIVE=#EEDD82
+# for the string in: #include "foo"
+$STRING-DIRECTIVE=#ADFF2F
+$LINE=#EEDD82
+$MARK-LINE=#FFFF00
+# This is actually for punctuation
+$SYMBOL=#EEEE00

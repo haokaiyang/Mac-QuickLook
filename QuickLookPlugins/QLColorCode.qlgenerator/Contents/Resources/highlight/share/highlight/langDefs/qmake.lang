@@ -1,0 +1,44 @@
+# QMake project language definition file
+#
+# Author: Andre Simon
+#   Mail: andre.simon1@gmx.de
+#   Date: 30.03.2009
+# ------------------------------------------
+# This file is a part of highlight, a free source code converter released under the GPL.
+#
+# The file is used to describe keywords and special symbols of programming languages.
+# See README in the highlight directory for details.
+#
+# New definition files for future releases of highlight are always appreciated ;)
+#
+# ----------
+# andre.simon1@gmx.de
+# http:/www.andre-simon.de/
+
+$DESCRIPTION=QMake Project
+
+# Functions
+$KEYWORDS(kwa)=basename contains count  dirname error eval exists find for 
+include infile  isEmpty join member message prompt quote sprintf system unique
+warning  else
+
+#Variables
+$KEYWORDS(kwb)=regex(([A-Z_]+)\W)
+
+# conditions 
+$KEYWORDS(kwc)=regex(\s*([\w\+\-]+)\:?\w*\s*\{)
+
+# $$ variables
+$KEYWORDS(kwd)=regex(\$?\$\w+|\$\$)
+
+$STRINGDELIMITERS="
+
+$SL_COMMENT=#
+
+$IGNORECASE=false
+
+$ESCCHAR=regex(\\\d{3}|\\x\p{XDigit}{2}|\\[ntvbrfa\\\?'"])
+
+$SYMBOLS= ( ) [ ] { }  : & | !  =  *  %  +  ~ \
+
+$CONTINUATIONSYMBOL=\

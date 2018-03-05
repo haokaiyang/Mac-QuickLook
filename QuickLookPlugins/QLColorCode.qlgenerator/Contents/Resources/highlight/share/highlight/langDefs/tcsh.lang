@@ -1,0 +1,46 @@
+# Tcsh script language definition file
+#
+# Author: Igor Furlan
+#   Mail: igor.furlan1@gmail.com
+#   Date: 19.8.2005
+# ------------------------------------------
+# This file is a part of highlight, a free source code converter released under the GPL.
+#
+# The file is used to describe keywords and special symbols of programming languages.
+# See README in the highlight directory for details.
+#
+# New definition files for future releases of highlight are always appreciated ;)
+#
+# ----------
+# andre.simon1@gmx.de
+# http:/www.andre-simon.de/
+
+$DESCRIPTION=TCSH
+
+$IDENTIFIER=regex([a-zA-Z_\@][\w\-]*)
+
+$KEYWORDS(kwa)= return if endif then else switch endsw while end foreach do done
+
+# built in  commands
+$KEYWORDS(kwa)=alias bg break breaksw case chdir continue default echo
+eval exec exit fg goto glob hashstat history jobs kill limit login logout
+nohup notify nice onintr popd pushd printenv read rehash repeat set setenv
+shift source suspend time umask unalias unhash unlimit unset unsetenv wait
+alloc bindkey builtins complete echotc filetest hup log sched settc setty
+stop telltc uncomplete where which dirs ls-F @
+
+$STRINGDELIMITERS=" '
+
+$SL_COMMENT=#
+
+$IGNORECASE=false
+
+$KEYWORDS(kwb)=regex(\$\w+)
+
+$KEYWORDS(kwc)=regex((\$\{\w+\}))
+
+$KEYWORDS(kwd)=regex(\`.*(cd|ls|ll|mkdir|rm|file).*\`)
+
+$ESCCHAR=regex(\\\d{3}|\\x\p{XDigit}{2}|\\[ntvbrfa\\\?'"])
+
+$SYMBOLS= ( ) [ ] { } , ; : & | < > !  = / * %  + -

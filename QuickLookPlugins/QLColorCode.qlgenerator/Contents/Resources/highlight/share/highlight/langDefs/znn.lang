@@ -1,0 +1,47 @@
+# Zonnon language definition file
+#
+# Author: Andre Simon
+#   Mail: andre.simon1@gmx.de
+#   Date: 24.7.2002
+#         updated 12.1.04 to add more types (ansi c, iso 99)
+# ------------------------------------------
+# This file is a part of highlight, a free source code converter released under the GPL.
+#
+# The file is used to describe keywords and special symbols of programming languages.
+# See README in the highlight directory for details.
+#
+# New definition files for future releases of highlight are always appreciated ;)
+#
+# ----------
+# andre.simon1@gmx.de
+# http:/www.andre-simon.de/
+
+$DESCRIPTION=Zonnon
+
+$KEYWORDS(kwa)=accept activity array as await begin by case const definition div 
+do else elsif end exception exit false for if
+implementation implements import in is loop mod module new nil object of on operator 
+or procedure 
+protocol record refines repeat return self termination then to true type until var while 
+ACCEPT ACTIVITY ARRAY AS AWAIT BEGIN BY CASE CONST DEFINITION DIV DO ELSE ELSIF END 
+EXCEPTION EXIT FALSE FOR IF IMPLEMENTATION IMPLEMENTS IMPORT IN IS LOOP MOD MODULE 
+NEW NIL OBJECT OF ON OPERATOR OR PROCEDURE PROTOCOL RECORD REFINES REPEAT RETURN 
+SELF TERMINATION THEN TO TRUE TYPE UNTIL VAR WHILE
+
+$KEYWORDS(kwb)=object boolean char integer cardinal fixed real set string
+
+$KEYWORDS(kwc)=
+
+$KEYWORDS(kwd)=regex((\w+)\s*\()
+
+$STRINGDELIMITERS=" '
+
+$ML_COMMENT=(* *)
+
+$ALLOWNESTEDCOMMENTS=true
+
+$IGNORECASE=false
+
+$ESCCHAR=regex(\\\d{3}|\\x\p{XDigit}{2}|\\[ntvbrfa\\\?'"])
+
+$SYMBOLS= ( ) [ ] { } , ; . : & | < > !  = / *  %  + - ~

@@ -1,0 +1,148 @@
+Highlight installation instructions
+-----------------------------------
+
+Content
+=======
+
+0. Package structure
+1. Basic installation
+2. Known compiler issues
+3. LaTeX unicode support
+4. Lazy pointer issue under MacOS X
+5. Static linking (run highlight as service)
+
+
+01. Package structure
+=====================
+
+root of highlight-x.x
+|
+|-- examples       # examples for highlight scripting
+|   |-- plugins    # plugins for various web toolkits
+|   `-- swig       # SWIG interface and sample code
+|-- gui_files      # supporting files for the optional GUI
+|   |-- ext        # file open filter configuration
+|   `-- l10n       # GUI translations
+|-- langDefs       # language definitions (*.lang)
+|-- man            # man page
+|-- src            # source code
+|   |-- cli        # command line interface code 
+|   |-- core       # highlight core code (builds the library)
+|   |   |-- astyle # Artistic Style code
+|   |   `-- re     # Regex code
+|   `-- gui-qt     # optional GUI code
+`-- themes         # color themes (*.theme)
+
+AUTHORS            # contributors of code and patches
+ChangeLog          # list of changes
+COPYING            # license
+Doxyfile           # Doxygen configuration
+filetypes.conf     # file type extension configuration
+highlight.desktop  # desktop integration of optional GUI
+highlight.spec     # RPM build description
+INSTALL            # this file
+makefile           # basic makefile
+README             # user manual
+README_DE          # German user manual
+README_LANGLIST    # list of supported languages
+README_REGEX       # regular expression manual
+TODO               # just ideas, no plans 
+
+
+1. Basic installation
+=====================
+
+ 1. tar xzvf highlight-x.x.tar.gz
+
+ 2. cd highlight-x.x
+
+ 3. make help
+
+ 4. make / make cli   (compile static library and the CLI interface)
+    make lib-static   (optional, compile static library only)
+    make lib-shared   (optional, compile shared library only)
+    make gui          (optional, compile static library and the Qt 4.x GUI)
+
+ 5, make install
+    (depending on your installation destination, you need to be root)
+
+ 6. make install-gui (optional)
+    Install additional files if you have compiled the highlight GUI binary.
+    (depending on your installation destination, you need to be root)
+
+ 7. make clean (optional)
+
+ 8. make apidocs (optional)
+    (you need to have doxygen installed)
+
+ After the compilation of the CLI or GUI, a library (libhighlight.a) was
+ generated which may be used for other C++ projects.
+
+ Highlight's default data directory is /usr/share/highlight.
+ You may alter this directory at compile time or at run time:
+ - See the makefile how to add a compiler directive which defines an
+   installation directory (data_dir variable)
+ - Use the --data-dir option to define a new directory at run time. You may
+   want to save this parameter in the highlight configuration file
+   ($HOME/.highlightrc)
+ - You can add an additional data directory by the --add-data-dir option.
+   Files will be searched in this directory first. This may also be configured
+   in $HOME/.highlightrc.
+ - See the makefile to change the configuration file directory 
+   (conf_dir variable).
+
+
+2. Known compiler issues
+========================
+
+These errors occour with old gcc releases:
+
+ 1. Is there a stringstream / sstream header for gcc 2.95.2?
+
+ See http://sources.redhat.com/ml/libstdc++/2000-q2/msg00700/sstream
+
+ 2. Core dumps with gcc 2.96 (RedHat 7.1, 7.3)
+
+ RedHat included this unofficial release of gcc, which had a buggy stringstream
+ implementation.
+ See http://www.mail-archive.com/gcc-bugs@gcc.gnu.org/msg22146.html
+ There is no workaround, please upgrade to gcc 3.x. (Reported by Mark Hessling)
+
+ 3. Compilation error with "right" IO manipulator
+
+ In htmlcode.cpp: `right' undeclared (first use this function)
+ (Each undeclared identifier is reported only once for each function it
+  appears in.)
+ There is no workaround, please upgrade to gcc 3.x. (Reported by Christoph Bier)
+
+
+3. LaTeX unicode support
+========================
+
+To enable UTF-8 support in LaTeX, the ucs package has to be installed.
+See the following package names or sources:
+
+Fedora: tetex-unicode
+SuSE:   latex-ucs
+
+Source: http://www.unruh.de/DniQ/latex/unicode/
+
+
+4. Lazy pointer issue under MacOS X
+===================================
+
+Stripping the highlight binary causes program termination at runtime:
+
+dyld: lazy symbol binding failed: lazy pointer not found
+dyld: lazy pointer not found
+Trace/BPT trap
+
+To avoid this issue, edit the makefile to not strip the binary after
+linkage (see src/makefile, LDFLAGS variable).
+
+
+5. Static linking (run highlight as service)
+============================================
+
+If highlight cannot be run as service because of shared linkage, link
+it with the -static option (see src/makefile, LDFLAGS variable).

@@ -1,0 +1,21 @@
+# greenlcd.style
+# This File is part of highlight, a universal source code converter.
+# See README in the highlight directory for documentation.
+
+$DEFAULTCOLOUR=#00bb00
+$BGCOLOUR=#003000
+$FONTSIZE=10
+
+$KW-GROUP(kwa)=#00ed00 bold
+$KW-GROUP(kwb)=#00ed00
+$KW-GROUP(kwc)=#beef13
+$KW-GROUP(kwd)=#c0ff73
+$NUMBER=#3399cc
+$ESCAPECHAR=#3399cc
+$STRING=#dfdfdf
+$STRING-DIRECTIVE=#dfdfdf
+$COMMENT=#888888 italic
+$DIRECTIVE=#bfbfbf
+$LINE=#bcbcbc
+$SYMBOL=#2fe7a9
+$MARK-LINE=#146176

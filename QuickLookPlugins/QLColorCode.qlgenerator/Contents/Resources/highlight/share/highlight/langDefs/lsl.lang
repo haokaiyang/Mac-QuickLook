@@ -1,0 +1,46 @@
+# Linden Script (Second Life) language definition file
+#
+# Author: Andre Simon
+#   Mail: andre.simon1@gmx.de
+#   Date: 03.03.2007
+# ------------------------------------------
+# This file is a part of highlight, a free source code converter released under the GPL.
+#
+# The file is used to describe keywords and special symbols of programming languages.
+# See README in the highlight directory for details.
+#
+# New definition files for future releases of highlight are always appreciated ;)
+#
+# ----------
+# andre.simon1@gmx.de
+# http:/www.andre-simon.de/
+
+$DESCRIPTION=Linden Script
+
+$KEYWORDS(kwa)=for do while if else jump
+
+$KEYWORDS(kwb)=integer float string key vector rotation list
+
+$KEYWORDS(kwc)=regex((ll\w+)\s*\()
+
+$KEYWORDS(kwd)=regex((\w+)\s*\()
+
+$STRINGDELIMITERS=" '
+
+$SL_COMMENT=//
+
+#$ML_COMMENT=/* */
+
+$ALLOWNESTEDCOMMENTS=false
+
+$IGNORECASE=false
+
+#$DIRECTIVE=#
+
+$ESCCHAR=regex(\\\d{3}|\\x\p{XDigit}{2}|\\[ntvbrfa\\\?'"])
+
+$SYMBOLS= ( ) [ ] { } , ; . : & | < > !  = / *  %  + - ~
+
+$CONTINUATIONSYMBOL=\
+
+#$REFORMATTING=true

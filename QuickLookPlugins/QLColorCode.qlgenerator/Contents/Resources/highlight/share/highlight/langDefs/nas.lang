@@ -1,0 +1,36 @@
+# Nasal language definition file
+#
+# Author: André Simon
+#   Mail: andre.simon1@gmx.de
+#   Date: 18.11.2003
+# ------------------------------------------
+# This file is a part of highlight, a free source code converter released under the GPL.
+#
+# The file is used to describe keywords and special symbols of programming languages.
+# See README in the highlight directory for details.
+#
+# New definition files for future releases of highlight are always appreciated ;)
+#
+# ----------
+# andre.simon1@gmx.de
+# http:/www.andre-simon.de/
+
+$DESCRIPTION=Nasal
+
+$KEYWORDS(kwa)= and  or  nil  if  elsif  else  for  foreach while  return 
+break  continue  func  size  keys  append  pop  int  streq  substr contains 
+typeof
+		   
+$KEYWORDS(kwb)=parents me arg
+
+$STRINGDELIMITERS=" ' 
+
+$SL_COMMENT=#
+
+$ALLOWNESTEDCOMMENTS=false
+
+$IGNORECASE=false
+
+$ESCCHAR=regex(\\\d{3}|\\x\p{XDigit}{2}|\\[ntvbrfa\\\?'"])
+
+$SYMBOLS= ( ) [ ] { } , ; : & | < > !  = / * %  + -

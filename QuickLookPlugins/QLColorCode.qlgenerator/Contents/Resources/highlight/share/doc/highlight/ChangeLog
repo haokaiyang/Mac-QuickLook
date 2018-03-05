@@ -1,0 +1,1249 @@
+CHANGELOG Highlight
+
+highlight 2.12
+
+07-09-2009
+
+-fixed bug with $INCLUDE statement
+-fixed ctags file parsing
+-added nested language recognition within a source file (suggested by Pavel Striz)
+-added $NESTED statement to language definitions (pas, html, tex)
+-added support for F# (fs.lang)
+-added support for haXe (hx.lang)
+-improved various language definitions
+-revised documentation
+-LIB: added version to shared lib output name
+-CLI: added options --start-nested and --print-style
+
+---
+highlight 2.11
+
+23-07-2009
+
+-added BBCode output option (--bbcode, suggested by Qui Peccavit)
+-added new --delim-cr option to cope with MacOS 9 files
+  (suggested by Steven Haddock)
+-added shared lib target (make lib-shared, suggested by Dario Teixeira)
+-list of installed languages (--list-langs) was enhanced to include mapped file
+  extensions (suggested by Martin Kammerlander)
+-improved many colour themes using Agave (agave.sf.net)
+
+---
+highlight 2.10
+
+24-06-2009
+
+-fixed CR parsing bug on MacOS (thanks to Shiro Wilde)
+-fixed SWIG makefile (thanks to David Bremner)
+-license changed from GPLv2 to GPLv3 (incl. included libs)
+-updated Artistic Style lib to version 1.23
+-new indentation schemes: stroustrup, whitesmith, banner
+-removed indentSchemes and helpmsg directories
+-removed README_INDENT
+-replaced ide-devcpp theme by a new jedit theme
+-added support for Interactive Data Language (idlang, thanks to Roberto 
+  Mendoza)
+-added support for Rebol, Oz, Mercury, Zonnon, ATS (Applied Type System),
+  CHILL, NetRexx, Inno Setup and INTERLIS
+-added pp, rjs, jnlp, groovy, gnad, es, sblc, ooc, gst, sq extensions
+  to filetypes.conf
+-improved Prolog, Pike, Oberon, Nice, Java, Lisp, Lua, Haskell, C# and SML
+  definitions
+-improved spec.lang for RPM (thanks to Luoyi Ly)
+-CLI: option --help-lang is deprecated
+-API: dropped setSpecialOptions(), renamed initializing methods to init*
+
+---
+highlight 2.9
+
+30-April-2009
+
+-added more customized boxes for the LaTeX --pretty-symbols switch
+  (thanks to Romain Francois)
+-GUI: fixed makefile to pass costum paths to the Qt project makefile
+  (thanks to Joerg Germeroth)
+-GUI: reduced window height (thanks to Fidel Barrera)
+-GUI: added Spanish translation (thanks to Fidel Barrera) 
+-GUI: added drag and drop for input files
+
+---
+highlight 2.8
+
+30-March-2009
+
+-added --pretty-symbols option to improve LaTeX output quality of tilde and
+  braces (thanks to Romain Francois)
+-omitted warning message if --syntax parameter is contained in the --skip list
+  (thanks to Bob Smith)
+-included language descriptions in --list-langs output
+-dropped dependency of --replace-quotes and --fragment options
+-enhanced Python SWIG example (testmod.py)
+-added qmake language definition
+-fixed SWIG scripts (thanks to David Bremner)
+-fixed gcc 4.4 compilation (patch by Jochen Schmitt)
+-dropped core/html32generator.*
+-dropped src/gui (wxWidgets based interface)
+-GUI: rewrote the user interface using Qt
+
+---
+highlight 2.7
+
+12-January-2009
+
+-changed versioning scheme to major.minor
+-fixed infinite loop in the W32 build when outputting LaTeX/TeX as UTF-8
+   (thanks to Christophe Bal)
+-fixed VHDL and Scilab definitions (thanks to Frederik Teichert)
+-fixed XML definition (thanks to Edin)
+-fixed -r switch (thanks to Frederik Teichert)
+-fixed default number recognition regex
+-added Clojure language definition (thanks to Pierre Larochelle)
+-added wrapping arrow in LaTeX/HTML output if --wrap/--wrap-simple is set
+  (suggested by Frederik Teichert)
+-updated ide-msvcpp.style to match current Visual Studio appearance
+  (suggested by Pieter Kruger)
+-added make targets "lib" and "cli"
+-organized sources in subdirectories (core, cli, gui) and adjusted makefiles
+
+---
+highlight 2.6-14
+
+21-October-2008
+
+-added --ctags-file option to add tooltips with meta information in HTML output
+-added options to improve compatibility with GNU source-highlight:
+  --doc, --no-doc, --tab, --css, --output-dir, --failsafe, --out-format,
+  --src-lang, --line-number, --line-number-ref
+-fixed ADA95, C#, Eiffel, Fortran, TCL, Bash definitions
+-added Vala language definition
+-added several file suffixes to filetypes.conf
+-fixed gcc 4.3 compilation issues (patch by Detlef Reichelt)
+-fixed race condition in makefile (patch by Jochen Schmitt)
+-added exit condition if input path matches output path
+  (suggested by James Haefner)
+-GUI: added ctags file selection options (only wx2.9 version)
+
+---
+highlight 2.6-13
+
+29-September-2008
+
+-added --skip option to ignore unknown file types (suggested by Bob Smith)
+-added Haskell LHS language definition (suggested by Sebastian Roeder)
+-added regex description for Perl and Ruby definitions
+-improved Bison, Paradox, SML, Snobol, Verilog definitions
+-renamed snobol.lang to sno.lang
+-updated Artistic Style lib to version 1.22
+-replaced dirstream lib by a faster file globbing method
+  (invoked with --batch-recursive)
+-support for USE_FN_MATCH compile flag was dropped
+-Makefile generates libhighlight.a (suggested by Adiel Mittmann)
+-Updated SWIG makefile and documentation
+
+---
+highlight 2.6-12
+
+04-August-2008
+
+-added RTF character stylesheet option (suggested by Klaus Nordby)
+-fixed filetypes.conf path in RPM specfile (thanks to Nikita Borodikhin)
+
+---
+highlight 2.6-11
+
+09-July-2008
+
+-added SVG output option (--svg)
+-reassigned -G short option from --class-name to --svg
+-fixed various makefile issues (patches by Samuli Suominen)
+-added highlight.desktop file (suggested by Samuli Suominen)
+-GUI: added SVG and font selection options (only wx2.9 version)
+-GUI: reduced window height by hiding format specific input controls
+-updated highlight.spec to compile wx2.9 GUI
+
+---
+highlight 2.6-10
+
+07-May-2008
+
+-fixed XHTML output (thanks to Allen McPherson)
+-added Logtalk definition (thanks to Paulo Moura)
+-added support for Eiffel ecf project files (thanks to Jérémie Blaser)
+-various code improvements (patch by Antonio Diaz Diaz)
+
+---
+highlight 2.6-9
+
+26-March-2008
+
+-fixed --validate-input option with input from stdin
+-fixed missing DESTDIR prefix in makefile (thanks to Bob Smith)
+-fixed handling of several keyword regexes using the same group name
+-added support for Lilypond
+-added support for Arc (thanks to Pierre Larochelle)
+-added support for embedded output instructions (see README)
+-added examples/highlight_pipe.* (PHP, Perl and Python interface scripts)
+-replaced getopt_long by argparser class
+-language definition parameters $kw_list and $kw_re are merged to $keywords
+-GUI: fixed preview of UTF-8 files (thanks to Victor Woo)
+-GUI: added all-gui-wx29 target in Makefile to compile with wxWidgets 2.9
+
+---
+highlight 2.6-8
+
+01-February-2008
+
+-fixed highlighting issue with nested comments, if delimiters are distinct
+-fixed XML and CSS highlighting
+-fixed C escape sequence parsing of octal and hex sequences
+-language definition tag tag_delim was dropped
+-outdated file README_ES was dropped
+-gcc4.3 compilation support was added (patch by Jochen Schmitt)
+-font-family parameter is enclosed in apostrophes in HTML output
+-added --kw-case=capitalize option
+-added --enclose-pre option
+-added file README_LANGLIST
+-improved several language definitions
+-GUI: decreased window height
+-GUI: preview window is scrolled to last view position after a content update
+-GUI: windows saves and restores previous position and size
+
+---
+highlight 2.6-7
+
+04-January-2008
+
+-support for RTF background colour was added
+-regex() in language definitions  expression allows optional definition of
+  capturing group number
+-added --add-config-dir option to define config search path
+  (suggested by Nathaniel Gray)
+-allowed invocation of makefile with CFLAGS and LDFLAGS as parameters
+  (patch by Nathaniel Gray)
+-fixed OCaml definition (thanks to Nathaniel Gray)
+-fixed AutoIt definition
+-added case insensitive file suffix matching (thanks to Stefan Boumans)
+-GUI: added RTF mimetype to clipboard data (thanks to Stefan Boumans)
+-GUI: fixed preview update after tab width change (thanks to Stefan Boumans)
+
+---
+highlight 2.6-6
+
+10-December-2007
+
+-added Smalltalk definition and moe theme (thanks to Joerg Walter)
+-added support for diff and patch files
+-GUI: added clipboard button (suggested by Klaus Schueller and Stefan Boumans)
+-fixed Matlab definition (thanks to Andreas Boehler)
+-fixed print.style (thanks to Albert Neu)
+-fixed output of lines with CR/LF (bug of 2.6.5)
+-fixed php and css definitions
+-updated ActionScript definition (thanks to Samuel Toulouse)
+-updated sql definition (thanks to Stefan Boumans)
+-dropped dull theme
+
+---
+highlight 2.6-5
+
+02-October-2007
+
+-fixed compilation warning on 64 Bit OS (thanks to Uwe Sassenberg)
+-allowed embedded comments in Pascal definition (thanks to Helmut Giritzer)
+-fixed memory leak
+-improved performance
+-added serendipity plugin in examples/plugins
+-added support for diff (and patch) files (suggested by Dan Christensen)
+-adjusted SWIG makefiles and sample scripts
+-improved definitions of Bash, Ruby, Maya, Tcl, Agda and Haskell
+
+---
+highlight 2.6-4
+
+13-September-2007
+
+-fixed TeX and LaTeX output (space after strings were omitted,
+  thanks to Andre Schade)
+-fixed Perl language definition (thanks to Jens Kadenbach)
+-fixed gui.cpp compilation with wxWigets unicode build (thanks to Dennis Veatch)
+-updated R language definition (thanks to Yihui Xie)
+
+---
+highlight 2.6-3
+
+06-September-2007
+
+-added --inline-css option to output CSS within each tag element
+-renamed previewgenerator.* files to html32generator.*
+-GUI: changed GUI configuration format (using wx config classes)
+-GUI: added inline CSS option
+-binaries are no longer stripped by default (src/makefile)
+-added notes to makefiles and INSTALL concerning static linking
+  (thanks to Ken Poole)
+-improved MacOS X compatibility (thanks to Benjamin Kowarsch)
+-added ide-xcode theme (thanks to Benjamin Kowarsch)
+-README files were updated
+-updated plugin scripts to use the new --inline-css option
+
+---
+highlight 2.6-2
+
+19-July-2007
+
+-dropped deprecated option --format-style
+-added --html option for plausibility (HTML output is still default)
+-reassigned -H option to --html
+-added option --kw-case to output keywords in upper case or lower case if
+  the language is not case sensitive
+-added option --mark-line to highlight several code lines in HTML output
+-added mark-line parameter to colour themes, renamed kw_group parameter
+  to kw-group
+-added option --validate-input to test if input file is text (if the input
+  is considered binary, no parsing takes place)
+-updated astyle code to release 1.21
+-improved PHP4 compatibility of the wordpress plugin (thanks to Thomas Keller)
+-added support for Open Object Rexx (oorexx.lang)
+-updated documentation
+
+---
+highlight 2.6-1
+
+21-May-2007
+
+-support of HTML colour notation in theme files (ie #12aa00)
+-fixed bad formatting of single line comment and directive substrings after
+  line wrapping took place (multiline comments may still be screwed up)
+-enabled "highlight -c stdout" to print style definition to stdout
+-moved highlight/highlight subdir to highlight/src
+-removed examples/cgi
+-added examples/plugins
+-moved gui file directories ext and i18n to DATADIR/gui_files/
+-removed themes: berries-light, whatis
+-added themes: lucretia, orion
+-fixed SWIG interface files and scripts
+-fixed makefile and filetypes.conf (thanks to Axel Dyks)
+-improved ini.lang (thanks to Axel Dyks)
+-GUI: added Brazilian Portuguese translation (thanks to Yorick)
+
+---
+highlight 2.6-0
+
+05-May-2007
+
+-fixed bug with line number count starting at zero by default
+-modified makefile to support PREFIX and DESTDIR variables (patch by Jeremy Bopp)
+
+---
+highlight 2.5-6 beta
+
+20-April-2007
+
+-added new option --class-name (suggested by John Pye)
+-fixed XML output (thanks to Hilmar Bunjes)
+-updated README files
+
+---
+highlight 2.5-5 beta
+
+05-April-2007
+
+-renamed --line-number-width to --line-number-length
+-added new option --line-length
+-fixed compilation error with gcc 4.3 (thanks to Martin Michlmayr)
+-added script shebang recognition with stdin input (patch by Alan Briolat)
+-added support for Boo scripting language
+-fixed translated help texts
+-added *.p, *.i, *.w as Progress file suffixes (thanks to Mark Reeves)
+
+---
+highlight 2.5-4 beta
+
+07-March-2007
+
+-improved display quality of preview font (Courier New)
+-updated astyle to version 1.20.2
+
+---
+highlight 2.5-3 beta
+
+03-March-2007
+
+-fixed bug in GUI preview update
+-reduced GUI height
+-added support for Linden script (Second Life)
+
+---
+highlight 2.5-2 beta
+
+28-February-2007
+
+-added prefix and prefix_bin variables to makefile (suggested by Thomas Link)
+-removed LaTeX page dimension directives (suggested by Thomas Link)
+-improved several color themes
+-removed berries-dark, added seashell theme
+
+---
+highlight 2.5-1 beta
+
+29-January-2007
+
+-fixed GTK GUI language file encoding to UTF 8
+-improved Ruby language definition
+-added gui subsection in the RPM specfile
+
+---
+highlight 2.5-0 beta
+
+17-January-2007
+
+-added Miranda language definition (thanks to Peter Bartke)
+-added Powershell (Monad) language definition
+-fixed ignored conf_dir parameter in makefiles (thanks to Bob Smith)
+-included source files and additional make rules to compile a wxWidgets GUI
+  (binary: highlight-gui; make all-gui; needs wxWidgets 2.6+)
+
+---
+highlight 2.4-8
+
+19-October-2006
+
+-added xterm 256 color output (-M, --xterm256) (thanks to Wolfgang Frisch)
+-prints warning if output format ignores the theme background colour
+-fixed Java and Python language definitions
+-revised README files
+
+---
+highlight 2.4-7
+
+10-June-2006
+
+-fixed segfault in symbol parsing procedure (thanks to Veit Wedtstein)
+-updated Lua and Lisp definitions
+-added AutoIt, NSIS, Graphviz and Qore definitions
+-updated SWIG sample scripts
+
+---
+02-May-2006
+
+highlight 2.4-6
+
+-fixed segfault when outputting ANSI (thanks to Philip Jenvey)
+
+---
+20-March-2006
+
+highlight 2.4-5
+
+-fixed bug which caused segfault on x86_64 (thanks to Eric Hopper)
+-fixed wrong enumeration start when outputting text w/o highlighting
+  (thanks to Russell Yanofsky)
+-added anchor-prefix option (suggested by Peter Biechele)
+-added anchor-filename option (suggested by Mazy)
+-added $description entry to language file format
+-added D language file
+-updated regex classes to version 1.05.02
+
+---
+19-February-2006
+
+highlight 2.4-4
+
+-added print-config option
+-added scilab definition (thanks to Gunnar Lindholm)
+-dropped support for XSL-FO (use XML instead for further processing)
+-dropped deprecated options (css-infile, css-outfile, include-css)
+-fixed line numbering (starting at 1, printed if syntax option is txt)
+   (thanks to Russell Yanofsky)
+-renamed extensions.conf to filetypes.conf
+-moved content of scriptre.conf into filetypes.conf
+-renamed option help-int to help-lang
+-renamed option format-style to reformat
+-updated regex classes to version 1.04
+-code cleanup
+-updated documentation
+
+---
+30-October-2005
+
+highlight 2.4-3
+
+-added RTF page-size option (suggested by David Strip)
+-fixed bug in RTF output, which prevented italic and bold output
+  (patch by Jeremy Weinberger)
+-renamed colour theme parameter KW_CLASS to KW_GROUP
+
+---
+25-September-2005
+
+highlight 2.4-2
+
+-added line-number-start switch (suggested by Roie Black)
+-added babel switch to make output compatible with LaTeX Babel
+  package (disables Babel shorthands)
+-fixed ampl.lang (thanks to David Strip)
+-fixed error message if language definition is unknown
+-added Nemerle definition (n.lang)
+-added SAS definition (thanks to Alexandre Detiste)
+-added TTCN3 definition (thanks to Peter Biechele)
+-added tcsh.lang (thanks to Igor Furlan)
+-Unix package: moved *.conf to /etc/highlight/
+  (suggested by Jochen Schmitt)
+
+---
+23-July-2005
+
+highlight 2.4-1
+
+-dropped include-pkg option
+-added CSS style for list items (--ordered-list)
+-fixed default number regex
+-fixed VHDL event recognition
+-added missing KWD keyword style to several colour themes
+-added $STRING_UNEQUAL parameter for language definitions
+-added string CodeGenerator::generateString(const string &)
+-improved Ruby and Octave highlighting
+-added SWIG interface in examples/swig
+-removed examples/python-binding
+-removed themes: neon2 fluke greyish ide-jbuilder4 ide-jcreator2
+   ide-synedit neon2 rand02 ron whitenblue website
+
+---
+02-July-2005
+
+highlight 2.3-6 beta
+
+-fixed crash in language definition loader
+-saved helpmsg/cs.help as iso-8859-2
+-added include-pkg option to define a list of LaTeX packages
+  which should be included
+-fixed output of UTF-8 characters (replaced isspace by iswspace)
+
+---
+26-June-2005
+
+highlight 2.3-5 beta
+
+-fixed LaTeX and TeX output
+-added support for UTF-8 LaTeX output (suggested by Sungmin Cho)
+-dropped automatic conversion of ASCII characters > 127, package
+  latin1 is included instead
+
+---
+17-June-2005
+
+highlight 2.3-4 beta
+
+-added font and fontsize options (submitted by Yves Bailly)
+-added line-number-width (suggested by Yves Bailly)
+-code cleanup
+
+---
+16-May-2005
+
+highlight 2.3-3 beta
+
+-added kwd keyword class to most of the colour themes
+-added regular expressions to some language definitions
+
+---
+04-May-2005
+
+highlight 2.3-2 beta
+
+-improved number regex
+-added --ordered-list option (suggested by Dominic Lchinger)
+-fixed tag parsing (broken in 2.3-1)
+-updated docs
+-added Brazilian help text (thanks to Adao Raul)
+-added Czech help text
+
+---
+23-April-2005
+
+highlight 2.3-1 beta
+
+-added support for regular expressions in language definitions
+
+---
+25-March-2005
+
+highlight 2.2-10
+
+-added support for PowerPC Assembler (thanks to Juergen Frank)
+-added support for AppleScript (thanks to Andreas Amann)
+-added encoding option to set proper output encoding type in XML and
+   HTML output formats (default encoding: ISO-8895-1)
+   Note: encoding name has to match input file encoding
+-style definitions are generated if only --fragment and --style-outpath
+   options are set
+-added simple recognition of scripts without file extension
+  (Bash, Perl, AWK, Python)
+-added config file scriptre.conf to configure script recognition
+-moved langDefs/extensions.conf to package base directory
+-added --force option to generate output if language type is unknown
+-fixed parsing of escape sequences outside of strings in Perl
+  (last six points suggested by Andreas Amann)
+-fixed output of CR line terminators
+-added classes pre.hl and body.hl in CSS definitions
+
+---
+27-February-2005
+
+highlight 2.2-9
+
+-fixed --output option
+-fixed line number indentation in TeX and LaTeX output
+-fixed compilation error for Darwin (OSX) (thanks to Plumber)
+-fixed LaTeX compilation warnings (thanks to Tyranix)
+-fixed xml default file suffix
+-closing style tags are no longer printed in the following output line
+   (suggested by Yves Bailly)
+-fixed rb.lang (Ruby is case sensitive)
+-external style definitions and inclusion of user defined styles were
+   added to LaTeX and TeX output
+-installation directory configuration is improved in the makefiles
+   (all suggested by Thomas Link)
+-new options: style-outfile, style-infile, include-style
+-deprecated options: css-outfile, css-infile, include-css
+
+---
+20-February-2005
+
+highlight 2.2-8
+
+-added XML output (suggested by Matteo Bertini)
+-added support for MS SQL (thanks to Magnus ?erg)
+-added support for Pyrex (thanks to Matteo Bertini)
+-added support for Hecl, Luban and Qu
+
+---
+12-January-2005
+
+highlight 2.2-7
+
+-fixed compilation error on AMD64/gcc4.0 (thanks to Andreas Jochens)
+-fixed tab replacement (thanks to Adrian Bader)
+-fixed parsing of keywords with special characters as prefix ($ALLOWEDCHARS)
+   (thanks to Magnus ?erg)
+-single spaces in (La)TeX are no longer preceeded by backslash
+
+---
+03-December-2004
+
+highlight 2.2-6
+
+-fixed compilation error with getopt and Solaris 5.8
+  (thanks to Philippe Cornu and Jean-Emmanuel Reynaud)
+-enabled css-infile option when include-css is set
+-improved IO and Perl language definitions
+-updated dirstram classes to release 0.4
+-W32 port: fixed installation path determination
+
+---
+31-October-2004
+
+highlight 2.2-5
+
+-fixed some compiler warnings in various Debian builds (thanks to Ayman Negm)
+-fixed indentation error in LaTeX output and output of "--" in bold font
+  (thanks to Michael Suess)
+-added background colour attribute of body element to the CSS output to
+  improve compability with old browsers (NS Communicator 4.8)
+  (thanks to Wojciech Stryjewski)
+-in CSS output, user defined CSS definitions are now included after highlight
+  style definitions to make modifications easier
+-highlight returns EXIT_FAILURE after every IO failure
+-updated Spanish manual and help message (thanks to David Villa)
+
+---
+26-September-2004
+
+highlight 2.2-4
+
+-changed ANSI output colours to vim style (suggested by David Villa)
+-added new acid indentation scheme and acid colour theme
+  (thanks to Alexandre "AciD" Bonneau)
+-highlight returns 1 (EXIT_FAILURE) if file operations failed
+  (suggested by David Villa)
+-fixed bug in LaTeX output: [ and * characters after a linebreak (\\) caused
+  latex compilation to stop (thanks to Christian Schilling)
+-improved error reports
+
+---
+10-September-2004
+
+highlight 2.2-3
+
+-applied patch to suppress compiler warnings on several platforms
+  (thanks to weasel@debian.org)
+-renamed the /utils directory to /examples, which moved to
+  /usr/share/doc/highlight/ (suggested by Ayman Negm)
+-if --output is defined and output format is (X)HTML, the CSS file is stored in
+  the directory given by --output (suggested by Vicky Brown)
+-added spanish translations: README_ES and es.help (thanks to David Villa)
+-added support for SNMPv1 and SNMPv2 files: mib.lang (thanks to Roman Surma)
+-fixed highlighting of escape sequences in Pascal (thanks to Grzegorz Tworek)
+-added Pascal multi line comment delimiters: (*, *)
+-added a third keyword style (kwc) to all themes
+-added a third keyword group: ada.lang, gawk.lang, c.lang, java.lang, pas.lang
+-fixed some language definition with old $keyword entries
+
+---
+20-July-2004
+
+highlight 2.2-2
+
+-removed $STRINGDELIMITERPAIR parameter
+-internal changes
+
+---
+11-July-2004
+
+highlight 2.2-1
+
+-added content-type (iso-8859-1) to HTML output
+-added possibility to define custom keyword groups (suggested by Daniel Bonniot)
+-reformatting and indentation schemes are customizable, config files are located
+  in /indentSchemes (suggested by Petri Heiramo)
+-added new output format: ANSI terminal sequences (--ansi)
+  (suggested by David Villa)
+  assigned -A to --ansi, -g to --fop-compatible
+-added $SL-COMMENT parameter to colour themes (enables seperate highlighting
+ of single and multi line comments)
+-added option to fill linenumbers with zeroes
+-improved quality of colour themes
+-changed names of following command line options:
+  deletetabs -> replace-tabs
+  listthemes -> list-themes
+  listlangs  -> list-langs
+  includecss -> include-css
+  printindex -> print-index
+-dropped support for C# member attributes (was a nasty workaround)
+-dropped support for Forth
+-removed unnecessary --batch (-b) option
+-removed utils/cgi/perl/README_CGI
+-fixed raw string highlighting bug: r"""\n""" in Python is parsed correctly
+-fixed some old parameters in language definitions
+-added source directory names to generated index file (-C)
+
+---
+20-June-2004
+
+highlight 2.0-25
+
+-fixed quote replacement in LaTeX (\dq -> \dq{}) (thanks to Adrian Bader)
+-fixed crash if $HOME is not defined (thanks to Kostas Maistelis)
+-added compile flag CONFIG_FILE_PATH to define a custom path to the config file
+-added local copy of getopt, which is compiled if the system does not provide it
+  (removed win32cmdline.*)
+-fixed VHDL event parsing
+-removed some poor quality colour themes and improved some others
+-added ide-eclipse style
+
+---
+10-June-2004
+
+highlight 2.0-24
+
+-improved VHDL support (thanks to Aaron D. Marasco)
+-added Coldfusion MX definition (thanks to Paul Connell)
+-added $REFORMATTING option to language definitions
+-added a Python binding in utils/python-binding
+-some code clean up
+
+---
+16-May-2004
+
+highlight 2.0-23
+
+-fixed ABAP definition (thanks to Kevin Barter)
+-fixed Python definition
+-fixed parsing of methods applied to numerical literals (possible in Ruby)
+-fixed indentation of line numbers in LaTeX (thanks to Michael Berndt)
+-reduced LaTeX output file size
+-improved layout of LaTeX document
+-applied some patches to Artistic Style code (see astyle.sourceforge.net)
+-added updated phpwiki-plugin utils/cgi/php/SyntaxHighlighter.php
+  (thanks to Reini Urban)
+
+---
+19-April-2004
+
+highlight 2.0-22
+
+-improved Fortran 77 parsing (thanks to Geraldo Veiga),
+  moved parsing information to f77.lang and f90.lang
+-added highlighting of float literals like .5
+-added new language definitions: ABAP/4, ARM, Bison, Dylan, FAME,Informix, Lisp,
+  Octave, R, Scala, Snobol, Verilog
+-removed -d option
+-added -P option to display a progress bar in batch mode
+
+---
+23-March-2004
+
+highlight 2.0-21
+
+-added option (-r) to replace " by \dq in LaTeX (thanks to Nikolai Mikuszeit)
+-added option (-E) to define another search path, where language definitions
+   and themes may be stored (suggested by a Debian package tester)
+-fixed bug which disabled HTML anchors (thanks to Richard Beauchamp)
+-fixed wrong current working directory detection in W32 code (thanks to Ian Oliver)
+-improved fragmented TeX output
+-fixed man page
+-changed path of config file to ~/.highlightrc (Unix)
+-added options to config file
+-changed parameter prefix from "/" to the more convenient "$" in configuration files
+-changed "typesmods" parameter in language definitions to "types"
+-improved some colour themes
+-added $INCLUDE statement in language definitions to include content of other files
+
+---
+09-March-2004
+
+highlight 2.0-20
+
+-added new parser options: TYPEDELIMITERS and KEYWORDDELIMITERS to enable
+   highlighting of variables like ${var}
+-changed RTF font to Courier New
+-added symbol highlighting (last two suggested by Anssi Lehtinen)
+-added new colour themes (darkblue, zellner, ron, peachpuff, pablo, nedit)
+-added a new directive to add a custom installation directory at compile time
+   (CUSTOM_INSTALL_DIR in highlight/makefile)
+-added Doxygen documentation
+-updated spec.lang, sh.lang and make.lang
+-fixed some case insensitive language files
+-replaced make by ${MAKE} in makefile (suggested by Thomas Dettbarn)
+-removed utils/frontend (see homepage for highlight-gui package)
+-moved German help to README_DE
+-moved documentation files to /usr/share/doc/highlight (suggested by Ayman Negm)
+
+---
+21-February-2004
+
+highlight 2.0-19
+
+-improved whitespace indentation in TeX and LaTeX
+-fixed output of +, -, =, <, > in TeX
+-fixed output of blank lines in TeX
+   (all suggested by Milan Straka)
+-updated Java language definition to 1.5
+-added support for BibTex, Erlang, Icon, Lisp, Lotos, Maple, Objectice C,
+   Prolog, PostScript and RPM Spec
+
+---
+08-February-2004
+
+highlight 2.0-18
+
+-changed hskip unit in LaTeX output vom mm to em
+-fixed different font width of spaces in TeX output
+   (thanks to Milan Straka)
+-added macros in TeX output to reduce file size
+-fixed bug which made first line number disappear (introduced in 2.0-17)
+-declared XSL-FO output as experimental, added a switch to provide
+   modified output for both Apache FOP and xmlto/xsltproc
+
+---
+01-February-2004
+
+highlight 2.0-17
+
+-enabled multiple input file names and real batch processing wildcards
+-improved debugging output
+-added new PHP Wiki plugin (thanks to Alec Thomas)
+-fixed newlines at the beginning and the ending of HTML output
+-fixed Java and Nice language definitions (thanks to Daniel Bonniot)
+-general cleanup (code, makefiles, docs)
+
+---
+12-January-2004
+
+highlight 2.0-16
+
+-added new options to wrap long lines (suggested by Johannes Wei�)
+-added new colour themes: vim, vim-dark and ide-codewarrior
+-improved Java, Nice and C parsing
+
+---
+04-January-2004
+
+highlight 2.0-15
+
+-improved XSL-FO output (thanks to Daniel Bonniot)
+-reduced LaTeX output file size
+
+---
+21-December-2003
+
+highlight 2.0-14
+
+-added XSL-FO output format (suggested by Daniel Bonniot)
+-fixed segfault when theme file was not found
+-improved makefiles
+-ported code to Solaris (thanks to Ade Fewings)
+
+---
+25-November-2003
+
+highlight 2.0-13
+
+-fixed parsing of XML comments
+-fixed conversion of umlauts and accents
+-improved parsing of numbers (suffixes like 30L, 4.5f; exponents)
+-'@' in HTML output is replaced  by HTML entity to confuse spam robots
+-fixed Avenue, Perl, Progress and Clipper language definitions
+-added support for Action Script, Objective Caml, Standard ML, Felix,
+   Frink, IO, Nasal, MaxScript, Oberon, Object Script
+-replaced AutoConf build process by customizable makefile (suggested by John Skaller)
+
+---
+09-November-2003
+
+highlight 2.0-12
+
+-fixed parsing of subtractions (i.e: varName-1)
+-added support for SuperX++ (thanks to Kimanzi Mati)
+-added Relax NG Compact language definition (thanks to Christian Siefkes)
+
+---
+26-October-2003
+
+highlight 2.0-11
+
+-fixed LaTeX and Squirrel language definitions
+   (thanks to Stephan Bhme and Alberto Dechemelis)
+-fixed number parsing (allow 'a'-'f' in Hex numbers only)
+-replaced double quotes by single quotes in fragmented LaTeX output
+-added a new subdirectory "utils/", moved "cgi/" there
+-added a new Python Qt-Frontend
+-added a PHP module (thanks to Philip Van Hoof)
+-added Nice language definition
+
+---
+21-September-2003
+
+highlight 2.0-10
+
+-changed LaTeX font settings to \tt and \it
+-improved fragmented LaTeX output
+-fixed LaTeX language definition
+-fixed multi line compiler directive parsing with strings
+-added new Squirrel ans JSP language definitions
+
+---
+14-September-2003
+
+highlight 2.0-9
+
+-trailing whitespace from input is ignored
+-modified LaTeX fragmented output to simplify inclusion of code in
+   existing documents
+-added support for multiple line compiler directives
+-added new THE style (thanks to Mark Hessling)
+
+---
+15-August-2003
+
+highlight 2.0-8 Hot Summer Build
+
+-fixed bug which prevented highlighting of escape characters within strings
+   which start a new line
+-fixed XHTML line anchors attribute to "id"
+-added background colour support for plain TeX
+-improved recognition of strings with different open/close delimiters
+-added a reasonable 4th support
+-internal changes to improve speed
+-changed XHTML encoding from utf-8 to iso-8859-1 and xhtml version to 1.1
+-removed comment in XHTML header to enable highlighting when style
+   definition is included in output
+-added recognition of hex, octal and unicode escape sequences (\123, \xff)
+-improved Python and Tcl support
+
+---
+04-August-2003
+
+highlight 2.0-7
+
+-fixed parsing of C# simplified strings (thanks to Cerda)
+-added support for C# member attributes (thanks to Gauthier)
+-added --listlangs option (suggested by Mark Hessling)
+-improved plausibility of --outdir option (thanks to Otto Barnes II)
+
+---
+27-July-2003
+
+highlight 2.0-6
+
+-fixed bug in HTML and XHTML output, which caused insertion of too many
+   "</span>" tags (thanks to Mark Hessling)
+
+---
+20-July-2003
+
+highlight 2.0-5
+
+-improved LaTeX, TeX and RTF colour output
+-fixed TeX output formatting errors
+-fixed LaTeX line number output (thanks to Johannes Nolte)
+-improved code portability (thanks to Gauthier)
+-added french help (thanks to Gauthier)
+
+---
+01-July-2003
+
+highlight 2.0-4
+
+-improved Ada 95 output (thanks to Frank Piron)
+-added HTML index file option
+-simplified API
+-added some language definitions
+
+---
+28-May-2003
+
+highlight 2.0-2
+
+-fixed bug causing lowercase output of case insensitive
+   languages (thanks to David and Mark Hessling)
+-added new Matlab colour theme (thanks to David)
+-improved Rexx language definition (thanks to Mark Hessling)
+-added plain text language definition
+
+---
+01-May-2003
+
+highlight 2.0
+
+-fixed memory leak in DataDir::searchDataDir()
+-fixed configuration file parsing
+-added data-dir option
+-added batch-recursive option
+-changed CmdLineoptions.cpp to compile under Windows
+
+---
+27-April-2003
+
+highlight 2.0b-9
+
+-improved integer literal and C++ multiline comment parsing
+   (both suggested by Benjamin Kaufmann)
+-improved directive line parsing
+
+---
+20-April-2003
+
+highlight 2.0b-8
+
+-added Pike language definition (thanks to Olivier Girondel)
+-added support for Forth (suggested by Hans Bezemer)
+-fixed bugs in language definition loader method
+-fixed segfault
+
+---
+07-April-2003
+
+highlight 2.0b-7
+
+-added Artistic Style indentation and reformatting
+
+---
+31-March-2003
+
+highlight 2.0b-6
+
+-fixed fortran code parsing ( thanks to Henning Weber)
+-improved performance
+
+---
+highlight 2.0b-5
+
+-fixed theme files which had DOS line terminators
+-presets reader method was fixed
+-changed RTF output to Courier and 20 pt font size
+-help screen fixed
+
+---
+19-March-2003
+
+highlight 2.0b-4
+
+-added css-infile and css-outfile options to make generation of customizable css
+   definitons clearer (suggested by Markus Werle)
+-fixed bug reading fontsize parameter of themes
+
+---
+16-March-2003
+
+highlight 2.0b-3
+
+-improved RTF output
+
+---
+09-March-2003
+
+highlight 2.0b-2
+
+-improved RTF output (added bold/italics/underline attributes)
+-improved TeX output (added theme colors [thanks to Markus Henning for TeX-URL],
+   bold and italics)
+-added a decription how to use the highlight parser in own applications
+
+---
+05-March-2003
+
+highlight 2.0b
+-memory leak was fixed
+-the parser was rewritten to add more flexibility and stability
+-added ability to highlight code with tags (XML, HTML...)
+-added ability to highlight strings with prefixes
+   (variableprefix, keywordprefix)
+-different source file extensions are stored in a configuration file
+   (extensions.conf)
+-configuration reader was modified to allow storing parameter values
+   in multiple lines
+-added some more language definitions
+
+---
+30-January-2003
+
+highlight 1.3.4-2
+
+-added option to disable directive line bug
+-added ability to search *.style and *.lang files in different directories,
+  which may be set as prefix option of ./configure
+  (suggested by Jose Santiago)
+
+---
+28-January-2003
+
+highlight 1.3.4
+
+-fixed LaTeX output regarding escape characters outside of strings
+-fixed unmasked escape characters
+   (both bugs reported by Peter Albert)
+-added \ttfamily to LaTeX header (suggested by Peter Albert)
+-rpm-spec file allows relocatable builds (thanks to Dwight Engen)
+-added "CPP" to recogniced source file suffixes (suggested by Maniac)
+-replaced verb-|- by \textbar
+-fixed php.lang and py.lang
+
+---
+08-January-2003
+
+highlight 1.3.3
+
+-fixed Asm.lang (lower case of keywords/types)
+-added option to specify target directory of the output files
+-fixed bug in LateX/RTF/TeX output; last opened tag being closed now
+-improved LaTeX output
+-added ability to read presets from the configuration file $HOME/.highlight.conf
+-added simple cgi script (Perl)
+
+---
+29-November-2002
+
+highlight 1.3.2-2
+
+- fixed LaTeX output of | and ~ characters (thanks to Martin Idelberger)
+
+---
+26-November-2002
+
+highlight 1.3.2
+
+-fixed buffer overflow problem (thanks to Christian Perle)
+-added Rexx, Modula3, Agda, Haskell language definition
+-added (G)AWK language definition (thanks to Andreas Schoenberg)
+-added Bold and Italic font support, and background colour to LaTeX output
+-highlight compiles without warnings with gcc 3.2
+
+---
+20-November-2002
+
+highlight 1.3.1-2
+
+-applied gcc 3.2 patch (thanks to Georg Young)
+
+---
+18-November-2002
+
+highlight 1.3.1
+
+-fixed bug whioch disabled batch mode
+-added POV Ray Definition (thanks to Christian Perle)
+-added emacs and kwrite style
+
+---
+11-November-2002
+
+highlight 1.3  (beta)
+
+-applied Ruby definition file patch (thanks to Jonas Fonseca)
+-introduced style definition files
+-added background colour to style definitions
+-added line anchors in HTML output
+
+---
+05-October-2002
+
+highlight 1.2.1
+
+-applied patch to make highlight compile with gcc 3.x (thanks to Marc Duponcheel)
+-fixed LaTeX output of "^" and /hskip  (thanks to Dan Muller)
+-fixed TeX output
+
+---
+26-August-2002
+
+highlight 1.2
+
+-fixed bug which caused wrong output file suffixes in batch mode
+-fixed (X)HTML output of french characters
+-added frech character output (accent graphe, acute) to rtf, TeX and LaTeX output
+-ability to recognize keywords with "-"
+-added new language definitions (Ruby, COBOL, Fortran)
+
+---
+20-August-2002
+
+highlight 1.1
+
+-TeX output
+-fixed documentation regarding LaTeX / TeX output (Thanks to Keith Briggs)
+-fixed bug which caused single line comments left unmasked
+-french letters like ? ?are masked
+
+---
+13-August-2002
+
+highlight 1.0 <stable>
+
+-reduced tex output file size
+-Perl and Visual Basic definition file
+-fixed error in help msg (Thanks to Jan van Haarst)
+
+---
+25-July-2002
+
+highlight 0.1
+
+-RTF and La(Tex) output
+-Lua definition file
+-header and footer part of output file may be omitted
+-changed path of language definitions to /usr/share/highlight
+
+---
+06-May-2002:
+
+src2css 0.2
+
+-batch mode, converting all files matching a given wildcard
+-XHTML output
+-Python definition file
+
+---
+04-Apr-2002:
+
+src2css 0.1
+
+-initial release

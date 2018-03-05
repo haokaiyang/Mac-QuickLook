@@ -1,0 +1,63 @@
+# Python language definition file
+#
+# Author: Andre Simon
+#   Mail: andre.simon1@gmx.de
+#   Date: 3.4.2002
+# ------------------------------------------
+# This file is part of highlight, a free source code converter released under the GPL.
+#
+# The file is used to describe keywords and special symbols of programming languages.
+# See README in the highlight directory for details.
+#
+# New definition files for future releases of highlight are always appreciated ;)
+#
+# ----------
+# andre.simon1@gmx.de
+# http:/www.andre-simon.de/
+
+# "keyword" groups are taken from the VIM-Syntaxfile of Neil Schemenauer
+# (almost: None is a keyword now; True and False are planned to become
+# keywords)
+
+$DESCRIPTION=Python
+
+#keywords
+$KEYWORDS(kwa)= break continue del except exec finally pass print raise
+return try global assert lambda yield def class for while if elif else
+and in is not or import from as None True False
+
+#builtins, including types
+$KEYWORDS(kwb)= bool enumerate set frozenset help reversed sorted sum
+Ellipsis NotImplemented __import__ abs apply buffer callable chr
+classmethod cmp coerce compile complex delattr dict dir divmod eval
+execfile file filter float getattr globals hasattr hash hex id input
+int intern isinstance issubclass iter len list locals long map max min
+object oct open ord pow property range raw_input reduce reload repr
+round setattr slice staticmethod str super tuple type unichr unicode
+vars xrange zip
+
+#exceptions
+$KEYWORDS(kwc)= ArithmeticError AssertionError AttributeError
+DeprecationWarning EOFError EnvironmentError Exception
+FloatingPointError IOError ImportError IndentationError IndexError
+KeyError KeyboardInterrupt LookupError MemoryError NameError
+NotImplementedError OSError OverflowError OverflowWarning
+ReferenceError RuntimeError RuntimeWarning StandardError StopIteration
+SyntaxError SyntaxWarning SystemError SystemExit TabError TypeError
+UnboundLocalError UnicodeError UnicodeEncodeError UnicodeDecodeError
+UnicodeTranslateError UserWarning ValueError Warning WindowsError
+ZeroDivisionError
+
+$KEYWORDS(kwd)=regex((\w+)\s*\()
+
+$STRINGDELIMITERS=""" ''' " ' 
+
+$RAWSTRINGPREFIX=r
+
+$SL_COMMENT=#
+
+$IGNORECASE=false
+
+$ESCCHAR=regex(\\\d{3}|\\x\p{XDigit}{2}|\\[ntvbrfa\\\?'"])
+
+$SYMBOLS= ( ) [ ] { } , ; . : & | < > !  = / * %  + - @

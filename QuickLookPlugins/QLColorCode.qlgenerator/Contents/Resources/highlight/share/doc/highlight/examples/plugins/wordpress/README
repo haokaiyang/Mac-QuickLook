@@ -1,0 +1,33 @@
+=== Highlight plugin ===
+
+This plugin uses highlight (http://www.andre-simon.de) to add syntax highlighting to WordPress.
+
+== Description ==
+
+The highlight utility converts source code of 120 programming languages to HTML 
+with syntax highlighting. This plugin pipes the content of <pre>-Tags associated
+with a lng parameter to highlight, and returns the output code which is included
+in the WordPress blog entry.
+
+Usage:
+
+Paste the following in the code section of the blog editing form:
+
+<pre lang="c">#include <stdio.h>
+
+int main (void){
+  printf("This is some random code");
+  return 0;
+}</pre>
+
+Use the lang parameter to define the programming language (c, php, py, xml, etc).
+See the highlight documentation to learn all possible languages.
+See the highlight.php file for some formatting options (line numbering, code
+indentation, line wrapping etc).
+
+== Installation ==
+
+1. Install highlight (www.andre-simon.de) on your host
+2. Unzip the wp_highlight.zip file and upload the content to the 
+   `/wp-content/plugins/` directory
+3. Activate the plugin

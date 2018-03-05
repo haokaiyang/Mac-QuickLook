@@ -1,0 +1,38 @@
+# Lotos (ISO 8807) language definition file
+#
+# Author: André Simon
+#   Mail: andre.simon1@gmx.de
+#   Date: 08.02.04
+# ------------------------------------------
+# This file is a part of highlight, a free source code converter released under the GPL.
+#
+# The file is used to describe keywords and special symbols of programming languages.
+# See README in the highlight directory for details.
+#
+# New definition files for future releases of highlight are always appreciated ;)
+#
+# ----------
+# andre.simon1@gmx.de
+# http:/www.andre-simon.de/
+
+$DESCRIPTION=Lotos
+
+$KEYWORDS(kwa)=accept actualizedby any behavior behaviour choice endlib endproc
+endspec endtype eqns  exit for forall formaleqns formalopns formalsorts hide
+iin is let library noexit of ofsort opnnames  opns par  process  renamedby 
+sortnames  sorts  specification  stop  type  using  where  false true
+
+
+$KEYWORDS(kwb)=Bit BitString Bool DecDigit DecString Element FBool HexDigit
+HexStringOctDigit Octet OctString Nat NonEmptyString OctetString Set String
+BasicNaturalNumber BasicNonEmptyString BitNatRepr Boolean FBoolean DecNatRepr
+HexNatRepr NatRepresentations NaturalNumber OctNatRepr RicherNonEmptyString
+String0 String1
+
+$STRINGDELIMITERS=" '
+
+$ML_COMMENT=(* *)
+
+$IGNORECASE=false
+
+$SYMBOLS= ( ) [ ] { } , ; : & | < > !  = / * %  + -

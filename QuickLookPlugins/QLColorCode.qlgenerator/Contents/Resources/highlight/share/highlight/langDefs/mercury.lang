@@ -1,0 +1,48 @@
+# Mercury language definition file
+#
+# Author: Andre Simon
+#   Mail: andre.simon1@gmx.de
+#   Date: 06.8.2009
+# ------------------------------------------
+# This file is a part of highlight, a free source code converter released under the GPL.
+#
+# The file is used to describe keywords and special symbols of programming languages.
+# See README in the highlight directory for details.
+#
+# New definition files for future releases of highlight are always appreciated ;)
+#
+# ----------
+# andre.simon1@gmx.de
+# http:/www.andre-simon.de/
+
+$DESCRIPTION=Mercury
+
+$KEYWORDS(kwa)=is and or func impure   pred  semipure not when
+then if else where   all
+arbitrary promise_equivalent_solutions	
+promise_equivalent_solution_sets promise_exclusive
+promise_exclusive_exhaustive promise_exhaustive
+promise_impure  promise_impure_implicit
+promise_pure promise_pure_implicit
+promise_semipure promise_semipure_implicit some
+ype solver   end_module import_module include_module
+initialise initialize finalise finalize inst instance mode module
+pragma   promise  rule typeclass use_module
+interface implementation det
+
+$KEYWORDS(kwa)=div mod rem
+
+$KEYWORDS(kwc)=regex([A-Z]\w+)
+
+$KEYWORDS(kwd)=regex((\w+)\s*\()
+
+$STRINGDELIMITERS=" '
+
+$SL_COMMENT=%
+
+$IGNORECASE=false
+
+$ESCCHAR=regex(\\\d{3}|\\x\p{XDigit}{2}|\\[ntvbrfa\\\?'"])
+
+$SYMBOLS= ( ) [ ] { } , ; . : & | < > !  = / *   + - ~
+

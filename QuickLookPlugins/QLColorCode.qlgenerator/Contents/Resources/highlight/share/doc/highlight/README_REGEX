@@ -1,0 +1,247 @@
+-------------------------------------------------------------------------------
+---  REGULAR EXPRESSIONS MANUAL -----------------------------------------------
+-------------------------------------------------------------------------------
+
+This file is based on the original API documentation of Jeffery Stuart's
+Pattern class.
+
+-------------------------------------------------------------------------------
+
+You can use regular expressions in highlight language definitions.
+Note that the expression has to be defined as regex(<RE> <, GRUP-NUM>), where
+RE is the regex string, and GROUP-NUM is an optional parameter which defines
+the group number whose match should be returned.
+
+See README which definition parameters support regular expressions.
+
+
+Content:
+--------
+
+- Regex rules
+- Backslashes, escapes, and quoting
+- Character Classes
+- Groups and capturing
+- Examples
+
+-------------------------------------------------------------------------------
+
+
+Regex rules:
+------------
+
+Construct       Matches
+
+Characters
+
+x               The character x
+\\              The character \
+\0nn            The character with octal ASCII value nn
+\0nnn           The character with octal ASCII value nnn
+\xhh            The character with hexadecimal ASCII value hh
+\t              A tab character
+\r              A carriage return character
+\n              A new-line character
+
+
+Character Classes
+
+[abc]           Either a, b, or c
+[^abc]          Any character but a, b, or c
+[a-zA-Z]        Any character ranging from a thru z, or A thru Z
+[^a-zA-Z]       Any character except those ranging from a thru z, or A thru Z
+[a\-z]          Either a, -, or z
+[a-z[A-Z]]      Same as [a-zA-Z]
+[a-z&&[g-i]]    Any character in the intersection of a-z and g-i
+[a-z&&[^g-i]]   Any character in a-z and not in g-i
+
+
+Predefined character classes
+
+.               Any character. Multiline matching must be compiled into the
+                pattern for . to match a \r or a \n. Even if multiline matching
+                is enabled, . will not match a \r\n, only a \r or a \n.
+\d              [0-9]
+\D              [^\d]
+\s              [ \t\r\n\x0B]
+\S              [^\s]
+\w              [a-zA-Z0-9_]
+\W              [^\w]
+
+
+POSIX character classes
+
+\p{Lower}       [a-z]
+\p{Upper}       [A-Z]
+\p{ASCII}       [\x00-\x7F]
+\p{Alpha}       [a-zA-Z]
+\p{Digit}       [0-9]
+\p{Alnum}       [\w&&[^_]]
+\p{Punct}       [!"#$%&'()*+,-./:;<=>?@[\]^_`{|}~]
+\p{XDigit}      [a-fA-F0-9]
+
+
+Boundary Matches
+
+^               The beginning of a line. Also matches the beginning of input.
+$               The end of a line. Also matches the end of input.
+\b              A word boundary
+\B              A non word boundary
+\A              The beginning of input
+\G              The end of the previous match. Ensures that a "next" match will
+                only happen if it begins with the character immediately 
+                following the end of the "current" match.
+\Z              The end of input. Will also match if there is a single trailing
+                \r\n, a single trailing \r, or a single trailing \n.
+\z              The end of input
+
+
+Greedy Quantifiers
+
+x?              x, either zero times or one time
+x*              x, zero or more times
+x+              x, one or more times
+x{n}            x, exactly n times
+x{n,}           x, at least n times
+x{,m}           x, at most m times
+x{n,m}          x, at least n times and at most m times
+
+
+Possessive Quantifiers
+
+x?+             x, either zero times or one time
+x*+             x, zero or more times
+x++             x, one or more times
+x{n}+           x, exactly n times
+x{n,}+          x, at least n times
+x{,m}+          x, at most m times
+x{n,m}+         x, at least n times and at most m times
+
+
+Reluctant Quantifiers
+
+x??             x, either zero times or one time
+x*?             x, zero or more times
+x+?             x, one or more times
+x{n}?           x, exactly n times
+x{n,}?          x, at least n times
+x{,m}?          x, at most m times
+x{n,m}?         x, at least n times and at most m times
+
+
+Operators
+
+xy              x then y
+x|y             x or y
+(x)             x as a capturing group
+
+
+Quoting
+
+\Q              Nothing, but treat every character (including \s) literally 
+                until a matching \E
+\E              Nothing, but ends its matching \Q
+
+Special Constructs
+
+(?:x)           x, but not as a capturing group
+(?=x)           x, via positive lookahead. This means that the expression will
+                match only if it is trailed by x. It will not "eat" any of the
+                characters matched by x.
+(?!x)           x, via negative lookahead. This means that the expression will
+                match only if it is not trailed by x. It will not "eat" any of
+                the characters matched by x.
+(?<=x)          x, via positive lookbehind. x cannot contain any quantifiers.
+(?x)            x, via negative lookbehind. x cannot contain any quantifiers.
+(?>x)           x{1}+
+
+
+
+Backslashes, escapes, and quoting:
+----------------------------------
+
+The backslash character ('\') serves to introduce escaped constructs, as defined
+in the table above, as well as to quote characters that otherwise would be
+interpreted as unescaped constructs. Thus the expression \\ matches a single
+backslash and \{ matches a left brace.
+
+It is an error to use a backslash prior to any alphabetic character that does
+not denote an escaped construct; these are reserved for future extensions to the
+regular-expression language. A backslash may be used prior to a non-alphabetic
+character regardless of whether that character is part of an unescaped
+construct.
+
+It is necessary to double backslashes in string literals that represent regular
+expressions to protect them from interpretation by a compiler. The string
+literal "\b", for example, matches a single backspace character when interpreted
+as a regular expression, while "\\b" matches a word boundary. The string litera
+"\(hello\)" is illegal and leads to a compile-time error; in order to match the
+string (hello) the string literal "\\(hello\\)" must be used.
+
+
+Character Classes:
+------------------
+
+Character classes may appear within other character classes, and may be composed
+by the union operator (implicit) and the intersection operator (&&). The union
+operator denotes a class that contains every character that is in at least one
+of its operand classes. The intersection operator denotes a class that contains
+every character that is in both of its operand classes.
+
+The precedence of character-class operators is as follows, from highest to
+lowest:
+
+ 1   Literal escape    \x
+ 2   Range             a-z
+ 3   Grouping          [...]
+ 4   Intersection      [a-z&&[aeiou]]
+ 5   Union             [a-e][i-u]
+
+Note that a different set of metacharacters are in effect inside a character
+class than outside a character class. For instance, the regular expression .
+loses its special meaning inside a character class, while the expression -
+becomes a range forming metacharacter.
+
+
+Groups and capturing:
+---------------------
+
+Capturing groups are numbered by counting their opening parentheses from left to
+right. In the expression ((A)(B(C))), for example, there are four such groups:
+
+ 1 ((A)(B(C)))
+ 2 (A)
+ 3 (B(C))
+ 4 (C)
+
+Group zero always stands for the entire expression. Note that highlight will 
+only evaluate the highest group number to make regular expressions more suitable
+for language definitions. Use (?:) syntax to avoid a capture of the new group.
+
+
+Examples:
+---------
+
+$KEYWORDS(kwa)=regex([A-Z]\w+)
+Highlight identifiers beginning with a capital letter.
+
+$KEYWORDS(kwb)=regex([$@%]\w+)
+Highlight variables beginning with $, @ or %.
+
+$KEYWORDS(kwc)=regex(\$\{(\w+)\})
+or
+$KEYWORDS(kwc)=regex(\$\{(\w+)\}, 1)
+Highlight variable names like ${name}. Only the name is highlighted as keyword.
+The grouping feature is used to achieve this effect. If no capturing group
+index is defined (like in the first example above), the right-most group's match
+(highest capturing index) is returned.
+
+$KEYWORDS(kwd)=regex((\w+)\s*\()
+Highlight method names. Note that grouping is used again.
+
+
+---
+Andre Simon
+andre.simon1@gmx.de
+http://www.andre-simon.de/
+http://wiki.andre-simon.de/

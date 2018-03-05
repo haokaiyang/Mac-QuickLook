@@ -1,0 +1,64 @@
+# Arc language definition file
+#
+# Author: Pierre Larochelle
+#   Mail: pierrebombay@gmail.com
+#   Date: 05.25.08
+# ------------------------------------------
+# This file is a part of highlight, a free source code converter released under the GPL.
+#
+# The file is used to describe keywords and special symbols of programming languages.
+# See README in the highlight directory for details.
+#
+#
+# ---------- 
+
+$DESCRIPTION=Arc
+
+# Function, macro, and template definitions
+$KEYWORDS(kwa)=def defhook defmem defop defops defset deftem mac
+
+# Looping
+$KEYWORDS(kwb)=drain each for forlen loop noisy-each on ontable while whiler whilet until 
+
+# Conditionals
+$KEYWORDS(kwc)=case caselet check if iflet when whenlet unless
+
+# General functions
+$KEYWORDS(kwd)=aand abs accum acons addtem adjoin afn after aif alist all alphadig alref and andf annotate 
+apply assert assoc atend atlet atom atomic atomic-invoke atwith atwiths avg awhen bar* before begins best 
+bestn blank bound break-threadcaar cache cadr call-w/stdin call-w/stdout car carif caris catch 
+ccc cddr cdr client-ip close coerce commonest compare complement compose consif conswhen copy count 
+counts current-gc-milliseconds current-process-milliseconds cut date days-since dead dedup
+ deq details dir dir-exists disp do do1 dotted downcase ellipsize empty endmatch enq 
+enq-limit ensure-dir ero err errsafe eval even exact expand-metafn-call expand= expand=list expt file-exists 
+fill-table find findsubseq firstn firstn-that flat fn for forlen fromstring headmatch hook hooks* hours-since
+idfn in infile insert-sorted inside insort insortnew inst instring intersperse is isa isnt iso join jtime
+keep keys kill-thread last len len< len> let list listtab litmatch load load-table load-tables macex macex1 
+map map1 mappend maptable max median mem memo memtable merge mergesort metafn min mismatch mod most msec multiple 
+multisubst n-of new-thread newstring no  nonwhite nor nthcdr num number obj odd on-err only 
+ontree open-socket or orf outfile outstring pair parse-format peekc pipe-from plural point pop pos positive 
+posmatch pr prall prf prn protect prs pull punc push pushnew qlen qlist quasiquote queue quit quote rand 
+rand-choice rand-string random-elt range read read-table readall readb readc readfile readfile1 readline 
+readstring1 reclist recstring reduce reinsert-sorted rem rep repeat rev rfn rmfile rotate round roundup rreduce
+safe-load-table saferead safeset save-table scar scdr seconds set setforms setter sig since single sleep 
+socket-accept some sort split sqrt sread sref ssexpand ssyntax stderr stdin stdout string subst summing 
+swap sym system table tablist temload temloadall templates* templatize temread testify thread time 
+time10 to-nearest tokens tostring trav tree-subst treewise trim trues trunc tuples type union uniq 
+upcase urldecode vals w/appendfile w/bars w/infile w/instring w/outfile w/outstring w/socket
+w/stdin w/stdout w/table w/uniq warn whitec wipe with withs write write-table 
+writeb writec writefile1 zap
+
+$IDENTIFIER=regex([a-zA-Z_][\w\-\/]*)
+
+# The rest is taken directly from André Simon's lisp.lang definition
+$STRINGDELIMITERS="
+
+$ML_COMMENT=;| |;
+
+$SL_COMMENT=;
+
+#$IGNORECASE=false
+
+$ESCCHAR=regex(\\\d{3}|\\x\p{XDigit}{2}|\\[ntvbrfa\\\?'"])
+
+$SYMBOLS= ( ) [ ] { } , : &  < > ! + = / * '

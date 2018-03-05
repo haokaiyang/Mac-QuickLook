@@ -1,0 +1,41 @@
+# Standard ML language definition file
+#
+# Author: Andre Simon
+#   Mail: andre.simon1@gmx.de
+#   Date: 17.11.2003
+# Update: 11.09.2008
+# ------------------------------------------
+# This file is a part of highlight, a free source code converter released under the GPL.
+#
+# The file is used to describe keywords and special symbols of programming languages.
+# See README in the highlight directory for details.
+#
+# New definition files for future releases of highlight are always appreciated ;)
+#
+# ----------
+# andre.simon1@gmx.de
+# http:/www.andre-simon.de/
+
+$DESCRIPTION=Standard ML
+
+$KEYWORDS(kwa)=abstraction abstype and andalso as before case datatype else end
+eqtype exception do fn fun functor handle if in include infix infixr let local
+nonfix of op open orelse overload raise rec sharing sig signature struct
+structure then type val where while with withtype o true false  Bool String Int
+Real Word Char StringCvt Word8 List ListPair Vector TextIO BinIO div mod
+
+$KEYWORDS(kwb)=bool string int real word
+
+$KEYWORDS(kwd)=regex((\w+)\s*\()
+
+$STRINGDELIMITERS="
+
+$ML_COMMENT=(* *)
+
+$ALLOWNESTEDCOMMENTS=true
+
+$IGNORECASE=false
+
+$ESCCHAR=regex(\\\d{3}|\\x\p{XDigit}{2}|\\[ntvbrfa\\\?'"])
+
+$SYMBOLS= ( ) [ ] { } , ; : & | < > !  = / * %  + - ' .

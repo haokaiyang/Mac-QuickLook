@@ -1,0 +1,40 @@
+# Luban language definition file
+#
+# Author: Andre Simon
+#   Mail: andre.simon1@gmx.de
+#   Date: 14.02.2005
+#  ---------------------------------------
+# This file is a part of highlight, a free source code converter released under the GPL.
+#
+# The file is used to describe keywords and special symbols of programming languages.
+# See README in the highlight directory for details.
+#
+# New definition files for future releases of highlight are always appreciated ;)
+#
+# ----------
+# andre.simon1@gmx.de
+# http:/www.andre-simon.de/
+
+$DESCRIPTION=Luban
+
+$KEYWORDS(kwa)=as  break  continue  else  finish  for  foreach  if  implements  in  input  isa 
+namespace output static  store  struct  typedef wait  waitfor while println
+
+
+$KEYWORDS(kwb)=bool char string vector map set null error enum range int double 
+
+$KEYWORDS(kwc)=true false and or not
+
+$STRINGDELIMITERS=" '
+
+$SL_COMMENT=//
+
+$ML_COMMENT=/* */
+
+$ALLOWNESTEDCOMMENTS=false
+
+$IGNORECASE=false
+
+$ESCCHAR=regex(\\\d{3}|\\x\p{XDigit}{2}|\\[ntvbrfa\\\?'"])
+
+$SYMBOLS= ( ) [ ] { } , ; . : & | < > !  = / *  %  + - ~

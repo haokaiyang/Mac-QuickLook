@@ -1,0 +1,47 @@
+# DOS Batch script language definition file
+#
+# Author: Andre Simon
+#   Mail: andre.simon1@gmx.de
+#   Date: 02.03.2003
+# ------------------------------------------
+# This file is a part of highlight, a free source code converter released under the GPL.
+#
+# The file is used to describe keywords and special symbols of programming languages.
+# See README in the highlight directory for details.
+#
+# New definition files for future releases of highlight are always appreciated ;)
+#
+# ----------
+# andre.simon1@gmx.de
+# http:/www.andre-simon.de/
+
+$DESCRIPTION=DOS Batch
+
+$KEYWORDS(kwa)=do else end errorlevel exist exit for goto if not pause return
+say select then when
+
+# DOS Cmds
+$KEYWORDS(kwb)=ansi append assign attrib autofail backup basedev boot break
+buffers cache call cd chcp chdir chkdsk choice cls cmd codepage command comp
+copy country date ddinstal debug del detach device devicehigh devinfo dir
+diskcoache diskcomp diskcopy doskey dpath dumpprocess eautil endlocal erase
+exit_vdm extproc fcbs fdisk fdiskpm files find format fsaccess fsfilter
+graftabl iopl join keyb keys label lastdrive libpath lh loadhigh makeini
+maxwait md mem memman mkdir mode move net patch path pauseonerror picview
+pmrexx print printmonbufsize priority priority_disk_io prompt protectonly
+protshell pstat rd recover reipl ren rename replace restore rmdir rmsize run
+set setboot setlocal shell shift sort spool start subst suppresspopups swappath
+syslevel syslog threads time timeslice trace tracebuf tracefmt trapdump tree
+type undelete unpack use ver verify view vmdisk vol xcopy xcopy32 xdfcopy
+echo
+
+# Variables
+$KEYWORDS(kwc)=regex(%\S+)
+
+$STRINGDELIMITERS="
+
+$SL_COMMENT=regex(^(rem|Rem|REM).*)
+
+$IGNORECASE=true
+
+$SYMBOLS= ( ) [ ] { } , ; : & | < > !  = / *  %  + -

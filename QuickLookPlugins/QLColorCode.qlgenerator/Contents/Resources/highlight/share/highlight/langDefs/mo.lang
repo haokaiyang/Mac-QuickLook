@@ -1,0 +1,41 @@
+# Modelica script language definition file
+#
+# Author: André Simon
+#   Mail: andre.simon1@gmx.de
+#   Date: 04.03.2003
+# ------------------------------------------
+# This file is a part of highlight, a free source code converter released under the GPL.
+#
+# The file is used to describe keywords and special symbols of programming languages.
+# See README in the highlight directory for details.
+#
+# New definition files for future releases of highlight are always appreciated ;)
+#
+# ----------
+# andre.simon1@gmx.de
+# http:/www.andre-simon.de/
+
+$DESCRIPTION=Modelica
+
+$KEYWORDS(kwa)=annotation assert block class connector constant discrete else elseif
+elsewhen end exit extends external final flow for function if in inner input
+import loop model nondiscrete outer output package parameter record redeclare
+replaceable return size terminate then type when while algorithm equation
+protected public and  false not or true
+
+# functions
+$KEYWORDS(kwb)=abs acos asin atan atan2 connect cos cosh cross der edge exp initial
+noEvent pre reinit sample sign sin sinh tan tanh terminal
+
+$STRINGDELIMITERS="
+
+$ML_COMMENT=/* */
+$SL_COMMENT=//
+$ESCCHAR=regex(\\\d{3}|\\x\p{XDigit}{2}|\\[ntvbrfa\\\?'"])
+$IGNORECASE=true
+
+$SYMBOLS= ( ) [ ] { } , ; : & | < > !  = / * %  + -
+
+
+
+

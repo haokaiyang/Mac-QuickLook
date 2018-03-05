@@ -1,0 +1,55 @@
+Developer/Maintainer:
+André Simon <andre.simon1 at gmx de>
+
+Developer of the Artistic Style classes:
+Tal Davidson <davidsont at bigfoot com>
+Jim Pattee <jimp03 at email com>
+
+Developer of Regex classes:
+Jeffery Stuart <mail_address>
+
+Developer of xterm 256 colour best matching functions:
+Wolfgang Frisch <wf at frexx de>
+
+Developer of the argparser class:
+Antonio Diaz Diaz
+
+CLI translators:
+French: Gauthier S.
+Spanish: David Villa
+
+GUI translators:
+Spanish: Fidel Barrera
+
+Language definitions:
+Christian Perle (Povray)
+Andreas Schoenberg (AWK)
+Olivier Girondel (Pike)
+Christian Siefkes (NG Relax Compact)
+Paul Connell (Coldfusion MX)
+Peter Bartke (Miranda)
+Joerg Walter (Smalltalk)
+Pierre Larochelle (Arc, Clojure)
+Roberto Mendoza (IDL)
+Paulo Moura (Logtalk)
+
+Colour themes:
+David (matlab)
+Mark Hessling (THE)
+Alexandre Bonneau (Acid)
+Sunrise Telephone Systems Ltd. (ide-xcode)
+Joerg Walter (moe)
+
+Patches:
+Marc Duponcheel (gcc 3.x compatibility)
+Jonas Fonseca (Ruby language definition)
+Georg Young (gcc 3.x compatibility)
+weasel@debian.org (suppress compile warnings of Debian package)
+Jeremy Weinberger (RTF bugfix)
+Alan Briolat (shebang recognition with stdin stream)
+Jeremy Bopp (makefile prefix/destdir variables)
+Antonio Diaz Diaz (argparser replacement for getopt_long)
+Samuli Suominen (various makefile bugfixes)
+Detlef Reichelt (gcc 4.3 compatibility)
+Jochen Schmitt (gcc 4.4 compatibility)
+Nathaniel Gray (makefile bugfix)

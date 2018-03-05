@@ -1,0 +1,21 @@
+# metallica.style (inspired by the Master Of Puppets cover)
+# This file is part of highlight, a universal source code converter.
+# See README in the highlight directory for documentation.
+
+$DEFAULTCOLOUR=#C4B1A8
+$BGCOLOUR=#1E1616
+$FONTSIZE=10
+$KW-GROUP(kwa)=#49d4d6
+$KW-GROUP(kwb)=#BA1919
+$KW-GROUP(kwc)=#7B2421
+$KW-GROUP(kwd)=#AD5139
+$NUMBER=#9C928C
+$ESCAPECHAR=#837D83
+$STRING=#635D63
+$STRING-DIRECTIVE=#635D63
+$COMMENT=#C4674A
+$SL-COMMENT=#C4674A
+$DIRECTIVE=#E7A731
+$LINE=#9C928C
+$SYMBOL=#506070
+$MARK-LINE=#394e62

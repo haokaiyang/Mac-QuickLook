@@ -1,0 +1,157 @@
+-------------------------------------------------------------------------------
+---  HIGHLIGHT LANGUAGE LIST ---------------------------------- August 2009 ---
+-------------------------------------------------------------------------------
+
+All supported languages and the syntax definition file names are listed below.
+By default, the *.lang files are located in /usr/share/highlight/langDefs/.
+The language definitions my be mapped to file extensions in the filetypes.conf
+config file (default location: /etc/filetypes.conf).
+Since release 2.12, it is possible to highlight source files with multiple
+languages (ie HTML+PHP), see the NESTED instruction in README.
+
+Language     Language
+definition:  description:
+-----------------------------------
+
+4gl:        Informix
+a4c:        ASCEND
+abp:        ABAP/4
+ada:        ADA95
+agda:       Agda
+ampl:       AMPL
+amtrix:     AMTrix
+applescript:AppleScript
+arc:        Arc
+arm:        ARM
+as:         Action Script
+asm:        Assembler
+asp:        ASP
+aspect:     Abstract
+ats:        Applied Type System
+au3:        AutoIt
+avenue:     Avenue
+awk:        (G)AWK
+bat:        DOS Batch
+bb:         Blitz Basic
+bib:        BibTeX
+bms:        BM Script
+boo:        Boo
+cb:         ClearBasic
+c:          C and C++
+chl:        CHILL
+cfc:        ColdFusion MX
+clipper:    Clipper
+clojure:    Clojure
+clp:        Clips
+cob:        COBOL
+cs:         C#
+css:        CSS
+d:          D
+diff:       Diff
+dot:        Graphviz
+dylan:      Dylan
+e:          Eiffel
+erl:        Erlang
+euphoria:   Euphoria
+exp:        Express
+f77:        Fortran 77
+f90:        Fortran 90
+flx:        Felix
+frink:      Frink
+fs:         F#
+haskell:    Haskell
+hcl:        Hecl
+httpd:      Apache Config
+icn:        Icon
+idlang:     Interactive Data Language
+idl:        IDL
+ili:        INTERLIS
+ini:        INI
+inp:        FAME
+iss:        Inno Setup
+io:         IO
+java:       Java
+j:          Jasmin
+js:         Javascript
+jsp:        JSP
+lbn:        Luban
+ldif:       LDAP
+lgt:        Logtalk
+lhs:        Haskell LHS
+lisp:       Lisp
+lotos:      Lotos
+lsl:        Linden Script
+ls:         Lotus
+lua:        Lua
+ly:         Lilypond
+make:       Make
+mel:        Maya
+mercury:    Mercury
+mib:        SNMP
+miranda:    Miranda
+ml:         Objective Caml
+m:          Matlab
+mod3:       Modula3
+mo:         Modelica
+mpl:        Maple
+ms:         MaxScript
+mssql:      MSSQL
+nas:        Nasal
+nice:       Nice
+n:          Nemerle
+nrx:        NetRexx
+nsi:        NSIS
+nut:        Squirrel
+oberon:     Oberon
+objc:       Objective C
+octave:     Octave
+oorexx:     Open Object Rexx
+os:         Object Script
+oz:         Oz
+pas:        Pascal
+php:        PHP
+pike:       Pike
+pl1:        PL/1
+pl:         Perl
+pov:        POV-Ray
+progress:   Progress
+pro:        Prolog
+ps1:        Microsoft PowerShell
+psl:        PATROL
+ps:         PostScript
+py:         Python
+pyx:        Pyrex
+qmake:      QMake Project
+q:          Qore
+qu:         Qu
+rb:         Ruby
+rebol:      Rebol
+rexx:       Rexx
+rnc:        Relax NG
+r:          R
+sas:        SAS
+scala:      Scala
+scilab:     Scilab
+sc:         Paradox
+sh:         Bash
+smalltalk:  Smalltalk
+sma:        SMALL
+sml:        Standard ML
+sno:        SNOBOL
+spec:       RPM Spec
+spn:        SPIN SQL
+s:          PowerPC Assembler
+sql:        PL/SQL
+sybase:     Sybase SQL
+tcl:        Tcl/Tk
+tcsh:       TCSH
+tex:        TeX and LaTeX
+ttcn3:      TTCN3
+vala:       Vala
+vb:         Visual Basic
+verilog:    Verilog
+vhd:        VHDL
+xml:        XML
+xpp:        SuperX++
+y:          Bison
+znn:        Zonnon

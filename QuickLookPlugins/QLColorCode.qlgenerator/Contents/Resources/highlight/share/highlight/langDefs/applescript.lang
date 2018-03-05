@@ -1,0 +1,51 @@
+# AppleScript language definition file
+#
+# Author: Andreas Amann
+#   Mail: aamann@mac.com
+#   Date: 12.3.2005
+# ------------------------------------------
+# This file is a part of highlight, a free source code converter released under the GPL.
+#
+# The file is used to describe keywords and special symbols of programming languages.
+# See README in the highlight directory for details.
+#
+# New definition files for future releases of highlight are always appreciated ;)
+#
+# ----------
+# andre.simon1@gmx.de
+# http:/www.andre-simon.de/
+
+$DESCRIPTION=AppleScript
+
+$KEYWORDS(kwa)=and as at beginning considering contain contains does div else end
+equal error every exit first from get global greater if ignoring in is last local
+me mod my not of on or property reopen repeat return script set tell than the then
+to transaction try with without which while whose
+
+$KEYWORDS(kwc)=AppleScript access activate after alias application  ascending ASCII at
+attached before box button buttons case cell cells character characters  choose class
+close column columns content contents control controls copy count  current data date
+day default delay delete delimiter descending desktop dialog  display document
+documents domain duplicate enabled ends eof equal entry  entries exists false field
+fields file files folder folders for icon icons indicator  indicators item items
+length list load location localized make matrix menu menus  missing month months name
+new number offset open order panel panels path popup  print process progress
+properties quit read response row rows scroll select  selected selection sheet size
+sort sorted source specification start starting  stop string table text title true
+Unicode update user value visible view views  window windows write year years
+
+$KEYWORDS(kwd)=regex((\w+)\s*\()
+
+$STRINGDELIMITERS="
+
+$SL_COMMENT=--
+
+$ML_COMMENT=(* *)
+
+$ALLOWNESTEDCOMMENTS=false
+
+$IGNORECASE=false
+
+$ESCCHAR=regex(\\\d{3}|\\u\d{4}|\\x\p{XDigit}{2}|\\[ntvbrfa\\\?'"])
+
+$REFORMATTING=false

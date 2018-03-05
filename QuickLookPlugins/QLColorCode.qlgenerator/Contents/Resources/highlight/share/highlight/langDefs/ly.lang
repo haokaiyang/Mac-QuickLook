@@ -1,0 +1,36 @@
+# Lilypond language definition file
+#
+# Author: Andre Simon
+#   Mail: andre.simon1@gmx.de
+#   Date: 15.02.2008
+# ------------------------------------------
+# This file is a part of highlight, a free source code converter released under the GPL.
+#
+# The file is used to describe keywords and special symbols of programming languages.
+# See README in the highlight directory for details.
+#
+# New definition files for future releases of highlight are always appreciated ;)
+#
+# ----------
+# andre.simon1@gmx.de
+# http:/www.andre-simon.de/
+
+$DESCRIPTION=Lilypond
+
+#allow decimals to follow identifier names without ws
+$IDENTIFIER=regex(([a-z]+)\d*)
+
+$KEYWORDS(kwa)=c d e f g a h b cis dis eis fis gis ais des es ges as s bes
+
+$KEYWORDS(kwb)=regex(\\[\w<>!\\]+)
+
+$STRINGDELIMITERS="
+
+# { is not supposed to follow % in single line comment
+$SL_COMMENT=regex(%(?!\{).*)
+
+$ML_COMMENT=%{ }%
+
+$IGNORECASE=false
+
+$SYMBOLS= ( ) [ ] { } < > ' , . / : ^ =  # * _ |  !

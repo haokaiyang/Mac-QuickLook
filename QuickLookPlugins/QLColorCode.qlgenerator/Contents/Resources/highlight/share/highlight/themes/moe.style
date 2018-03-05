@@ -1,0 +1,21 @@
+# acid.style - style
+# This File is part of highlight, a universal source code converter.
+# See README in the highlight directory for documentation.
+
+$DEFAULTCOLOUR=#000000
+$BGCOLOUR=#f6f6f6
+$FONTSIZE=8
+$KW-GROUP(kwa)=#661111 bold
+$KW-GROUP(kwb)=#000066 bold
+$KW-GROUP(kwc)=#000066
+$KW-GROUP(kwd)=#004466
+$NUMBER=#880022
+$ESCAPECHAR=#ff00ff bold
+$STRING=#aa4400
+$STRING-DIRECTIVE=#008800
+$COMMENT=#ff8800
+$SL-COMMENT=#ee7700
+$DIRECTIVE=#008844 bold
+$LINE=#333333
+$SYMBOL=#000000 bold
+$MARK-LINE=#ffffbb

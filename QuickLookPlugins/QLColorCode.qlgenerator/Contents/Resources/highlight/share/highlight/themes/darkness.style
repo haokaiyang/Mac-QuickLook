@@ -1,0 +1,20 @@
+# darkness.style
+# This File is part of highlight, a universal source code converter.
+# See README in the highlight directory for documentation.
+
+$DEFAULTCOLOUR=#ffffff
+$BGCOLOUR=#000000
+$FONTSIZE=10
+$KW-GROUP(kwa)=#ffff00 bold
+$KW-GROUP(kwb)=#00ff00
+$KW-GROUP(kwc)=#26e0e7
+$KW-GROUP(kwd)=#f34627
+$NUMBER=#619de7
+$ESCAPECHAR=#00abab
+$STRING=#abab00 bold
+$STRING-DIRECTIVE=#abab00
+$COMMENT=#008888
+$DIRECTIVE=#1da3cf
+$LINE=#888888
+$SYMBOL=#ff00ff
+$MARK-LINE=#444444

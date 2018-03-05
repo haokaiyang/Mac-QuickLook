@@ -1,0 +1,51 @@
+# CHILL (CCITT High Level Language) language definition file
+#
+# Author: Andre Simon
+#   Mail: andre.simon1@gmx.de
+#   Date: 22.06.09
+# ------------------------------------------
+# This file is a part of highlight, a free source code converter released under the GPL.
+#
+# The file is used to describe keywords and special symbols of programming languages.
+# See README in the highlight directory for details.
+#
+# New definition files for future releases of highlight are always appreciated ;)
+#
+# ----------
+# andre.simon1@gmx.de
+# http:/www.andre-simon.de/
+
+# + mpol
+
+$DESCRIPTION=CHILL
+
+$KEYWORDS(kwa)= AND BEGIN CASE DIV DO ELSE ELSIF END ESAC EXIT FI FOR GOTO IF IN 
+MOD NOT OD OF ON OR OUT RESULT RETURN THEN THEN TO UNTIL USES WHILE WITH XOR
+
+#types
+$KEYWORDS(kwb)=ARRAY DCL GRANT LABEL MODULE NEWMODE PROC POWERSET SEIZE SET STRUCT SYN SYNMODE TYPE PACK
+
+$KEYWORDS(kwc)= BIN CHAR INT RANGE BOOL PTR REF
+
+$KEYWORDS(kwd)=MODULE_DESCRIPTION_HEADER PATCH_INFOS LIO_INFOS SWSG_INFOS MSG_XREF
+EJECT FALSE NULL TRUE
+
+$STRINGDELIMITERS=" '
+
+#$SL_COMMENT=//
+
+$ML_COMMENT=/* */ <> <>
+
+$ALLOWNESTEDCOMMENTS=false
+
+$IGNORECASE=true
+
+#$DIRECTIVE=#
+
+$ESCCHAR=regex(\\\d{3}|\\x\p{XDigit}{2}|\\[ntvbrfa\\\?'"])
+
+$SYMBOLS= ( ) [ ] { } , ; . : & | < > !  = / *  %  + - ~
+
+#$CONTINUATIONSYMBOL=\
+
+#$REFORMATTING=true

@@ -1,0 +1,26 @@
+# xcode.style
+# This File is part of highlight, a universal source code converter.
+# See README in the highlight directory for documentation.
+
+# Modified by Nathan Gray
+
+$DEFAULTCOLOUR=#000000
+$BGCOLOUR=#ffffff
+$FONTSIZE=#11
+$KW-GROUP(kwa)=#8f0055
+$KW-GROUP(kwb)=#8f0055
+$KW-GROUP(kwc)=#8f0055
+$KW-GROUP(kwd)=#005555
+$KW-GROUP(callr)=#000988
+$KW-GROUP(fndef)=#8f5500
+$NUMBER=#2300ff
+$STRING=#c00000
+$KW-GROUP(str)=#c00000
+$ESCAPECHAR=#733710
+$COMMENT=#007f1c
+$DIRECTIVE=#733710
+# for the string in: #include "foo"
+$STRING-DIRECTIVE=#850055
+$LINE=#808080
+$SYMBOL=#000000
+$MARK-LINE=#ffffbb

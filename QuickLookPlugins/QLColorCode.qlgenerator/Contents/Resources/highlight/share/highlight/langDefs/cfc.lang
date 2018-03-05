@@ -1,0 +1,58 @@
+# Coldfusion MX language definition file
+#
+# Author: Paul Connell
+#   Mail: paulc@fusionworkshop.com
+#   Date: 04.06.2004
+#         28.01.2008 Replaced KW_DELIM entry by regexes (ASim)
+# ------------------------------------------
+# This file is a part of highlight, a free source code converter released under the GPL.
+#
+# The file is used to describe keywords and special symbols of programming languages.
+# See README in the highlight directory for details.
+#
+# New definition files for future releases of highlight are always appreciated ;)
+#
+# ----------
+# paulc@fusionworkshop.com
+# http:/www.fusionworkshop.com/
+
+$DESCRIPTION=ColdFusion MX
+
+$KEYWORDS(kwa)=3Dcfabort cfapplet cfapplication cfargument cfassociate cfbreak cfcache
+cfcase cfcatch cfchart cfchartdata cfchartseries cfcol cfcollection  cfcomponent
+cfcontent cfcookie cfdefaultcase cfdirectory cfdump cfelse cfelseif cferror cfexecute
+cfexit cffile cfflush cfform cfftp cffunction cfgrid cfgridcolumn cfgridrow
+cfgridupdate cfheader cfhtmlhead cfhttp cfhttpparam= cfif cfimport cfinclude cfindex
+cfinput cfinsert cfinvoke cfinvokeargument cfldap cflocation cflock cflog cflogin
+cfloginuser cflogout cfloop cfmail  cfmailparam cfmailpart cfmodule cfobject
+cfobjectcache cfoutput cfparam cfpop cfprocessingdirective cfprocparam cfprocresult
+cfproperty cfquery cfqueryparam cfregistry cfreport cfrethrow cfreturn cfsavecontent
+cfschedule cfscript cfsearch cfselect cfset cfsetting cfsilent cfslider cfstoredproc
+cfswitch cftable cftextinput cfthrow cftrace cftransaction cftree cftreeitem cftry
+cfupdate cfwddx cfxml
+
+$STRINGDELIMITERS=" '
+
+# set true if programming language is case sensitive
+# Keyword and types have to be lower case if true
+$IGNORECASE=true
+
+# set true if multiple line comments may be nested
+$ALLOWNESTEDCOMMENTS=true
+
+# comment begin and end (delimiters of multi-line comments)
+$ML_COMMENT=<!--- --->
+
+# List of strings which start one line comments
+$SL_COMMENT=//
+
+#$TAG_DELIM(kwa)=< >
+
+$KEYWORDS(kwa)=regex(<!?\/?\w+>?|/?>)
+$KEYWORDS(kwb)=regex(([-\w]+)=")
+$KEYWORDS(kwc)=regex(\&\#?\w+;)
+
+# Prefix which defines variables
+$KEYWORDS(kwd)=regex(\#\w+)
+
+$SYMBOLS= ( ) [ ] { } , ; : & | !  = / *  %  + - .

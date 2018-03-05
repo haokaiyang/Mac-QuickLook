@@ -1,0 +1,20 @@
+# easter.style
+# This File is part of highlight, a universal source code converter.
+# See README in the highlight directory for documentation.
+
+$DEFAULTCOLOUR=#2C7B34
+$BGCOLOUR=#fff9b9
+$FONTSIZE=10
+$KW-GROUP(kwa)=#1d45d6 bold
+$KW-GROUP(kwb)=#ed0f55 bold
+$KW-GROUP(kwc)=#26aae7 bold
+$KW-GROUP(kwd)=#1d45d6
+$NUMBER=#e11a70
+$ESCAPECHAR=#3ea392
+$STRING=#ca4be3
+$STRING-DIRECTIVE=#ca4be3
+$COMMENT=#1ea411 italic
+$DIRECTIVE=#1583b1
+$LINE=#7717b7
+$SYMBOL=#fa4700
+$MARK-LINE=#ffffff

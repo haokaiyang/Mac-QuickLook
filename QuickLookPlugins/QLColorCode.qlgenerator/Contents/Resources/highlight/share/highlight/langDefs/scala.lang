@@ -1,0 +1,26 @@
+# Scala language definition file
+#
+# Author: Andre Simon
+#   Mail: andre.simon1@gmx.de
+#   Date: 15.04.2004
+# ------------------------------------------
+# This file is a part of highlight, a free source code converter released under the GPL.
+#
+# The file is used to describe keywords and special symbols of programming languages.
+# See README in the highlight directory for details.
+#
+# New definition files for future releases of highlight are always appreciated ;)
+#
+# ----------
+# andre.simon1@gmx.de
+# http:/www.andre-simon.de/
+
+$DESCRIPTION=Scala
+
+$INCLUDE=java
+
+$KEYWORDS(kwa)=abstract def object override sealed trait type val var yield 
+
+$ALLOWNESTEDCOMMENTS=true
+
+$STRINGDELIMITERS=""" " '

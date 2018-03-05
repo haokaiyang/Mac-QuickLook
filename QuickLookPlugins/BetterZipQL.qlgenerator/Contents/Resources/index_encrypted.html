@@ -1,0 +1,271 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+ "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+ <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+ <title>BetterZip</title>
+ <style type="text/css">
+ /* <![CDATA[ */
+	html {
+		background: #f6f5f6;
+	}
+	body {
+		margin: 0px;
+		font: 10px "Lucida Grande";
+		color: #333;
+	}
+	#headwrap {
+		height: 155px;
+		width: 98%;
+		background: #f6f5f6;
+		z-index: 10;
+		margin: 0 1%;
+	}
+	#headwrap.abs {
+		position: absolute;
+	}
+	#headwrap.fix {
+		position: fixed;
+	}
+	#data {
+		margin: 20px;
+		color: #333;
+		margin: auto;
+		width:100%;
+		position: relative;
+		top: 160px;
+		z-index: 1;
+	}
+	#head {
+		background: #111;
+		height: 140px;
+		padding: 5px;
+		color: #aaa;
+		float: left;
+	}
+	#head td {
+		padding: 1px;
+	}
+	a {
+		text-decoration: none;
+		color: black;
+	}
+	h1 {
+		display: inline;	
+	}
+	#betterzip {
+		color: #000;
+		float: right;
+		font-size: 12px;
+		font-weight: bold;
+		margin-top: 5px;
+	}
+	#betterzip span {
+		color: #333;
+		font-size: 9px;
+		font-weight: normal;
+	}
+	#config {
+		position: absolute;
+		padding: 5px;
+		top: 140px; right: 10px;
+		z-index: 10;
+		margin-top: -30px;
+	}
+	#config hr {
+		height: 1px;
+		border: 0;
+		border-top: 0;
+		margin: 15px 0px;
+		color: #999;
+	}
+	#config ul {
+		list-style-type: none;
+		padding: 5px 20px;
+		margin: 0;
+	}
+	#config h3 {
+		color: #798291;
+	}
+	#config #disclosure {
+		margin: -13px -15px auto auto;
+		position:relative;
+		float: right;
+		z-index: 20;
+	}
+	#config #save {
+		margin: 0 20px 0 20px;
+	}
+	#controls {
+		position:absolute;
+		margin-top: 10px;
+		right: -10px;
+		width: 180px;
+		padding: 10px 5px 5px 5px;
+		background-color: white;
+		border: 1px solid #666;
+		float: right;
+		z-index: 30;
+	}
+	#data_table {
+		width:98%;
+		margin: 0 1%;
+	}
+	#header_table {
+		width: 100%;
+	}
+	.row0 {
+		background-color: #eee;
+	}
+	.row1 {
+		background-color: #fff;
+	}
+	table, tr {
+		margin: 0;
+		padding: 0;
+		border-collapse: collapse;
+	}
+	#data td, #data th, #header_table th {
+		padding: 3px 8px;
+		margin: 0;
+	}
+	#data th, #header_table th {
+		background-color: #fff;
+		border-bottom: 1px solid #ccc;
+		font-weight: bold;
+		color: #798291;
+		height: 20px;
+		margin-top:2px;
+	}
+	.n {
+		display: inline;
+		padding: 2px;
+		padding-top: 6px;
+		font-size: 11px;
+	}
+	.colName, .colDate, .colKind, .colAttributes {
+		text-align: left;
+		font-size: 11px;
+	}
+	.colAttributes {
+		width: 90px;
+	}
+	.r, .colSize, .colPacked {
+		text-align: right;
+		font-size: 11px;
+	}
+	.i {
+		float: left;
+		width: 16px;
+		height: 16px;
+		border:0;
+	}
+	.open {
+		float: left;
+		width: 12px;
+		height: 12px;
+		padding-top: 2px;
+		margin-left: -18px;
+		color: #868686;
+	}
+	%image-styles%
+ /* ]]> */
+ </style>
+
+  <script type="text/javascript">%effects.js%</script>
+  <script type="text/javascript">%config.js%</script>
+  <script type="text/javascript">%betterzipql.js%</script>
+
+  <script type="text/javascript">
+	<!--
+		%config%
+
+		function saveConfig (a)
+		{
+			Effect.toggle ('controls', 'blind');
+			a.href  = "bzqlconfig://save";
+			a.href += "/keepHeaderFixed=" + ($("keepHeaderFixed").checked ? "1" : "0");
+			a.href += "/showHiddenFiles=" + ($("showHiddenFiles").checked ? "1" : "0"); 
+			a.href += "/showPackageContents=" + ($("showPackageContents").checked ? "1" : "0");
+			a.href += "/colDate=" + ($("colDate").checked ? "1" : "0");
+			a.href += "/colSize=" + ($("colSize").checked ? "1" : "0");
+			a.href += "/colPacked=" + ($("colPacked").checked ? "1" : "0");
+			a.href += "/colKind=" + ($("colKind").checked ? "1" : "0");
+			a.href += "/colAttributes=" + ($("colAttributes").checked ? "1" : "0");
+		}	
+
+		window.onresize = function (event) 
+		{
+    	syncTableWidths ();
+		}
+	// -->
+	</script>
+</head>
+
+<body onLoad="loadDone();">
+	<div id="headwrap" class="abs">
+		<table style="width: 100%; padding-top: 2px; "><tr>
+			<td style="width: 140px"><img id="%icon%" height="128" width="128"></td>
+			<td style="padding: 2px; vertical-align: top;">
+				<h1>%name%</h1>
+				<table>
+					<tr><td class="r">%Path%:</td><td>%path%</td></tr>
+					<tr><td class="r">%Kind%:</td><td>%kind%</td></tr>
+					<tr><td class="r">%Date Modified%:</td><td>%time%</td></tr>
+					<tr><td class="r">%Size%:</td><td>%unco%</td></tr>
+					<tr><td class="r">%Packed%:</td><td>%comp%</td></tr>
+				</table>
+			</td>
+			<td style="padding: 2px; vertical-align: top;width: 180px">
+
+				<div id="betterzip">
+					<a href="http://macitbetter.com/">Powered by BetterZip<br/>
+						<span>Better archiving for your Mac.</span>
+					</a>
+				</div>
+				<div style="clear:both;"></div>
+
+				<div id="config">
+					<input id="disclosure" type="button" onClick="return Effect.toggle ('controls');" value="%Configuration%">
+					<div id="controls" style="display: none;">
+						<h3>%Layout%</h3>
+						<ul>
+							<li><input type="checkbox" id="keepHeaderFixed" onClick="tgglHead()" />
+								<label for ="keepHeaderFixed">%Keep header fixed%</label></li>
+						</ul>
+						<hr noshade />
+						<h3>%Item Visibility%</h3>
+						<ul>
+							<li><input type="checkbox" id="showHiddenFiles" onClick="tgglHidden()" />
+								<label for ="showHiddenFiles">%Show hidden files%</label></li>
+							<li><input type="checkbox" id="showPackageContents" onClick="tgglPackages()"/>
+								<label for ="showPackageContents">%Show package contents%</label></li>
+						</ul>
+						<hr noshade />
+						<h3>%Columns%</h3>
+						<ul>
+							<li><input type="checkbox" id="colDate" onClick="tgglColumns()"/>
+							<label for ="colDate">%Date modified%</label></li>
+							<li><input type="checkbox" id="colSize" onClick="tgglColumns()"/>
+							<label for ="colSize">%Size%</label></li>
+							<li><input type="checkbox" id="colPacked" onClick="tgglColumns()"/>
+							<label for ="colPacked">%Packed%</label></li>
+							<li><input type="checkbox" id="colKind" onClick="tgglColumns()"/>
+							<label for ="colKind">%Kind%</label></li>
+							<li><input type="checkbox" id="colAttributes" onClick="tgglColumns()"/>
+							<label for ="colAttributes">%Attributes%</label></li>
+						</ul>
+						<p style="text-align: center;"><a href="#" onClick="saveConfig(this);return true;"><input id="save" type="button" value="%Save as Default%"></a></p>
+						<p style="text-align: center;"><span style="color: #999;">%(Saving will close this window)%</span></p>
+					</div>
+				</div>
+			</td>
+		</tr></table>
+		<p style="text-align: center; width: 400px; font-size: 12px; margin: auto; margin-top: 50px;">
+			%The listing is encrypted%
+		</p>
+	</div>
+	
+</body>
+</html>

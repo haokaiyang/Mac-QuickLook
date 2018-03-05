@@ -1,0 +1,55 @@
+# Pascal/Object Pascal language definition file
+#
+# Author: Andre Simon
+#   Mail: andre.simon1@gmx.de
+#   Date: 10.1.2002
+#         27.10.2004:  Added modifications made by Jens Theess for the TotalCommander
+#                      Lister plugin (http://www.theess.com/highlight)
+#         01.09.2009: Added nested directive
+# ------------------------------------------
+# This file is a part of highlight, a free source code converter released under the GPL.
+#
+# The file is used to describe keywords and special symbols of programming languages.
+# See README in the highlight directory for details.
+#
+# New definition files for future releases of highlight are always appreciated ;)
+#
+# ----------
+# andre.simon1@gmx.de
+# http:/www.andre-simon.de/
+
+$DESCRIPTION=Pascal
+
+$KEYWORDS(kwa)= absolute abstract and array as asm assembler automated begin case
+cdecl class const constructor destructor dispid dispinterface div do downto
+dynamic else end except export exports external far file finalization finally
+for forward function goto if implementation in initialization inherited inline
+interface is label library message mod near nil not object of or out override
+packed pascal private procedure program property protected public published
+raise record register repeat resourcestring safecall set shl shr stdcall string
+then threadvar to try type unit until uses var virtual while with xor
+
+$KEYWORDS(kwb)=boolean char integer pointer real text
+true false cardinal longint byte word single double int64
+
+$KEYWORDS(kwc)=if else then downto do for repeat while to until with
+
+$KEYWORDS(kwd)=regex((\w+)\s*\()
+
+$STRINGDELIMITERS=" '
+
+$SL_COMMENT=//
+
+$ML_COMMENT={ } (* *)
+
+$IGNORECASE=true
+
+$SYMBOLS= ( ) [ ] , ; : & | < > !  = / * %  + - @ . ^
+
+$ESCCHAR=regex(\#\$\p{XDigit}{2}|\#\d{,3})
+
+$DIGIT=regex((?:0x|0X|\$)[0-9a-fA-F]+|\d*[\.\_]?\d+(?:[eE][\-\+]\d+)?[lLuUbfdm]*)
+
+$ALLOWEXTESCAPE=true
+
+$NESTED(asm)=regex(asm) regex(end;)

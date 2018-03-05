@@ -1,0 +1,47 @@
+# Python language definition file
+#
+# Author: Andre Simon
+#   Mail: andre.simon1@gmx.de
+#   Date: 12.3.2007
+# ------------------------------------------
+# This file is part of highlight, a free source code converter released under the GPL.
+#
+# The file is used to describe keywords and special symbols of programming languages.
+# See README in the highlight directory for details.
+#
+# New definition files for future releases of highlight are always appreciated ;)
+#
+# ----------
+# andre.simon1@gmx.de
+# http:/www.andre-simon.de/
+
+$DESCRIPTION=Python
+
+#keywords
+$KEYWORDS(kwa)= abstract and as AST break callable cast char class constructor 
+continue def destructor do elif else ensure enum event except failure
+final from for false get given goto if import in interface internal is isa not 
+null of or otherwise override namespace partial pass public protected 
+private raise ref retry return self set super static struct success transient 
+true try typeof unless virtual when while yield
+
+#macros
+$KEYWORDS(kwb)=print assert using lock debug
+ 
+#$KEYWORDS(kwc)=
+
+$KEYWORDS(kwd)=regex((\w+)\s*\()
+
+$STRINGDELIMITERS=""" ''' " '
+
+$RAWSTRINGPREFIX=r
+
+$SL_COMMENT=# //
+
+$ML_COMMENT=/* */
+
+$IGNORECASE=false
+
+$ESCCHAR=regex(\\\d{3}|\\x\p{XDigit}{2}|\\[ntvbrfa\\\?'"])
+
+$SYMBOLS= ( ) [ ] { } , ; . : & | < > !  = / * %  + - @
