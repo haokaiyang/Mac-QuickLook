@@ -1,0 +1,35 @@
+/* 
+   Style.css
+   QuickLookCSV
+
+   Created by Pascal Pfiffner on 03.07.09.
+   This sourcecode is released under the Apache License, Version 2.0
+   http://www.apache.org/licenses/LICENSE-2.0.html 
+ */
+
+body {
+	margin: 20px;
+	font: small normal 'Lucida Grande', 'Helvetica Neue', sans-serif;
+	background-color: rgb(242,242,242);
+}
+table {
+	min-width: 100%;
+	border: 1px solid rgb(170,170,170); border-collapse: separate; border-spacing: 0; -webkit-border-radius: 3px;
+	box-shadow: 0 1px 0 rgba(255,255,255,0.8);
+}
+tr { background-color:white; }
+td {
+	margin: 0; padding: 0.2em 0.4em;
+	vertical-align: top;
+	font-size: small;
+	border-left: 1px solid rgb(170,170,170);
+}
+td:first-child { border-left: none; }
+tr:first-child td:first-child { -webkit-border-top-left-radius: 3px; }
+tr:first-child td:last-child { -webkit-border-top-right-radius: 3px; }
+tr:last-child td:first-child { -webkit-border-bottom-left-radius: 3px; }
+tr:last-child td:last-child { -webkit-border-bottom-right-radius: 3px; }
+
+.file_info { margin:0.5em 2px; color:rgb(20,20,20); text-shadow:rgba(255,255,255,0.8) 0 1px 0; }
+.alt_row { background-color:rgb(230,230,230); }
+.truncated_rows { margin:0.5em 2px; color:rgb(20,20,20); text-shadow:rgba(255,255,255,0.8) 0 1px 0; }
