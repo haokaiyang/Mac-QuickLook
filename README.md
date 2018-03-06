@@ -35,23 +35,41 @@ Then, run `qlmanage -r reload QuickLook
 [QLVideo](https://github.com/Marginal/QLVideo)         | display thumbnails, static QuickLook previews, cover art and metadata for most types of video files | .asf, .avi, .flv, .mkv, .rm, .webm, .wmf |
 [QLAddict](https://github.com/tattali/QLAddict) | A QuickLook plugin that lets you view subtitles .srt files like Addic7ed.com on mac | .src |
 [QLCommonMark](https://github.com/digitalmoksha/QLCommonMark) |QuickLook generator for beautifully rendering CommonMark documents on macOS| markdown file |
+[qlplayground](https://github.com/inloop/qlplayground) | QuickLook generator for the Xcode Playgrounds |.playground|
 [QLPrettyPatch](https://github.com/atnan/QLPrettyPatch) |QuickLook generator for patch files | .patch |
 [QLFits](https://github.com/onekiloparsec/QLFits) | The macOS quicklook plugin for FITS files | .fits |
 [QLAnsilove](https://github.com/ansilove/QLAnsilove) | macOS QuickLook for ANSi, ASCii, and other Text-mode Art | ANSi (.ANS, .CIA, .ICE),Binary (.BIN),Artworx (.ADF),iCE Draw (.IDF),Xbin (.XB),PCBoard (.PCB),Tundra (.TND),ASCII (.ASC),Release info (.NFO),Description in zipfile (.DIZ),Membership in zipfile (.MEM) |
 [qlvega](https://github.com/invokesus/qlvega)| QuickLook Plugin for Vega and Vega-Lite | Vega and Vega-Lite files |
+[Krita-QuickLook](https://github.com/Algorithmus/Krita-QuickLook)| QuickLook Generator plugin for .kra and .ora files| .kra .ora|
+[pud-quicklook](https://github.com/war2/pud-quicklook)|QuickLook plugin for PUD files|.pud|
+[quicklook-pfm](https://github.com/lnxbil/quicklook-pfm)|Apple QuickLook Plugin for PPM, PGM, PFM and PBM files|PPM PFM PGM PBM|
+[ReceiptQuickLook](https://github.com/letiemble/ReceiptQuickLook)|A QuickLook plugin to inspect App Store receipts.| |
+[QuickLookR](https://github.com/hrbrmstr/QuickLookR)|macOS QuickLook plugin for R save(), saveRDS() & feather files|.rdata, .rda, .rds|
+[quicklook-gpx](https://github.com/vibrog/quicklook-gpx)|QuickLook plugin for GPX files|.gpx|
 [WebPQuickLook](https://github.com/emin/WebPQuickLook) | preview WebP image files | .webp |
 [ePub-quicklook](https://github.com/jaketmp/ePub-quicklook)| extract the cover images from EPUB files to use as the file icon, and present a nice overview of the EPUB in QuickLook | .epub |
+[qltext-jp](https://github.com/mzp/qltext-jp)|A quicklook plugin for Japanese text file(e.g. Shift JIS, EUC-JP, or UTF-8)| |
 [QuickNFO](https://github.com/planbnet/QuickNFO) | Quicklook Plugin for NFO files | .nfo |
 [QuickJSON](https://github.com/johan/QuickJSON) |  pretty-print (node.js style) JSON | .json |
 [quicklook-csv](https://github.com/p2/quicklook-csv)  | A QuickLook plugin for CSV files | csv |
 [FictionBook2QL](https://github.com/gonzoua/FictionBook2QL/) | QuickLook generator for FictionBook (fb2) e-book file format  | fb2 |
+[ipynb-quicklook](https://github.com/tuxu/ipynb-quicklook)|A Quick Look generator for Jupyter/IPython notebooks without further dependencies|.ipynb|
+[jupyter-notebook-quick-look](https://github.com/jendas1/jupyter-notebook-quick-look) |Preview jupyter notebooks in quick look.|.jupyter|
+[QLWaveForm](https://github.com/seagirl/QLWaveForm) | view waveforms of audio files |.wav|
 [QuickLookAPK](https://github.com/hezi/QuickLookAPK)| display Android packages informations| .apk |
+[GLTFQuickLook](https://github.com/magicien/GLTFQuickLook) | macOS QuickLook plugin for glTF files |glTF files. (.gltf/.glb)|
+[qlZipInfo](https://github.com/srirangav/qlZipInfo) |  A MacOSX QuickLook Generator for Zip and JAR files | .zip .jar|
+[QLNetcdf](https://github.com/tobeycarman/QLNetcdf) | A QuickLook Plugin for previewing NetCDF files. | .nc|
+[matlab-quicklook](https://github.com/jaketmp/matlab-quicklook) | A Mac OS X quicklook generator for MATLAB .mat workspace files.| .mat|
+[MikuMikuDanceQuickLook](https://github.com/magicien/MikuMikuDanceQuickLook)|macOS QuickLook plugin for MikuMikuDance files|.pmd |
+[qlImagePreviewWithSize](https://github.com/srirangav/qlImagePreviewWithSize)|QuickLook plugin for images that includes the image's size in the title bar| |
 [qlMoviePreview](https://github.com/Nyx0uf/qlMoviePreview) | QuickLook plugin to display movie thumbnail and video informations. Also create nice Finder icons from the thumbnail. | mkv |
 [qlwoff](https://github.com/Nyx0uf/qlwoff) | QuickLook plugin to preview Web Open Font Format files (woff) | woff |
 [ql-bbc4](https://github.com/simongregory/ql-bbc4)| Quicklook plugin for .bbc4 media archives | .bbc4 |
 [qlboxnote](https://github.com/louije/qlboxnote)| QuickLook previews generator plugin for .boxnote files. | .boxnote |
 [NDSQuickLook](https://github.com/gonzoua/NDSQuickLook) | Quick Look generator for Nintendo DS ROM images | image |
-[FGOutlook2011]() | Outlook 2011 for Mac plug-in, to view header message of type olk14Message. | 
+[FGOutlook2011]() | Outlook 2011 for Mac plug-in, to view header message of type olk14Message. |
+[quickgeojson](https://github.com/irees/quickgeojson) | QuickLook for GeoJSON | .geojson | 
 [Provisioning](https://github.com/chockenberry/Provisioning) | A Quick Look plug-in for .mobileprovision files | .mobileprovision |
 [Starcraft Replay QL](https://code.google.com/archive/p/sc2replay-ql/) | A Quick Look generator to read Starcraft II Replays | MPQ DDS |
 [ql-iff](https://github.com/dalton-tulou/ql-iff) | Quick Look plugin for viewing iff pictures | .iff |
@@ -65,7 +83,9 @@ Then, run `qlmanage -r reload QuickLook
 [QLEnscript](https://www.dribin.org/dave/blog/archives/2007/11/14/quick_look_enscript/) |preview source code files| Objective-C/C++ C/C++ Perl Python Java Shell scripts Assembly language source file|
 [HetimaClipping](http://hetima.com/soft/clippingql-e.html)|This is Cover Flow and Quick Look plugin for text clipping file (.textClipping). and picture clipping file (.pictClipping)| .textClipping, .pictClipping|
 [BrushViewQL](http://brushviewer.sourceforge.net/)|see the contents of Photoshop brush files | .abr |
-
+[D64QLPlugin](https://github.com/arcanelab/D64QLPlugin)| A D64/D71/D81 DiskImage QuickLook Plugin for Mac OS X | |
+[QuicklookDot](https://github.com/besi/quicklook-dot)|OSX QuickLook Plugin for Graphviz dot files|.dot|
+[QLVJ](https://github.com/lov/QLVJ)|Quicklook plugin for generating thumbnails via Quicktime| .mov, .qtz|
 
 
 
@@ -73,7 +93,9 @@ Then, run `qlmanage -r reload QuickLook
 | Name | descript | support file |
 | - | - | - |
 [Suspicious Package](http://www.mothersruin.com/software/SuspiciousPackage/)| Inspecting macOS Installer Packages) | .pkg |
+[QLXPlaneObj](https://github.com/Marginal/QLXPlaneObj) | display thumbnails and QuickLook previews for X-Plane 3D Object files |  .obj |
 [QLdds](https://github.com/Marginal/QLdds) | display thumbnails, QuickLook previews and metadata for "DirectDraw Surface" (DDS) texture files. | DirectX 8/9 DDS,DirectX 10 DDS extensions,Cubemaps |
+[QLWindowsApps](https://github.com/shysaur/QLWindowsApps)| QuickLook plugin for Windows DLLs and EXEs| .dll .exe|
 [quicklook-pat](https://github.com/pixelrowdies/quicklook-pat) | Quicklook plugin to view Adobe Photoshop pattern files in Apple's Finder application | .pat |
 [AssetCatalogTinkerer](https://github.com/insidegui/AssetCatalogTinkerer)|open .car files and browse/extract their images| .car |
 [phew](https://github.com/sveinbjornt/Phew)| FLIF image viewer and QuickLook plugin for macOS | FLIF|
@@ -81,4 +103,4 @@ Then, run `qlmanage -r reload QuickLook
 [ImageFolderQLGenerator](http://hasseg.org/imageFolderQLGenerator/)|This is a Quick Look Plugin (or Quick Look Generator) that creates thumbnails and previews for folders that contain image files| |
 [QLTorrent](http://technocrank.com/downloads/) |  isplays the contents of a metainfo “.torrent” file| .torrent |
 [quicklook-ipa](https://code.google.com/archive/p/quicklook-ipa/) |display iPhone / iPad / iPod Touch applications| |
-[DPX pictures]|displaying DPX pictures | |
+[DPX pictures]()|displaying DPX pictures | |

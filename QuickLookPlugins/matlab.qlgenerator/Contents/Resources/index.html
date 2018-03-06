@@ -1,0 +1,103 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+            
+            <title>MATLAB</title>
+            <meta name="description" content="MATLAB quicklook Template">
+                <meta name="author" content="Jake TM Pearce">
+                    
+                    <style type="text/css">
+                        /* <![CDATA[ */
+                        html {
+                            background: #111;
+                        }
+                        body {
+                            margin: 0px;
+                            font: 0.8em "Lucida Grande";
+                            color: #aaa;
+                            
+                            /* Disable scrollbars and ensure that the body fills the window */
+                            overflow: hidden;
+                            width: 100%;
+                            height: 100%;
+                        }
+                        div {
+                            margin: 0;
+                            padding: 0;
+                        }
+                        #header {
+                            /* Provide scrollbars if needed and fix the header dimensions */
+                            overflow: auto;
+                            position: absolute;
+                            width: 100%;
+                            height: 150px;
+                        }
+                        #main {
+                            /* Provide scrollbars if needed, position below header, and derive height from top/bottom */
+                            overflow: auto;
+                            position: absolute;
+                            width: 100%;
+                            top: 150px;
+                            bottom: 0;
+                        }
+                        #metadata {
+                            float: left;
+                            clear: both;
+                            width: 100%;
+                        }
+                        img.icon {
+                            margin-top:15px;
+                            margin-left: 20px;
+                            margin-right: 5%;
+                            margin-bottom: 20px;
+                            float: left;
+                        }
+                        th {
+                            background-color: #111;
+                            font-weight: bold;
+                            color: white;
+                            height: 20px;
+                            margin-top:3px;
+                        }
+                        .data_table {
+                            width:95%;
+                            margin: 0 1%;
+                            margin-left: 20px;
+                        }
+                        .colName, .colType, .colDim {
+                            text-align: left;
+                            background-color: #111;
+                        }
+                        .colName {
+                            width: 40%;
+                        }
+                        .colType, .colDim {
+                            width: 20%;
+                        }
+                        td.r {
+                            text-align:right;
+                        }
+                        /* ]]> */
+                        </style>
+                    
+    </head>
+    <div id="header">
+		<img class="icon" alt="Document Icon" src="%image%" height="128" width="128" />
+        
+		<table style="margin-top: 10px">
+	        <tr><td></td><td><h1>%name%</h1></td></tr>
+			<!--<tr><td class="r">%Path%:</td><td>%path%</td></tr> We don't really need the path - It's quicklook!-->
+			<tr><td class="r">%Size%:</td><td>%size%</td></tr>
+			<tr><td class="r">%Date_Modified%:</td><td>%time%</td></tr>
+			<tr><td class="r">%Number_of_Vars%:</td><td>%noVars%</td></tr>
+		</table>
+    </div>
+    <div id="main">
+        <table class="data_table">
+            <tr><th class="colName">%Name%</th><th class="colType">%Type%</th><th class="colDim">%Dimensions%</th></tr>
+            %table_data%
+        </table>
+    </div>
+    </body>
+</html>

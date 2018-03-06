@@ -1,0 +1,105 @@
+<html>
+    <head>
+        <title>QuickLook GeoJSON</title>
+        <link rel="stylesheet" href="cid:mapbox.v2.1.4.css" />
+        <style type="text/css">
+            html { height: 100% }
+            body { height: 100%; margin: 0; padding: 0;}
+            #map { height: 100% }
+            
+            /**
+             * in the mapbox CSS file we have references to the icon spritesheet, which
+             * needs to be rewritten to use the cid: prefix
+             */
+            .leaflet-control-zoom-out { background-image: url("cid:icons-000000@2x.png"); }
+            .leaflet-control-zoom-in {  background-image: url("cid:icons-000000@2x.png"); }
+        </style>
+        <script type="text/javascript" src="cid:mapbox.v2.1.4.js" ></script>
+        <script type="text/javascript" src="cid:leaflet-omnivore.min.js" ></script>
+    </head>
+    <body>
+        <div id="map"></div>
+        <script type="text/javascript">
+            
+        var geo_data = {{GEOJSON}};
+
+        //the MapBox JS API has a simplestyle module that exposes its defaults
+        //changing the defaults from grays to an off-red and making the stroke
+        //a bit thinner and opacity less
+        var defaults = L.mapbox.simplestyle.defaults;
+        defaults.fill = defaults.stroke = "#ff3c00";
+        defaults["stroke-width"] = 1;
+        defaults["fill-opacity"] = .3;
+
+
+        var styleFeature = function(feature) {
+            //point features will check for the simplestyle-spec styles of
+            //marker-color and marker-size. We can't use the MapBox simplestyle
+            //method, because that only supports line/poly data and doesn't take
+            //marker styles into account at all
+            if(feature.geometry.type == "Point") {
+                var radius = 4;
+                
+                if(feature.properties["marker-size"] !== undefined) {
+                    if(feature.properties["marker-size"] == "small") {
+                        radius = 2;
+                    }
+                    else if(feature.properties["marker-size"] == "large") {
+                        radius = 6;
+                    }
+                }
+                
+                return {
+                    radius: radius,
+                    color: feature.properties["marker-color"] !== undefined ? feature.properties["marker-color"] : "#ff7800",
+                    fillOpacity: 1,
+                    stroke: false
+                }
+            }
+            //for line/poly features we just rely on the simplestyle.style() method built into
+            //the MapBox JS API
+            else {
+                return L.mapbox.simplestyle.style(feature);
+            }
+        }
+        
+        // QuickLook isn't supposed to allow external resources,
+        // but amazingly it works!
+  		
+        var map = L.map('map');
+        L.tileLayer('https://{s}.tiles.mapbox.com/v3/{id}/{z}/{x}/{y}.png', {
+                    maxZoom: 18,
+                    attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, ' +
+                    '<a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, ' +
+                    'Imagery © <a href="http://mapbox.com">Mapbox</a>',
+                    id: 'examples.map-20v6611k'
+                    }).addTo(map);
+        var layer;
+        
+        // if dealing with topojson use the omnivore plugin for leaflet from mapbox
+        if(geo_data.type == "Topology") {
+            layer = omnivore.topojson.parse(geo_data);
+            layer.setStyle(L.mapbox.simplestyle.style);
+        }
+        // otherwise this is just geojson and we use leaflet's built-in geojson layer
+        //funny enough, the omnivore plugin doesn't have a geojson.parse method like
+        //it does for topojson
+        else {
+            layer = L.geoJson(geo_data, {
+                                style: styleFeature,
+                                pointToLayer: function (feature, latlng) {
+                                    return L.circleMarker(latlng, styleFeature(feature));
+                                }
+                              });
+        }
+        
+        layer.addTo(map);
+        
+        map.fitBounds(layer.getBounds());
+        </script>
+        
+    </body>
+</html>
+
+
+

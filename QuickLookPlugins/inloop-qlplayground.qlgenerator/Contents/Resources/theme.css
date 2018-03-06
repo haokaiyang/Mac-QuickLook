@@ -1,0 +1,289 @@
+/* apple-swift.css
+ * Emulates Apple Swift documentation syntax highlighting
+ * Contributed by Nate Cook
+ * http://natecook.com/code/swift-brush-for-syntaxhighlighter  */
+.syntaxhighlighter a, .syntaxhighlighter div, .syntaxhighlighter code,
+.syntaxhighlighter table caption {
+    -moz-border-radius: 0 0 0 0 !important;
+    -webkit-border-radius: 0 0 0 0 !important;
+    background: none !important;
+    border: 0 !important;
+    bottom: auto !important;
+    float: none !important;
+    height: auto !important;
+    left: auto !important;
+    line-height: 1.1em !important;
+    margin: 0 !important;
+    outline: 0 !important;
+    overflow: visible !important;
+    padding: 0 !important;
+    position: static !important;
+    right: auto !important;
+    text-align: left !important;
+    top: auto !important;
+    vertical-align: baseline !important;
+    width: auto !important;
+    box-sizing: content-box !important;
+    font-family: "Consolas", "Bitstream Vera Sans Mono", "Courier New", Courier, monospace !important;
+    font-weight: normal !important;
+    font-style: normal !important;
+    font-size: 1em !important;
+    min-height: inherit !important;
+    min-height: auto !important;
+}
+
+.syntaxhighlighter {
+    width: 100% !important;
+    margin: 1em 0 1em 0 !important;
+    position: relative !important;
+    overflow: auto !important;
+    font-size: 1em !important;
+}
+
+.syntaxhighlighter.source {
+    overflow: hidden !important;
+}
+
+.syntaxhighlighter .bold {
+    font-weight: bold !important;
+}
+
+.syntaxhighlighter .italic {
+    font-style: italic !important;
+}
+
+.syntaxhighlighter .line {
+    white-space: nowrap !important;
+}
+
+.syntaxhighlighter table {
+    width: 100% !important;
+}
+
+.syntaxhighlighter.show {
+    display: block !important;
+}
+
+.syntaxhighlighter.ie {
+    font-size: 0.9em !important;
+    padding: 1px 0 1px 0 !important;
+}
+
+.syntaxhighlighter.printing .line.alt1 .content, .syntaxhighlighter.printing .line.alt2 .content,
+.syntaxhighlighter.printing .line.highlighted .number, .syntaxhighlighter.printing .line.highlighted.alt1 .content,
+.syntaxhighlighter.printing .line.highlighted.alt2 .content {
+    background: none !important;
+}
+
+.syntaxhighlighter.printing .line .number {
+    color: #bbbbbb !important;
+}
+
+.syntaxhighlighter.printing .line .content {
+    color: black !important;
+}
+
+.syntaxhighlighter.printing .toolbar {
+    display: none !important;
+}
+
+.syntaxhighlighter.printing a {
+    text-decoration: none !important;
+}
+
+.syntaxhighlighter.printing .plain, .syntaxhighlighter.printing .plain a {
+    color: black !important;
+}
+
+.syntaxhighlighter.printing .comments, .syntaxhighlighter.printing .comments a {
+    color: #008200 !important;
+}
+
+.syntaxhighlighter.printing .string, .syntaxhighlighter.printing .string a {
+    color: blue !important;
+}
+
+.syntaxhighlighter.printing .keyword {
+    color: #006699 !important;
+    font-weight: bold !important;
+}
+
+.syntaxhighlighter.printing .preprocessor {
+    color: gray !important;
+}
+
+.syntaxhighlighter.printing .variable {
+    color: #aa7700 !important;
+}
+
+.syntaxhighlighter.printing .value {
+    color: #009900 !important;
+}
+
+.syntaxhighlighter.printing .functions {
+    color: deeppink !important;
+}
+
+.syntaxhighlighter.printing .constants {
+    color: #0066cc !important;
+}
+
+.syntaxhighlighter.printing .script {
+    font-weight: bold !important;
+}
+
+.syntaxhighlighter.printing .color1, .syntaxhighlighter.printing .color1 a {
+    color: gray !important;
+}
+
+.syntaxhighlighter.printing .color2, .syntaxhighlighter.printing .color2 a {
+    color: deeppink !important;
+}
+
+.syntaxhighlighter.printing .color3, .syntaxhighlighter.printing .color3 a {
+    color: red !important;
+}
+
+.syntaxhighlighter.printing .break, .syntaxhighlighter.printing .break a {
+    color: black !important;
+}
+
+.syntaxhighlighter {
+    background-color: white !important;
+}
+
+.syntaxhighlighter .line.alt1 {
+    background-color: white !important;
+}
+
+.syntaxhighlighter .line.alt2 {
+    background-color: white !important;
+}
+
+.syntaxhighlighter .line.highlighted.alt1, .syntaxhighlighter .line.highlighted.alt2 {
+    background-color: #e9e9e9 !important;
+}
+
+.syntaxhighlighter .line.highlighted.number {
+    color: white !important;
+}
+
+.syntaxhighlighter table caption {
+    color: #353535 !important;
+}
+
+.syntaxhighlighter table td.code .container textarea {
+    background: white;
+    color: black;
+}
+
+.syntaxhighlighter .gutter {
+    color: grey !important;
+}
+
+.syntaxhighlighter .gutter .line {
+    border-right: none !important;
+}
+
+.syntaxhighlighter .gutter .line.highlighted {
+    background-color: #6ce26c !important;
+    color: white !important;
+}
+
+.syntaxhighlighter.printing .line .content {
+    border: none !important;
+}
+
+.syntaxhighlighter .plain, .syntaxhighlighter .plain a {
+    color: black !important;
+}
+
+.syntaxhighlighter .comments, .syntaxhighlighter .comments a {
+    color: #008312 !important;
+}
+
+.syntaxhighlighter .string, .syntaxhighlighter .string a {
+    color: #c41a16 !important;
+}
+
+.syntaxhighlighter .keyword {
+    color: #b833a1 !important;
+}
+
+.syntaxhighlighter .preprocessor {
+    color: grey !important;
+}
+
+.syntaxhighlighter .variable {
+    color: #508187 !important;
+}
+
+.syntaxhighlighter .value {
+    color: #1c00cf !important;
+}
+
+.syntaxhighlighter .functions {
+    color: deeppink !important;
+}
+
+.syntaxhighlighter .constants {
+    color: #0066cc !important;
+}
+
+.syntaxhighlighter .output {
+    color: #000000 !important;
+    font-weight: bold !important;
+}
+
+.syntaxhighlighter .script {
+    font-weight: bold !important;
+    color: #b833a1 !important;
+    background-color: none !important;
+}
+
+.syntaxhighlighter .color1, .syntaxhighlighter .color1 a {
+    color: #b833a1 !important;
+}
+
+.syntaxhighlighter .color2, .syntaxhighlighter .color2 a {
+    color: #6f41a7 !important;
+}
+
+.syntaxhighlighter .color3, .syntaxhighlighter .color3 a {
+    color: red !important;
+}
+
+.syntaxhighlighter {
+    font-size: 0.75em !important;
+}
+
+.syntaxhighlighter a, .syntaxhighlighter div, .syntaxhighlighter code,
+.syntaxhighlighter table, .syntaxhighlighter table td, .syntaxhighlighter table tr,
+.syntaxhighlighter table tbody, .syntaxhighlighter table thead, .syntaxhighlighter table caption,
+.syntaxhighlighter textarea {
+    font-family: Menlo, Consolas, monospace !important;
+}
+
+.syntaxhighlighter table td.gutter .line {
+    text-align: right !important;
+    padding: 0.2em 0.5em !important;
+}
+
+.syntaxhighlighter table td.code .line {
+    padding: 0.2em 1em !important;
+}
+
+.syntaxhighlighter table td.code .container textarea {
+    padding-top: 0 !important;
+    line-height: 1.35em !important;
+}
+
+.syntaxhighlighter .gutter .line {
+    background: #f3f2f1 !important;
+}
+
+.syntaxhighlighter .gutter .line.highlighted {
+    background-color: #898989 !important;
+    color: white !important;
+}
+

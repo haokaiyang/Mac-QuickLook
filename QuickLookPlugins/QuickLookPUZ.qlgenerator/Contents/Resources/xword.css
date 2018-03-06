@@ -1,0 +1,47 @@
+body { width: 700px; height: 400px; margin: 0 auto; font-family: "arial"; }
+
+div.circle { width: 200px; height: 200px; border-radius: 50%; border: 20px solid red; }
+div.slash { width: 218px; border: 10px solid red; transform: translate(-18px, -100px) rotate(-45deg); -webkit-transform: translate(-18px, -100px) rotate(-45deg); }
+#error { position: absolute; top: 0; bottom: 0; left: 0; right: 0; margin: auto; padding-top: 15%; text-align: center; }
+#nosymbol { display: inline-block; text-align: center; }
+#boarderror { display: inline-block; margin-top: 18px; text-align: center; }
+#boarderror td { width: 8px; height: 8px; text-align: center; }
+table.board, .board td { border: 1px solid black; border-collapse: collapse; background-color: white; }
+td.black { background-color: black; }
+
+#header p { display: inline-block; margin: 0 0; padding-top: 1em; }
+#title { float: left; font-size: 12px; }
+#copyright { padding: 0 4em; text-align: center; }
+#author { float: right; font-size: 12px; }
+#notes { padding: 5px 5px; text-align: justify; font-size: 10px; border: 1px solid black; }
+
+#puzzle { display: inline; }
+#section1 { float: left; width: 40%; column-count: 2; -webkit-column-count: 2; }
+#section2 { position: relative; float: right; width: 59%; }
+#section3 { position: relative; float: right; padding-top: 10px; width: 59%; column-count: 3; -webkit-column-count: 3; }
+
+#board { float: right; }
+#input { float: right; }
+
+table.board, .board td { position: relative; border: 1px solid black; border-collapse: collapse; background-color: white; }
+td.black { background-color: black; }
+td.shaded { background-color: #bbbbbb; }
+td div.circle { width: 94%; height: 97%; border-radius: 50%; border: 1px solid black; }
+
+.board td { width: 1.5em; height: 1.5em; }
+.board21 td { width: 1em; height: 1em; }
+.board22 td { width: .9em; height: .9em; }
+
+.board .number { position: absolute; left: 0; top: 1px; margin-left: 2px; font-size: .1em; }
+.board .answers, .board .solution { position: absolute; left: 10px; top: 7px; font-size: 1em; }
+
+.board21 .number { position: absolute; left: 0; top: 0; margin-left: 1px; font-size: .1em; }
+.board21 .answers, .board21 .solution { position: absolute; left: 5px; top: 4px; font-size: .8em; }
+
+.board22 .number { position: absolute; left: 0; top: 0; margin-left: 1px; font-size: .1em; }
+.board22 .answers, .board22 .solution { position: absolute; left: 5px; top: 3px; font-size: .8em; }
+
+.clues { font-size: 12px; }
+.cluesheader { padding: 10px 15px; font-weight: bold; }
+.cluenumber { vertical-align: top; text-align: right; padding: 0 5px; font-weight: bold; }
+.clue { vertical-align: top; }
