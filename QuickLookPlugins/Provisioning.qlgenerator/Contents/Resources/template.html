@@ -1,0 +1,281 @@
+<html>
+	<head>
+		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+		<meta http-equiv="Content-Language" content="en-us" />
+		<style>
+		body {
+			font-family: HelveticaNeue, sans-serif;
+			margin: 0.5em;
+		}
+		pre {
+			font-family: SourceCodePro, AndaleMono, Courier;
+		}
+		a {
+			color: #0087d4;
+			text-decoration: none;
+		}
+
+		div.container {
+			width: auto;
+			margin: 0 0 0.5em 0;
+			border-radius: 3px;
+			border: 1px solid #ddd;
+			background-color: #eee;
+		}
+		div.last {
+			margin: 0;
+		}
+		div.label {
+			font-weight: normal;
+			font-family: HelveticaNeue;
+		}
+		div.header {
+			padding: 0.5em;
+			border-radius: 3px 3px 0 0;
+			background-color: #ddd;
+		}
+		div.header > div.label {
+		}
+		div.section {
+			padding: 0.5em;
+		}
+		div.section > div.label {
+			color: #aaa;
+		}
+		div.divider {
+			border-top: 1px solid #ddd;
+		}
+		div.item {
+			float: left;
+		}
+		div.detail {
+			width: auto;
+			text-align: right;
+			color: #666;
+		}
+		div.data {
+			font-family: SourceCodePro, AndaleMono, Courier;
+		}
+		div.data > pre {
+			margin: 0;
+			font-size: 0.9em;
+		}
+		div.data > table {
+			font-size: 0.9em;
+			border-collapse: collapse;
+		}
+		div.data > table > tbody {
+		}
+		div.data > table > tbody > tr > td {
+			margin: 0em;
+			padding: 0.25em 0.5em 0.25em 0.5em;
+		}
+		div.data > table > tbody > tr > td.divider {
+			border-left: 1px solid #aaa;
+		}
+		div.data > table > tbody > tr.even {
+			background-color: #ddd;
+		}
+		div.summary {
+			color: #aaa;
+		}
+		div.summary > a {
+			color: #6aa1d3;
+		}
+
+		div#provision_info > div.header {
+			font-weight: bold;
+		}
+		div#provision_info > div.section#creation {
+			padding-bottom: 0.1em;
+		}
+		div#provision_info > div.section#expiration {
+			padding-top: 0.1em;
+		}
+		div#provision_info > div.header > div.label {
+			font-weight: bold;
+			float: left;
+		}
+		div#devices > div.header > div.label {
+			float: left;
+		}
+		div#devices > div.section {
+			overflow: auto;
+		}
+		div#devices > div.section > div.data {
+			float: left;
+		}
+		div#devices > div.header > div.label {
+			float: left;
+		}
+		div#certificates > div.header > div.label {
+			float: left;
+		}
+		div#certificates > div.section > div.data {
+			font-family: HelveticaNeue, sans-serif;
+		}
+		div#certificates > div.section > div.data > table {
+			font-size: 1em;
+		}
+		div#ad > div.section {
+			color: #999;
+		}
+		div#ad > div.header {
+			color: #999;
+		}
+
+		span.error {
+			color: #9a0003;
+		}
+		span.warning {
+			color: #daa520;
+		}
+
+		div#provision_info > div.debug  {
+			color:red;
+		}
+		
+		div.container
+/*
+		div.label {
+			outline: 1px solid purple;
+		}
+		div.item {
+			outline: 1px solid blue;
+		}
+		div.detail {
+			outline: 1px solid orange;
+		}
+		div.help {
+			outline: 1px solid green;
+		}
+		div.section {
+			outline: 1px solid cyan;
+		}
+		div.summary {
+			outline: 1px solid brown;
+		}
+		div.data {
+			outline: 1px solid gray;
+		}
+ */
+
+		</style>
+		<script>
+			function toggleDetails() {
+				var buttonElement = document.getElementById('toggle_button')
+				var helpElement = document.getElementById('raw_help');
+				var dataElement = document.getElementById('raw_data');
+				if (dataElement.style.display == 'none') {
+					dataElement.style.display = 'block';
+					helpElement.style.display = 'none';
+					buttonElement.innerHTML = 'Hide';
+				}
+				else {
+					dataElement.style.display = 'none';
+					helpElement.style.display = 'block ';
+					buttonElement.innerHTML = 'Show';
+				}
+			}
+		</script>
+	</head>
+	<body>
+		<div class="container" id="provision_info">
+			<div class="header __DEBUG__">
+				<div class="label" id="name">__Name__</div>
+				<div class="detail" id="uuid">__UUID__</div>
+			</div>
+			<div class="section" id="creation">
+				<div class="item" id="creation_summary">__CreationSummary__</div>
+				<div class="detail" id="creation_date">__CreationDateFormatted__</div>
+			</div>
+			<div class="section" id="expiration">
+				<div class="item" id="expiration_summary">__ExpirationSummary__</div>
+				<div class="detail" id="expiration_date">__ExpirationDateFormatted__</div>
+			</div>
+			<div class="section" id="file">
+				<div class="label">File Information</div>
+				<div class="item" id="file_info">__FileName__</div>
+				<div class="detail" id="file_description">__FileInfo__</div>
+			</div>
+			<div class="section" id="type">
+				<div class="label">Profile Type</div>
+				<div class="item" id="profile_type_label">__ProfilePlatform__ __ProfileType__</div>
+				<div class="detail" id="profile_type_description">Check <a href="https://developer.apple.com/account/__Platform__/profile/profileList.action">Provisioning Profiles in Dev Center</a></div>
+			</div>
+			<div class="section" id="team">
+				<div class="label">Team Name and ID</div>
+				<div class="item" id="team_name">__TeamName__ (__TeamIds__)</div>
+				<div class="detail">Check <a href="https://developer.apple.com/membercenter/index.action#accountSummary">Your Account in Member Center</a></div>
+			</div>
+			<div class="section" id="app">
+				<div class="label">App Name and ID</div>
+				<div class="item">__AppIDName__ (__AppIds__)</div>
+				<div class="detail">Check <a href="https://developer.apple.com/account/__Platform__/identifiers/bundle/bundleList.action">Identifiers in Dev Center</a></div>
+			</div>
+		</div>
+
+		<div class="container" id="devices">
+			<div class="header">
+				<div class="label">Provisioned Devices</div>
+				<div class="detail">Update <a href="https://developer.apple.com/account/__Platform__/device/deviceList.action">Devices in Dev Center</a></div>
+			</div>
+			<div class="section">
+				<div class="summary">Your device UDID must be included in this list before it can run an app built with this profile.</div>
+			</div>
+			<div class="section divider">
+				<div class="data">__ProvisionedDevicesFormatted__</div>
+				<div class="detail">__ProvisionedDevicesCount__</div>
+			</div>
+		</div>
+
+		<div class="container" id="certificates">
+			<div class="header">
+				<div class="label">Developer Certificates</div>
+				<div class="detail">Update <a href="https://developer.apple.com/account/__Platform__/certificate/certificateList.action">Certificates in Dev Center</a></div>
+			</div>
+			<div class="section">
+				<div class="summary">One of the certificates in this list must be in your keychain before Xcode can build and sign an app with this profile.</div>
+			</div>
+			<div class="section divider">
+				<div class="data">__DeveloperCertificatesFormatted__</div>
+			</div>
+		</div>
+
+		<div class="container" id="entitlements">
+			<div class="header">
+				<div class="label">Entitlements</div>
+			</div>
+			<div class="section">
+				<div class="data">__EntitlementsFormatted__</div>
+			</div>
+		</div>
+
+		<a id="toggle"></a>
+
+		<div class="container" id="data">
+			<div class="header">
+				<div class="item">Raw Data</div>
+				<div class="detail"><a href="#toggle" onclick="toggleDetails();" id="toggle_button">Show</a></div>
+			</div>
+			<div class="section" id="raw_help">
+				<div class="summary">Want to copy text from this Quick Look preview? <a href="http://www.macworld.com/article/1164668/select_and_copy_text_within_quick_look_previews.html">Follow these instructions</a>.</div>
+			</div>
+			<div class="section divider" id="raw_data" style="display: none;">
+				<div class="data">__RawData__</div>
+			</div>
+		</div>
+
+		<div class="container last" id="ad">
+			<div class="header">
+				<div class="label">Provisioning Quick Look Generator • Version __BundleVersion__</div>
+			</div>
+			<div class="section">
+				<div class="summary">This software is brought to you by <a href="http://iconfactory.com">The Iconfactory</a>. We do <a href="http://design.iconfactory.com">design work for many successful apps</a> and would love to help with yours. And if you find this tool useful, just wait until you <a href="http://xscopeapp.com">check out xScope!</a></div>
+			</div>
+		</div>
+
+		<div>
+		</div>
+	</body>
+</html>

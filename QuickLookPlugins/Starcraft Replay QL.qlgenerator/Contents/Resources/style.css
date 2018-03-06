@@ -1,0 +1,188 @@
+html, body {
+	font-family: Eurostile, "Lucida Grande";
+	font-size: 14pt;
+	line-height: 16pt;
+	background-color: rgba(0,0,0,0);
+	border: none;
+}
+
+h1 {
+	margin: 20px 0px 10px 10px;
+	font-weight: bold;
+	font-size: 20pt;
+}
+
+h2 {
+	font-weight: bold;
+	font-size: 16pt;
+	text-align: center;
+}
+
+.bnetlink {
+	float: right;
+	padding: 1pt;
+	margin: 4pt 10pt 0pt 0pt;
+	width: 14pt;
+	height: 14pt;
+}
+
+a.bnetlink {
+	-webkit-transition-property: width;
+	overflow: hidden;
+}
+
+span.bnetlink {
+	color: #888;
+	font-size: 14pt;
+	text-align: center;
+	opacity: 0.5;
+}
+
+.bnetlink > img {
+	width: 14pt;
+	height: 14pt;
+	opacity: 0.5;
+}
+
+.team {
+	width: 200px;
+	float: left;
+}
+
+.team-players {
+	list-style-type: none;
+	padding: 5px;
+}
+
+.team li {
+	clear: right;
+	height: 20pt;
+	padding: 2pt 0pt;
+	margin: -4pt 0pt;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+}
+
+.race-icon {
+	width: 20pt;
+	height: 20pt;
+	display: inline-block;
+	background-color: #000;
+	margin-bottom: -4pt;
+	-webkit-mask-repeat: no-repeat;
+	-webkit-mask-size: 20pt;
+	-webkit-mask-position: 0px 50%;
+}
+
+#map-preview-container {
+	float: left;
+	margin: 10px;
+	width: 256px;
+	text-align: center;
+}
+
+#map-preview {
+	width: %upx;
+	height: %upx;
+	margin-left: %upx;
+	margin-top: %upx;
+	display: block; 
+}
+
+#duration::before {
+	font-size: 18pt;
+	content: "⌛ ";
+}
+
+.panel {
+	overflow: hidden;
+}
+
+#panel-list {
+	list-style-type: none;
+	margin: 0px;
+	padding: 0px;
+	float: right;
+}
+
+#panel-list > li {
+	display: inline-block;
+	padding: 0px;
+	margin: 0px;
+	border: 1px #9a9a9a solid;
+	margin-left: -8px;
+}
+
+#panel-list > li:first-child {
+	border-top-left-radius: 5px;
+	border-bottom-left-radius: 5px;
+}
+
+#panel-list > li:last-child {
+	border-top-right-radius: 5px;
+	border-bottom-right-radius: 5px;
+}
+
+#panel-list > li > a {
+	display: inline-block;
+	padding: 2px 15px;
+	
+	cursor: pointer;
+	text-decoration: none;
+	color: black;
+	
+	background-image: -webkit-gradient(
+		linear,
+		left top,
+		left bottom,
+		color-stop(0.5, white),
+		color-stop(0.5, #ededed));
+}
+
+#panel-list > li > a:active {
+	background-image: -webkit-gradient(
+		linear,
+		left top,
+		left bottom,
+		color-stop(0, #e0e0e0),
+		color-stop(0.5, #d5d5d5),
+		color-stop(0.5, #cfcfcf),
+		color-stop(1, #d5d5d5));
+}
+
+#panel-list > li > a.selected {
+	text-shadow: 0px 1px 1px #fff;
+	
+	background-image: -webkit-gradient(
+		linear,
+		left top,
+		left bottom,
+		color-stop(0, #707070),
+		color-stop(0.25, #8f8f8f),
+		color-stop(0.75, #8f8f8f),
+		color-stop(1, #a4a4a4));
+}
+
+#chatlog {
+	display: table;
+}
+
+.chat-log-row {
+	display: table-row;
+	text-shadow: 0px 1px 1px rgba(0,0,0, 0.5);
+}
+
+.chat-log-row:nth-child(odd) {
+	background-color: rgba(0,0,0, 0.1);
+}
+
+.chat-log-cell {
+	display: table-cell;
+	padding: 0px 5px;
+}
+
+.prelude {
+	text-align: right;
+	width: 160px;
+}

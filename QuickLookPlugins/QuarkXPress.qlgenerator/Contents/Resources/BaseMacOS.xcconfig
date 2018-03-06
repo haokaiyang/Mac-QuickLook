@@ -1,0 +1,53 @@
+//
+// BaseMacOS.xcconfig
+//
+// Common Settings MacOS Target.
+//
+// (c) 1986 - 2011 Quark Software Inc.
+// All rights reserved.
+//
+
+EFFECTIVE_PLATFORM_NAME = MacOS
+
+ALWAYS_SEARCH_USER_PATHS = NO
+HEADER_SEARCH_PATHS = $(SDK_HEADERS) $(CORE_HEADERS) $(PROJECT_DIR)/src
+LIBRARY_SEARCH_PATHS = $(SDK_BINS)/** $(LEGACY_BIN) $(SDK_DLLs)
+FRAMEWORK_SEARCH_PATHS = $(SDK_FRAMEWORKS)
+
+SDKROOT = macosx10.11
+
+ARCHS = $(ARCHS_STANDARD_64_BIT) // Architectures
+ONLY_ACTIVE_ARCH = NO  // Build Active Architecture Only
+MACOSX_DEPLOYMENT_TARGET = 10.9 // Targeting Mavericks and above
+
+// Language
+GCC_VERSION = com.apple.compilers.llvm.clang.1_0
+GCC_C_LANGUAGE_STANDARD = c99
+GCC_WARN_UNUSED_VARIABLE = YES
+
+GCC_ENABLE_FIX_AND_CONTINUE = NO
+PREBINDING = NO
+
+// Warnings
+GCC_WARN_64_TO_32_BIT_CONVERSION = YES
+GCC_WARN_ABOUT_RETURN_TYPE = YES
+GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES
+GCC_WARN_INITIALIZER_NOT_FULLY_BRACKETED = NO
+GCC_WARN_ABOUT_DEPRECATED_FUNCTIONS = NO;
+GCC_TREAT_WARNINGS_AS_ERRORS = YES;
+
+GCC_PRECOMPILE_PREFIX_HEADER = YES
+GCC_PREFIX_HEADER = src/precompile.h
+
+WARNING_CFLAGS = -Wno-shift-negative-value
+
+// NAME_SUFFIX for legacy naming convention
+Debug_NAME_SUFFIX = .XC.d
+Release_NAME_SUFFIX = .XC.r
+NAME_SUFFIX = $($(CONFIGURATION)_NAME_SUFFIX)
+
+PRODUCT_NAME = $(PROJECT_NAME)
+
+// Default settings conflicts with Boost library, so set to 10.7 defaults
+CLANG_CXX_LIBRARY = libstdc++
+

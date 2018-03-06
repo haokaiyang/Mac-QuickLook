@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<title>StarCraft 2 Replay</title>
+	<link rel="stylesheet" type="text/css" href="cid:style.css"/>
+	<script type="text/javascript" src="cid:jquery-1.7.min.js"/>
+	<script type="text/javascript" src="cid:support.js"/>
+</head>
+<body>
+	<ul id="panel-list">
+		<li><a href="#" class="panel-button selected" data-panel="overview">Overview</a></li>
+		<li><a href="#" class="panel-button" data-panel="chatlog">Chat Log</a></li>
+	</ul>
+	<h1>%@</h1>
+	<div id="data-display">
+		<div class="panel" id="overview">
+			<div id="map-preview-container">
+				<img src="cid:preview.png" id="map-preview" alt="Map Preview"/>
+				<span id="duration">%@</span>
+			</div>
+			<div id="teams">
+				%@
+			</div>
+		</div>
+		<div class="panel" id="chatlog">
+			%@
+		</div>
+	</div>
+</body>
+</html>

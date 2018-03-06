@@ -1,0 +1,150 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+    "http://www.w3.org/TR/html4/strict.dtd">
+
+<html>
+<head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+<style type="text/css" media="screen">
+        html,body{
+            margin:0;
+            padding:0;
+        }
+        html{
+            background-color:rgb(11%,11%,11%);
+            color:#ccc;
+        }
+        #title{
+	background:#111;
+	color:#666;
+	padding-bottom:0.2em;
+	margin-bottom:1em;
+        }
+
+      #main{
+            clear:both;
+            border:0;
+            width:40em;
+            margin-left:auto;
+            margin-right:auto;
+        }
+      #size{
+            width:7em;
+        }
+        .odd{
+            background:#222;
+        }
+        .even{
+            background:#333;
+        }
+    #title #from p strong {
+	color: #999;
+	font-family: Verdana, Geneva, sans-serif;
+	padding:0.2em;
+	padding-left:1em;
+ 	
+}
+
+    #title #to p strong {
+	color: #999;
+	font-family: Verdana, Geneva, sans-serif;
+	padding:0.2em;
+	padding-left:1em;
+ 	
+}
+
+    #title #cc p strong {
+	color: #999;
+	font-family: Verdana, Geneva, sans-serif;
+	padding:0.2em;
+	padding-left:1em;
+ 	
+}
+
+
+
+    #title #daterec p strong {
+	color: #999;
+	font-family: Verdana, Geneva, sans-serif;
+	padding:0.2em;
+	padding-left:1em;
+ 	
+}
+
+    #title #datesent p strong {
+	color: #999;
+	font-family: Verdana, Geneva, sans-serif;
+	padding:0.2em;
+	padding-left:1em;
+ 	
+}
+
+
+    #title #priority p strong {
+	color: #999;
+	font-family: Verdana, Geneva, sans-serif;
+	padding:0.2em;
+	padding-left:1em;
+ 	
+}
+
+
+#title #subjectname h2 strong {
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: large;
+	color: #999;
+	padding:0.2em;
+	padding-left:1em;
+}
+
+
+textarea
+{
+    width:100%;
+	  background-color:rgb(0%,0%,0%);
+	  color:#ccc;
+	  border:0px solid #999999;
+}
+.textwrapper
+{
+    border:1px solid #999999;
+    margin:5px 0px;
+		padding:0.2em;
+	padding-left:1em;
+	padding-right:1em;
+	 background-color:rgb(0%,0%,0%);
+
+  //  padding:3px;
+}
+
+</style>
+    <head>
+<body>
+    <div id="title">
+        <div id="subjectname">
+            <h2><strong>Title</strong> {SUBJECT_NAME}</h2>
+</div>
+        <div id="from"><p><strong>From</strong> {FROM_INFO}<br>
+        </div>
+        <div id="to">
+          <p><strong>To</strong> {TO_INFO}<br>
+        </div>
+        <div id="cc">
+            <p><strong>cc </strong>{CC_INFO}<br>
+        </div>
+        <div id="daterec">
+            <p><strong>Received date</strong> {DATE_REC}<br>
+        <div id="datesent">
+            <p><strong>Sent date</strong> {DATE_SENT}<br>
+        </div>
+        <div class="textwrapper">
+        <label for="messagebody" id="messagebodyLabel"><h2><strong>Message</strong></label>
+        {BODY_MSG} 
+        </div>
+        
+    <table id="main">
+      <tr><th>Attachments</th></tr>
+      <tr><th>{ATTACH_FILES}</th></tr>
+        
+</table>
+</body>
+</html>
