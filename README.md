@@ -12,7 +12,7 @@
 - install : Move the downloaded .qlgenerator file to `~/Library/QuickLook` (only for yourself) or `/Library/QuickLook` (for everyone)
 - uninstall : Open `/Library/QuickLook` ,remove package
 
-Then, run `qlmanage -r reload QuickLook
+Then, run `qlmanage -r` reload QuickLook
 
 ## Plugins
 
