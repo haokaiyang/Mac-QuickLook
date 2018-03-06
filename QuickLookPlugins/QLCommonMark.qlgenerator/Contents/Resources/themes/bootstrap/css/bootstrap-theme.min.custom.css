@@ -1,0 +1,163 @@
+/*!
+ * Copyright 2017 digitalMoksha LLC
+ */
+
+/* Override Styles for this Theme */
+
+h2 {
+  border-bottom: 1px solid #ccc;
+}
+
+.table tbody {
+  border-top: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+}
+
+.markdown_note pre {
+  color:#333;
+  /*background-color: #fcfcfc;*/
+  /*border: 1px solid #ddd;*/
+  border: 1px solid rgba(174, 175, 5, 0.47);
+  border-radius: 4px;
+  background-color: rgba(249, 243, 24, 0.06);
+  margin-top: 10px;
+}
+
+.markdown_note pre[class*="language-"] {
+  background-color: rgba(249, 243, 24, 0.06);
+}
+
+.markdown_note pre::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+
+.code_note pre {
+  background-color: transparent;
+  border: none;
+}
+
+/* Track */
+.markdown_note pre::-webkit-scrollbar-track {
+  /*-webkit-box-shadow: inset 0 0 1px rgba(0,0,0,0.2); */
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+}
+ 
+/* Handle */
+.markdown_note pre::-webkit-scrollbar-thumb {
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+  /*background: rgba(51, 122, 183, 0.7);*/
+  background: rgba(0, 0, 0, 0.2);
+  /*-webkit-box-shadow: inset 0 0 1px rgba(0,0,0,0.5); */
+}
+.markdown_note pre:hover::-webkit-scrollbar-thumb {
+  /*background: rgba(108, 0, 0, 0.7);*/
+  background: rgba(108, 98, 0, 0.7);
+}
+.markdown_note pre::-webkit-scrollbar-thumb:window-inactive {
+  background: rgba(193, 194, 194, 0.3);
+}
+
+.left_note, .right_note {
+  border: 1px solid #ddd;
+  -moz-box-shadow: 0 0 11px rgba(139, 139, 139, 0.16);
+  box-shadow: 0 0 11px rgba(139, 139, 139, 0.16);
+}
+
+.left_note:hover, .right_note:hover,
+.note_title:hover + .left_note, .note_title:hover + .right_note {
+  border: 1px solid rgba(24, 99, 217, 0.3);
+  -moz-box-shadow: 0 0 11px rgba(9, 103, 234, 0.29);
+  box-shadow: 0 0 11px rgba(9, 103, 234, 0.29);
+}
+
+
+.example {
+  -moz-box-shadow: inset 0 1px 0px  rgba(230, 185, 66, 0.30), inset 0 -1px 0 rgba(230, 185, 66, 0.30);
+  box-shadow: inset 0 1px 0px  rgba(230, 185, 66, 0.30), inset 0 -1px 0 rgba(230, 185, 66, 0.30);
+  border-top: 1px solid rgba(254, 230, 119, 0.65);
+  border-bottom: 1px solid rgba(254, 230, 119, 0.65);
+  background-color: rgba(254, 238, 166, 0.06);
+}
+
+/* from Bootstrap */
+@media print {
+  *,
+  *:before,
+  *:after {
+/*    background: transparent !important;*/
+/*    color: #000 !important;*/
+    -webkit-box-shadow: none !important;
+            box-shadow: none !important;
+    text-shadow: none !important;
+  }
+/*  a,
+  a:visited {
+    text-decoration: underline;
+  }*/
+/*  a[href]:after {
+    content: " (" attr(href) ")";
+  }*/
+/*  abbr[title]:after {
+    content: " (" attr(title) ")";
+  }*/
+/*  a[href^="#"]:after,
+  a[href^="javascript:"]:after {
+    content: "";
+  }*/
+  pre,
+  blockquote {
+    border: 1px solid #999;
+    page-break-inside: avoid;
+  }
+  thead {
+    display: table-header-group;
+  }
+  tr,
+  img {
+    page-break-inside: avoid;
+  }
+  img {
+    max-width: 100% !important;
+  }
+  p,
+  h2,
+  h3 {
+    orphans: 3;
+    widows: 3;
+  }
+  h2,
+  h3 {
+    page-break-after: avoid;
+  }
+  .navbar {
+    display: none;
+  }
+  .btn > .caret,
+  .dropup > .btn > .caret {
+    border-top-color: #000 !important;
+  }
+  .label {
+    border: 1px solid #000;
+  }
+  .table {
+    border-collapse: collapse !important;
+  }
+  .table td,
+  .table th {
+    background-color: #fff !important;
+  }
+  .table-bordered th,
+  .table-bordered td {
+    border: 1px solid #ddd !important;
+  }
+}
+
+@media print {
+  blockquote, pre {
+    border: none;
+    border-left: 5px solid #eee;
+  }
+}

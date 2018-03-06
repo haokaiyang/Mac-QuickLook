@@ -1,0 +1,239 @@
+/*!
+ * Copyright 2017 digitalMoksha LLC
+ */
+
+/* Override Styles for all themes */
+
+body.multi_note {
+  background-color: #fbfbfb;
+}
+
+.single_note { margin: 15px; }
+
+h1 {
+  font: 28px "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+  font-weight: 300;
+  padding-bottom: 9px;
+  margin: 30px 0 20px;
+  /*border-bottom: 1px solid #eee*/
+}
+
+h2 {
+  font: 22px "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+  font-weight: 300;
+  padding-bottom: 5px;
+  margin: 25px 0 18px;
+}
+
+h3 {
+  font: 18px "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+  font-weight: 400;
+  padding-bottom: 9px;
+  margin: 20px 0 10px;
+}
+
+h4 {
+  font: 16px "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+  font-weight: 500;
+  padding-bottom: 9px;
+  margin: 20px 0 10px;
+}
+
+
+ul ul, ol ul {
+  list-style: square;
+  padding-left: 15px;
+}
+
+ol li, ul li { margin-bottom: 5px; }
+li ul { margin-top: 5px; }
+
+.task_item {
+  list-style: none;
+  margin-left: -21px;
+}
+
+li.task_item ul { margin-left: 23px; }
+.task_item p { margin-left: 23px; }
+
+.checkbox label::before, .checkbox label::after { margin-top: 1px; }
+.checkbox label { padding-left: 2px; }
+.checkbox label::before {
+  width: 16px;
+  height: 16px;
+}
+.checkbox label::after {
+  width: 15px;
+  height: 15px;
+  font-size: 10px;
+}
+
+a.onepassword_login::before {
+  font: 11px 'FontAwesome';
+  content: "\f08e";
+  margin-right: 5px;
+}
+
+a.onepassword_find::before {
+  font: 11px 'FontAwesome';
+  content: "\f084";
+  margin-right: 5px;
+}
+
+a.onepassword_find:hover::before, a.onepassword_login:hover::before {
+  text-decoration: none;
+}
+
+/* remove border around table head */
+.table { width: auto; }
+.table thead tr th { border: none; }
+.table tbody tr td { border: none; }
+
+pre code {
+  word-wrap: normal;
+  white-space: pre;
+}
+
+dt { font-weight: 500; }
+
+@media(min-width:568px) {
+  dl.dl-horizontal {
+    display: table;
+  }
+  
+  .dl-horizontal dt {
+    display: table-cell;
+    text-align: right;
+    float: none;
+    width: auto;
+    padding-left: 20px;
+  }
+  
+  
+  .dl-horizontal dd {
+    display: table-cell;
+    padding-left: 20px;
+    padding-bottom: 5px;
+  }
+
+  dl div { display: table-row-group; }
+  
+}
+
+blockquote {
+  font-size: 14px;
+  color: #555;
+}
+
+/*--- Multi Note ---*/
+
+h4.note_title {
+  font: 12px "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+  font-weight: 400;
+  padding-bottom: 3px;
+  margin-bottom: 0;
+  color: #999;
+  text-align: left;
+  padding-top: 3px;
+}
+h4.note_title a {
+  color: #999;
+}
+h4.note_title:hover a {
+  color: #666;
+}
+
+h4.note_title .note_title_edit {
+  text-align: right;
+  float: right;
+  display: none;
+}
+
+h4.note_title:hover .note_title_edit {
+  display: inline;
+}
+
+/* when using mult-note, make h1/h2 a little smaller,
+otherwise they look too big in the small space */
+.multi_note h1 { font-size: 22px; }
+.multi_note h2 { font-size: 20px; }
+.left_note, .right_note {
+  border-radius: 3px;
+  padding: 20px;
+  margin-top: 0;
+  margin-bottom: 15px;
+/*  max-height: 300px;*/
+  height: 300px;
+  overflow: hidden;
+  background-color: white;
+}
+
+.left_note:hover, .right_note:hover {
+  overflow: auto;
+}
+
+.preview_noscroll .left_note:hover, .preview_noscroll .right_note:hover {
+  overflow: hidden;
+}
+
+.left_note h1:first-child, .right_note h1:first-child { margin-top: 5px; }
+.left_note h2:first-child, .right_note h2:first-child { margin-top: 5px; }
+
+.multi_note.folder_note, .multi_note.image_note {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.multi_note.folder_note div {
+  width: 50%;
+}
+.multi_note.image_note div {
+  width: 50%;
+}
+.multi_note.folder_note figcaption {
+  text-align: center;
+}
+
+.single_note.image_note img {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.example {
+  margin-bottom: 15px;
+  margin-top: 15px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-right-style: none;
+  border-left-style: none;
+}
+
+/*--- make images in tables, and images in general, be respsonsive ---*/
+table img, img {
+  max-width: 100%;
+  height: auto;
+  /*display: block; allow images to align horizontally if they are in the 
+  same paragraph.  Like the build images on github. */
+}
+
+/*--- any special formatting for a sparkfile ---*/
+.spark_file h6 {
+  color: #777;
+  font-size: 11px;
+  text-decoration: underline;
+}
+
+/*--- printing tweaks ---*/
+@media print {
+  /* remove placing the full link text after the anchor */
+  a[href]:after {
+    content: none;
+  }
+  .left_container, .right_container, pre, blockquote {
+    page-break-inside: avoid;
+         break-inside: avoid;
+  }
+}

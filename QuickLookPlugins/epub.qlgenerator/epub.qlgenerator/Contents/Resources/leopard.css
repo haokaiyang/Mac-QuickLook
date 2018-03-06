@@ -1,0 +1,30 @@
+/*
+ Dark theme for snow-leopard.
+ */
+body {background: black; color: white;}
+p,th,td {font-family: "Georgia", serif; text-indent: 0;}
+/*div.clearBelow {height: 70em; float: left; width:23%}
+ div.image {float: left; background-color:#888; padding: 0px; margin-left: 0.7em; margin-right: 1.7em; margin-top:0; text-align: center; width: 100%; border-radius: 2px}*/
+div.clearBelow {margin-bottom: 200%; float: left; width:23%; margin-left: 0.7em; margin-right: 1.7em; min-width: 7em}
+div.image {float: left; background-color:#888; padding: 0px; margin-left: 0; margin-right: 0; margin-top:0; text-align: center; width: 99%; border-radius: 2px}
+div.image img {margin: 3px 2% 3px 2%; vertical-align: middle; width: 96%}
+div.title {margin-left: 10px; margin-top: 0; margin-right: 7px; margin-bottom: 0; font-family: "Gill Sans"; font-size: 1em;}
+h1 {font-weight: normal; letter-spacing: 0.1em;}
+p.authors {margin-left: 10px; margin-top: -1em; text-indent: 0.1em; bold; color: #aaa;}
+div.metadata {}
+div.synopsis {margin: 0; margin-left: 0; margin-right:0.7em; font-size: 0.9em; text-align: justify; -webkit-hyphens: auto; width: auto;}
+table {
+	float: right;
+	width: 70%;
+	font-size: smaller;
+	border-style: none;
+}
+th {
+	color: #aaa;
+	text-align: right;
+	vertical-align: text-top;
+	width: 25%;
+}
+td {
+	vertical-align: text-top;
+}

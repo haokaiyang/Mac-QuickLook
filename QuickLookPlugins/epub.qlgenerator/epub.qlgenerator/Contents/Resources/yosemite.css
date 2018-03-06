@@ -1,0 +1,84 @@
+/*
+ Light theme for Yosemite.
+ */
+body {
+    background-color: rgba(241,241,241,1);
+    color: black;
+    font-family: '.HelveticaNeueDeskInterface-Light';
+}
+p,th,td {
+    text-indent: 0;
+}
+div.clearBelow {
+    margin-bottom: 0;
+    float: left;
+    width:23%;
+    margin-left: 0.7em;
+    margin-right: 1.7em;
+    min-width: 7em;
+    overflow: hidden;
+}
+div.image {
+    float: left;
+    background-color:#888;
+    padding: 0px;
+    margin-left: 0;
+    margin-right: 0;
+    margin-top:0;
+    text-align: center;
+    width: 99%;
+    border-radius: 2px
+}
+div.image img {
+    margin: 3px 2% 3px 2%;
+    vertical-align: middle;
+    width: 96%
+}
+div.title {
+    width: 70%;
+    font-size: 1em;
+    float: right;
+    margin: 0 7px 0 0;
+}
+h1 {
+    font-weight: normal;
+    margin-top: 0;
+    letter-spacing: 0.05em;
+}
+p.authors {
+    margin-left: 0;
+    margin-top: -1em;
+    text-indent: 0.1em;
+    /*font-weight: bold;*/
+    color: #666;
+}
+div.metadata {
+}
+div.synopsis {
+    float: right;
+    width: 70%;
+    margin: 0;
+    font-size: 0.9em;
+    text-align: justify;
+    -webkit-hyphens: auto;
+}
+div.synopsis p {
+    margin-right:0.7em;
+}
+table {
+    float: right;
+    width: 70%;
+    font-size: smaller;
+    border-style: none;
+}
+th {
+    color: #aaa;
+    text-align: right;
+    vertical-align: text-top;
+    width: 25%;
+    font-weight: normal;
+    font-style: normal;
+}
+td {
+    vertical-align: text-top;
+}

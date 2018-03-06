@@ -1,0 +1,29 @@
+/*
+ Light theme for Lion.
+ */
+body {background-color: rgba(241,241,241,1); color: black;}
+p,th,td {font-family: "Lucida Grande", serif; text-indent: 0;}
+div.clearBelow {margin-bottom: 0; float: left; width:23%; margin-left: 0.7em; margin-right: 1.7em; min-width: 7em;  overflow: hidden;}
+div.image {float: left; background-color:#888; padding: 0px; margin-left: 0; margin-right: 0; margin-top:0; text-align: center; width: 99%; border-radius: 2px}
+div.image img {margin: 3px 2% 3px 2%; vertical-align: middle; width: 96%}
+div.title {float: right; width: 70%; margin-left: 0; margin-top: 0; margin-right: 7px; margin-bottom: 0; font-family: "Lucida Grande"; font-size: 1em;}
+h1 {font-weight: normal; margin-top: 0; letter-spacing: 0.05em;}
+p.authors {margin-left: 0; margin-top: -1em; text-indent: 0.1em; font-weight: bold; color: #666;}
+div.metadata {}
+div.synopsis {float: right; width: 70%; margin: 0; margin-left: 0; margin-right:0; font-size: 0.9em; text-align: justify; -webkit-hyphens: auto;}
+div.synopsis p {margin-right:0.7em;}
+table {
+	float: right;
+	width: 70%;
+	font-size: smaller;
+	border-style: none;
+}
+th {
+	color: #666;
+	text-align: right;
+	vertical-align: text-top;
+	width: 25%;
+}
+td {
+	vertical-align: text-top;
+}

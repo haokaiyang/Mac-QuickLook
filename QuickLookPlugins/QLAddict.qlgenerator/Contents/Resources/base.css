@@ -1,0 +1,61 @@
+/* infoBar */
+ul.infoBar {
+    display: inline;
+    padding: 0;
+    margin: 0;
+    margin-left: -5px;
+    list-style: none;
+}
+ul.infoBar > li {
+    display: inline-block;
+    padding-right: 5px;
+    padding-left: 5px;
+}
+.right {
+    float: right;
+}
+.green {
+    color: green;
+}
+.red {
+    color: red;
+}
+
+/* body */
+body {
+    margin: 20px 40px;
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    font-size: 12px;
+}
+
+h1 a:hover:before {
+    margin-left: -20px;
+    margin-right: 4px;
+    content: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAALCAYAAAB24g05AAAAAXNSR0IArs4c6QAAAAlwSFlzAAAuIwAALiMBeKU/dgAAAVlpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IlhNUCBDb3JlIDUuNC4wIj4KICAgPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4KICAgICAgPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIKICAgICAgICAgICAgeG1sbnM6dGlmZj0iaHR0cDovL25zLmFkb2JlLmNvbS90aWZmLzEuMC8iPgogICAgICAgICA8dGlmZjpPcmllbnRhdGlvbj4xPC90aWZmOk9yaWVudGF0aW9uPgogICAgICA8L3JkZjpEZXNjcmlwdGlvbj4KICAgPC9yZGY6UkRGPgo8L3g6eG1wbWV0YT4KTMInWQAAAgZJREFUKBV1UjtolEEQntn97+FFQUQsQmwURQsLiTZamMMHWogRsyfYGkSQgMddGhFcbGxyiGmEgEHQeHpBLEQR/v+4QMRCjIUaLMTutJAoqNyRkNsdv70ghoADy87Ot/PNkwliivEeUnyLmPrw7BAJE7FATwtzvL5HFe/a/KK1VuH44PNX+EypsUuxeweHhzA+gWsUQPYirDglIhbPhemxIweDfcA2uvjMtQFHjCCmFM+acn0qgP8TU46/F0r1i2txa0VFSPsAsRsJ4ImR55mtS1v8xMS+ZVN8tU7ppe2PxvIfAD3w7POm+CIhHd1GbXOs5Ya1/FMh2WUvUWaFfQf19va7rq7bj7244aCLUI5JdXRKtVn4I5OcIkdvBi83NjLSewYSjRqPr5CgqeX4HGyTkei+X+2Wy/VkmiwyXKscq/77k7xFp99H5NQF0jJvRusJi38pzo3DuYC4k9VKfqFQiseFeLZWOVoNU5ij/uxTe7KN0q+gwVNq+ubhL66T3o1HEx8HVTbajCgojX6EaBzpO+Ryp4M+Q4dUlrZhzKAnagFNkTE1HQyrZagUXzWjyefVtrX6UDm5Z8pJA2UQhdQC+86vGzhMIIxn/nf9E9JsivfXlcKm4J9CihJxi5ycRU8uYWP2dglWswdnjMdjjJtIt+8D24+zGPxxsIWSxv0NvTuP8l//ARr3zsdWyWztAAAAAElFTkSuQmCC);
+}
+
+/* table */
+table {
+    border-collapse: collapse;
+    border: 1px solid;
+    font-size: 10px;
+    width: 100%;
+}
+table td {
+    border: 1px solid;
+    vertical-align: middle;
+}
+
+.id {
+    font-weight: bold;
+    padding: 0 8px;
+    width: 1%;
+}
+.time {
+    text-align: center;
+    width: 200px;
+}
+.sub {
+    padding: 4px 2px;
+    white-space: pre;
+}

@@ -1,0 +1,255 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+ "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+ <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+ <title>X509 Details</title>
+
+  <script src="file:///${resourcePath}/jquery-1.4.4.min.js" type="text/javascript"></script>
+
+ <style type="text/css">
+ /* <![CDATA[ */
+	html {
+		background: #111;
+	}
+	body {
+		margin: 0px;
+		font: 14px "Lucida Grande";
+		color: #AAA;
+	}
+	#headwrap {
+		height: 35px;
+		width: 98%;
+		background: #111;
+		z-index: 10;
+		margin: 0 1%;
+	}
+	#headwrap.abs {
+		position: absolute;
+	}
+	#headwrap.fix {
+		position: fixed;
+	}
+	#data {
+		margin: 20px;
+		color: #121212;
+		margin: auto;
+		width:100%;
+		position: relative;
+		top: 35px;
+		z-index: 1;
+	}
+	#head {
+		background: #111;
+		height: 120px;
+		padding: 5px;
+		color: #aaa;
+		float: left;
+	}
+	#head td {
+		padding: 1px;
+	}
+	a {
+		text-decoration: none;
+		color: white;
+	}
+	h1 {
+		display: inline;	
+	}
+	#logo {
+		color: #FFF;
+		float: right;
+		font-size: 12px;
+		font-weight: bold;
+		margin-top: 5px;
+	}
+	#logo span {
+		color: #999;
+		font-size: 9px;
+		font-weight: normal;
+	}	
+	#data_table {
+		width:98%;
+		margin: 0 1%;
+	}
+	.odd {
+		background-color: lightblue;
+	}
+	.even {
+		background-color: #ffffaa;
+	}
+	.smallText {font-size:10px;}
+	
+	table, tr {
+		margin: 0;
+		padding: 0;
+		border-collapse: collapse;
+	}
+	#data td, #data th {
+		padding: 5px 8px;
+		margin: 0;
+	}
+	#data td.title {
+		width:20%;
+		text-align:right;
+		vertical-align:top;
+		font-weight:bold;
+	}	
+	
+	#data td.sectionTitle {
+		width:15%;
+		text-align:left;
+		vertical-align:top;
+		font-weight:bold;
+		color:white;
+		background-color:#2251d4;
+	}	
+	
+/*	td.data {
+		padding-left:20px;
+	}	
+*/	
+	.section {
+		border-bottom:1px solid #aa00aa;
+	}
+	.expired {
+		color:red;
+	}
+	.valid {
+		color:green;
+	}
+	.blue
+	{
+		color:blue;
+	}
+ /* ]]> */
+ </style> 
+</head>
+
+<body>
+	<div id="headwrap" class="abs">		
+		<div id="logo">
+			<a href="#">Powered by PingIdentity</a>
+		</div>
+	</div>
+	<div id="data">
+		<table id="data_table">
+			<tr>
+			<td class="sectionTitle section_head" id="details" colspan="2"><img style="vertical-align:bottom;" src="collapse.png" width="16px" height="16px"/>&nbsp;Details</td>			
+			</tr>
+			<tr class="even details">
+				<td class="title">Subject name:</td>
+				<td class="data">${subject}</td>
+			</tr>
+			<tr class="odd details">
+				<td class="title">Issuer name:</td>
+				<td class="data">${issuer}</td>
+			</tr>			
+			<tr class="even details">
+				<td class="title">Issue date:</td>
+				<td class="data">${issue-date}</td>
+			</tr>			
+			<tr class="odd section details">
+				<td class="title">Expiry date:</td>
+				<td class="data">${expiry-date} (<span class="${expiry-css}">${expiry-days-left}</span>)</td>
+			</tr>		
+			<tr>			
+				<td class="sectionTitle section_head" id="sig" colspan="2"><img style="vertical-align:bottom;" src="collapse.png" width="16px" height="16px"/>&nbsp;Signature info</td>
+			</tr>
+			<tr class="even sig">
+				<td class="title">Version:</td>
+				<td class="data">${version}</td>								
+			</tr>			
+			<tr class="odd sig">
+				<td class="title">Serial:</td>
+				<td class="data">${serial}</td>				
+			</td>
+			<tr class="even sig">
+				<td class="title">Signature algorithm:</td>
+				<td class="data">${algoWithOid}</td>
+			</tr>						
+			<tr class="odd section sig">
+				<td class="title">Signature parameters:</td>
+				<td class="data">${sigParams}</td>
+			</tr>	
+			<tr>
+				<td class="sectionTitle section_head" id="pubkey" colspan="2"><img style="vertical-align:bottom;" src="collapse.png" width="16px" height="16px"/>&nbsp;Public Key info:</td>			
+			</tr>
+			<tr class="even pubkey">
+				<td class="title">Algorithm:</td>
+				<td class="data">${pubkey-algo}</td>
+			</tr>	
+			<tr class="odd pubkey">
+				<td class="title">Key Size:</td>
+				<td class="data">${pubkey-size} bits</td>
+			</tr>																																
+			<tr class="even pubkey">
+				<td class="title">Parameters:</td>
+				<td class="data"><span class="smallText previewHolder">${pubkey-params-preview}</span><span class="smallText preview">${pubkey-params}</span>&nbsp;<img style="vertical-align:bottom;" src="expand.png" width="16px" height="16px"/></td>
+			</tr>																																	
+			<tr class="odd pubkey">
+				<td class="title">Public Key:</td>
+				<td class="data"><span class="smallText previewHolder">${pubkey-material-preview}</span><span class="smallText preview">${pubkey-material}</span>&nbsp;<img style="vertical-align:bottom;" src="expand.png" width="16px" height="16px"/></td>
+			</tr>																																	
+			<tr class="even pubkey ${show-exponent}">
+				<td class="title">Exponent:</td>
+				<td class="data">${pubkey-exponent}</td>
+			</tr>																																																																								
+			<tr>			
+				<td class="sectionTitle section_head" id="fingerprints" colspan="2"><img style="vertical-align:bottom;" src="collapse.png" width="16px" height="16px"/>&nbsp;Fingerprints</td>
+			</tr>			
+			<tr class="odd fingerprints">
+				<td class="title">MD5:</td>
+				<td class="data">${fingerprint-md5}
+			</tr>									
+			<tr class="even section fingerprints">
+				<td class="title">SHA1:</td>
+				<td class="data">${fingerprint-sha1}</td>
+			</tr>												
+		</table>
+	</div>
+	<script type="text/javascript">
+	$(document).ready(function()
+	{
+	   	var expandIcon="file:///${resourcePath}/expand.png";
+   		var collapseIcon="file:///${resourcePath}/collapse.png";	
+		var leftIcon="file:///${resourcePath}/left.png";	
+
+	  //remove elements
+	   $(".dontShow").remove();
+
+	  //hide previews
+	  $(".preview").hide();
+	  //toggle preview sections
+  	  $(".previewHolder").click(function()	
+		{
+			$(this).toggle();		
+			$(this).parent().find('img').attr('src',leftIcon);	
+			$(this).next('.preview').toggle();
+		});
+		
+	$(".preview").click(function()	
+	{
+		$(this).toggle();
+		$(this).parent().find('img').attr('src',expandIcon);			
+		$(this).prev('.previewHolder').toggle();
+	});
+  	  
+	  //toggle the componenet with class msg_body
+	  $(".section_head").click(function()
+	  {
+		var id=$(this).attr("id");		
+		var icon=$(this).find("img");
+		if(icon.attr('src').match('.*collapse.png'))
+			icon.attr('src',expandIcon);
+		else
+			icon.attr('src',collapseIcon);
+			
+	    $(this).parent().siblings("."+id).toggle();
+	  });
+	});
+	</script>
+	</script>
+</body>
+</html>

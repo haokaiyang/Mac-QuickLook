@@ -1,0 +1,222 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+	<head>
+		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+		<meta http-equiv="Content-Language" content="en-us" />
+		<style>
+		body {
+			font-family: HelveticaNeue;
+			margin: 0.5em;
+		}
+		pre {
+			font-family: SourceCodePro, AndaleMono, Courier;
+		}
+		a {
+			color: #0087d4;
+			text-decoration: none;
+		}
+
+		div.container {
+			width: auto;
+			margin: 0 0 0.5em 0;
+			border-radius: 3px;
+			border: 1px solid #ddd;
+			background-color: #efefef;
+		}
+		div.last {
+			margin: 0;
+		}
+		div.label {
+			font-weight: normal;
+			font-family: HelveticaNeue;
+		}
+		div.header {
+			height: 1.1em;
+			padding: 0.5em;
+			border-radius: 3px 3px 0 0;
+			background-color: #ddd;
+		}
+		div.header > div.label {
+		}
+
+		div.section {
+			padding: 0.5em;
+		}
+		div.section > div.label {
+			color: #999;
+		}
+
+		div.divider {
+			border-top: 1px solid #ddd;
+		}
+		div.item {
+			float: left;
+		}
+		div.detail {
+			width: auto;
+			text-align: right;
+			color: #666;
+		}
+
+		div.FITSHeader {
+			font-family: SourceCodePro, AndaleMono, Courier;
+		}
+		div.FITSHeader > pre {
+			margin: 0;
+			font-size: 0.9em;
+		}
+		div.FITSHeader > table {
+			font-size: 0.7em;
+			border-collapse: collapse;
+		}
+		div.FITSHeader > table > tbody {
+		}
+		div.FITSHeader > table > tbody > tr > td {
+			margin: 0em;
+			padding: 0.25em;
+		}
+		div.FITSHeader > table > tbody > tr > td.FITSHeaderKey {
+			width: 180px;
+		}
+		div.FITSHeader > table > tbody > tr > td.FITSHeaderValue {
+			width: 220px;
+		}
+		div.FITSHeader > table > tbody > tr > td.FITSHeaderComment {
+			width: 400px;
+			color: #666;
+		}
+
+		div.summary {
+			color: #aaa;
+		}
+		div.summary > a {
+			color: #6aa1d3;
+		}
+        
+        div.option {
+            height: 2.1em;
+            padding: 0.5em;
+            border-radius: 3px 3px 0 0;
+            background-color: #eee;
+        }
+        div.option_title {
+            color: #000;
+            width: 95%;
+            height: 2.2em;
+            float: left;
+        }
+        span.option_subtitle {
+            color: #666;
+            font-size: 0.9em;
+        }
+        input.option_input {
+            float: right;
+        }
+
+		div#header_info > div.header {
+			font-weight: bold;
+		}
+		div#header_info > div.section#creation {
+			padding-bottom: 0.1em;
+		}
+		div#header_info > div.section#expiration {
+			padding-top: 0.1em;
+		}
+		div#header_info > div.header > div.label {
+			font-weight: bold;
+			float: left;
+		}
+
+		div#HDU > div.header > div.label {
+			float: left;
+		}
+		div#HDU > div.section {
+			overflow: auto;
+		}
+		div#HDU > div.section > div.data {
+			float: left;
+		}
+
+		div#ad > div.section {
+			color: #999;
+		}
+		div#ad > div.header {
+			color: #999;
+		}
+
+		span.error {
+			color: #9a0003;
+		}
+		span.warning {
+			color: #daa520;
+		}
+		</style>
+		<script>
+            function toggleDetails(i) {
+                var buttonElement = document.getElementById('toggle_button'+i);
+                var headerElement = document.getElementById('HDUHeader'+i);
+                var dataElement = document.getElementById('HDUData'+i);
+                if (dataElement.style.display == 'none') {
+                    dataElement.style.display = 'block';
+                    headerElement.style.display = 'none';
+                    buttonElement.innerHTML = 'Show Header';
+                }
+                else {
+                    dataElement.style.display = 'none';
+                    headerElement.style.display = 'block ';
+                    buttonElement.innerHTML = 'Show Data';
+                }
+            }
+            function saveConfig (a) {
+                a.href  = "qlfitsconfig://save";
+                a.href += "/alwaysShowHeaders=" + (document.getElementById("alwaysShowHeadersInput").checked ? "1" : "0");
+                a.href += "/showSummaryInThumbnails=" + (document.getElementById("showSummaryInThumbnailsInput").checked ? "1" : "0");
+                return true;
+            }
+		</script>
+	</head>
+	<body>
+        
+	<div class="container" id="header_info">
+		<div class="header">
+			<div class="label" id="filename">__FileName__</div>
+			<div class="detail" id="summary">__ContentSummary__</div>
+		</div>
+	</div>
+
+	<div class="container">
+		<table style="width:100%">
+			__HDUTableLines__
+		</table>
+	</div>
+
+    <div class="container" id="options">
+        <div class="header">
+            <div class="label">
+                QuickLook Options &nbsp;
+                <a href="#" onClick="saveConfig(this);return true;" style="float:right;"><input id="save" type="button" value="Save"></a>
+            </div>
+        </div>
+        <div id="options">
+            __QuickLookOptions__
+        </div>
+    </div>
+
+	<div class="container last" id="ad">
+		<div class="header">
+			<div class="label">QLFits: Flexible Image Transport System (FITS) OSX Quick Look Generator • Version __BundleVersion__</div>
+		</div>
+		<div class="section">
+            <div class="summary">This QuickLook plugin is brought to you by <a href="http://onekilopars.ec">onekilopars.ec</a>, <i>far-reaching solutions for ground-based astronomers.</i> It is based on the open source project <a href="https://github.com/onekiloparsec/ObjCFITSIO">ObjCFITSIO</a>, the Objective-C wrapper around the excellent <a href="http://heasarc.gsfc.nasa.gov/fitsio/fitsio.html">cfitsio</a> library (thanks!).</div>
+        </div>
+        <div class="section">
+			<div class="summary">onekilopars.ec is the home of <a href="http://itunes.com/mac/iobserve"><b>iObserve</b> for Mac</a> and <a href="http://itunes.com/apps/cedricfollmi/iobserve">for iPad</a>, the best app for preparing your observations.</div>
+		</div>
+        <div class="section" id="copy_help">
+            <div class="summary">Want to be able to copy-paste text from this Quick Look preview? <a href="http://www.macworld.com/article/1164668/select_and_copy_text_within_quick_look_previews.html">Follow these instructions</a>.</div>
+        </div>
+	</div>
+	</body>
+</html>
