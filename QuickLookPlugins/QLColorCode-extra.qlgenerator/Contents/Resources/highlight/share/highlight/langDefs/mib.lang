@@ -1,0 +1,53 @@
+# SNMPv1 and SNMPv2 MIB and SMI files
+#
+# Author: Roman Surma, based on mib.vim by David Pascoe <pascoedj@spamcop.net>
+#   Mail: sur{_at_}loniir{_dot_}ru
+#   Date: 30.08.2004
+# ------------------------------------------
+# This file is a part of highlight, a free source code converter released under the GPL.
+#
+# The file is used to describe keywords and special symbols of programming languages.
+# See README in the highlight directory for details.
+#
+# New definition files for future releases of highlight are always appreciated ;)
+#
+
+$DESCRIPTION=SNMP
+
+$KEYWORDS(kwa)= ACCESS ANY AUGMENTS BEGIN BIT BITS BOOLEAN CHOICE
+COMPONENTS CONTACT-INFO DEFINITIONS DEFVAL
+DESCRIPTION DISPLAY-HINT END ENTERPRISE EXTERNAL FALSE
+FROM GROUP IDENTIFIER IMPLICIT IMPLIED IMPORTS INDEX
+LAST-UPDATED MANDATORY-GROUPS MAX-ACCESS
+MIN-ACCESS MODULE MODULE-COMPLIANCE MODULE-IDENTITY
+NOTIFICATION-GROUP NOTIFICATION-TYPE NOTIFICATIONS
+NULL OBJECT OBJECT-GROUP OBJECT-IDENTITY OBJECT-TYPE
+OBJECTS OF OPTIONAL ORGANIZATION REFERENCE
+REVISION SEQUENCE SET SIZE STATUS SYNTAX
+TEXTUAL-CONVENTION TRAP-TYPE TRUE UNITS VARIABLES
+WRITE-SYNTAX ::=
+
+$KEYWORDS(kwb)= accessible-for-notify current DisplayString
+deprecated mandatory not-accessible obsolete optional
+read-create read-only read-write write-only INTEGER
+Counter Gauge IpAddress OCTET STRING experimental mib-2
+TimeTicks RowStatus TruthValue UInteger32 Unsigned32 snmpModules
+Integer32 Counter32 TestAndIncr TimeStamp InstancePointer
+Gauge32 AutonomousType Counter64
+PhysAddress TimeInterval MacAddress StorageType RowPointer
+TDomain TAddress ifIndex
+
+$KEYWORDS(kwc)= FORCE-INCLUDE EXCLUDE cookie get-function set-function
+test-function get-function-async set-function-async
+test-function-async next-function next-function-async
+leaf-name DEFAULT contained
+
+$SL_COMMENT= --
+
+$STRINGDELIMITERS= "
+
+$IDENTIFIER=regex([a-zA-Z_][\w\-]*)
+
+$IGNORECASE=false
+
+$SYMBOLS= ( ) [ ] { } , ; : | = .

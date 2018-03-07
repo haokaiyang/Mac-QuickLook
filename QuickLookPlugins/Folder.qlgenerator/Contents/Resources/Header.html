@@ -1,0 +1,65 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
+        "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html>
+<head>
+	<!-- link rel="stylesheet" href="file://<RESOURCEPATH/>/quick_look_generator.css" charset="utf-8" / -->
+	<style type="text/css">
+	<IMPORT_CSS/>
+	<!-- Custom CSS discription
+		Please add override CSS to here. -->
+	</style>
+
+	<script type="text/javascript" language="javascript">
+	// <![CDATA[
+	<IMPORT_JS/>
+	// ]]>
+	</script>
+
+</head>
+
+<body onload="initialize()" id="folderView">
+
+<div id="tool_bar">
+	<p>
+		<span class="hide_archive_inline"><input type="checkbox" name="show_hidden_file" id="show_hidden_file" onclick="show_hidden_file()" />
+		<label for ="show_hidden_file"><LOCAL_show_hidden_file/></label></span>
+		<input type="checkbox" name="show_time" id="show_time" onClick="show_time()"/>
+		<label for ="show_time"><LOCAL_show_time/></label>
+	</p>
+</div>
+
+<div id="header">
+	<IMPORT_ATTRIBUTE/>
+	
+	<div class="list_header">
+		<table id="file_list_header_table" class="file_list">
+			<tr id="file_list_header">
+				<th class="file_name">
+					<LOCAL_NAME/>
+				</th>
+				<th class="file_created">
+					<LOCAL_CREATED/>
+				</th>
+				<th class="file_modified" class = 'hide_archive'>
+					<LOCAL_MODIFIED/>
+				</th>
+				<th class="file_size">
+					<LOCAL_SIZE/>
+				</th>
+				<th class="file_kind">
+					<LOCAL_KIND/>
+				</th>
+			</tr>
+		</table>
+	</div>
+</div>
+
+<div id="list_window">
+	<table id="file_list_body_table" class="file_list">
+		<IMPORT_LIST/>
+	</table>
+</div>
+
+
+</body>
+</html>

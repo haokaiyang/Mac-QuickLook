@@ -1,0 +1,20 @@
+# neon.style - style
+# This File is part of highlight, a universal source code converter.
+# See README in the highlight directory for documentation.
+
+$DEFAULTCOLOUR=#ffffff
+$BGCOLOUR=#000000
+$FONTSIZE=10
+$KW-GROUP(kwa)=#00ffff bold
+$KW-GROUP(kwb)=#ffff00
+$KW-GROUP(kwc)=#ef1347 bold
+$KW-GROUP(kwd)=#ffffff bold
+$NUMBER=#ff00ff
+$ESCAPECHAR=#cd00ff
+$STRING=#cd00ff
+$STRING-DIRECTIVE=#cd00ff
+$COMMENT=#00ff00 italic
+$DIRECTIVE=#ffbb00
+$LINE=#55abff
+$SYMBOL=#ee5896 bold
+$MARK-LINE=#404040

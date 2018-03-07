@@ -1,0 +1,22 @@
+# Relax NG Compact Syntax <http://www.relaxng.org/compact-20021121.html> 
+# definition file for the "highlight" <http://www.andre-simon.de/> source 
+# code converter
+#
+# Author: Christian Siefkes
+#   Mail: christian@siefkes.net
+#   Date: 2003-10-04
+
+$DESCRIPTION=Relax NG
+
+$KEYWORDS(kwa)=attribute default datatypes div element external grammar include 
+inherit list mixed namespace notAllowed parent start
+
+$KEYWORDS(kwb)=empty string text token
+
+$STRINGDELIMITERS=" '
+
+$SL_COMMENT=#
+
+$IGNORECASE=false
+
+$ESCCHAR=regex(\\\d{3}|\\x\p{XDigit}{2}|\\[ntvbrfa\\\?'"])

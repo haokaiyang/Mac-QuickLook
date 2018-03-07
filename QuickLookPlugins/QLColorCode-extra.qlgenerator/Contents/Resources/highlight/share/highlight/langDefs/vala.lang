@@ -1,0 +1,58 @@
+# Vala language definition file
+#
+# Author: Andre Simon
+#   Mail: andre.simon1@gmx.de
+#   Date: 14.10.2008
+# ------------------------------------------
+# This file is a part of highlight, a free source code converter released under the GPL.
+#
+# The file is used to describe keywords and special symbols of programming languages.
+# See README in the highlight directory for details.
+#
+# New definition files for future releases of highlight are always appreciated ;)
+#
+# ----------
+# andre.simon1@gmx.de
+# http:/www.andre-simon.de/
+
+$DESCRIPTION=Vala
+
+$KEYWORDS(kwa)=if else
+switch case default
+break continue return
+for foreach in
+do while try catch finally throw
+
+$KEYWORDS(kwb)= namespace interface class struct enum signal
+construct callback get set base
+const static var weak
+virtual abstract override
+public protected private
+in out ref  lock using
+abstract dynamic extern internal readonly sealed volatile 
+
+$KEYWORDS(kwc)=true false null bool byte char decimal double float int int8 
+int16 int32 int64 long object sbyte short string uchar uint uint8 uint16 uint32
+uint64 ulong ushort void
+
+$KEYWORDS(kwd)=regex((\w+)\s*\()
+
+$STRINGDELIMITERS=" '
+
+$SL_COMMENT=//
+
+$ML_COMMENT=/* */
+
+$ALLOWNESTEDCOMMENTS=false
+
+$IGNORECASE=false
+
+$DIRECTIVE=#
+
+$ESCCHAR=regex(\\\d{3}|\\x\p{XDigit}{2}|\\[ntvbrfa\\\?'"])
+
+$SYMBOLS= ( ) [ ] { } , ; . : & | < > !  = / *  %  + - ~
+
+#$CONTINUATIONSYMBOL=\
+
+$REFORMATTING=false

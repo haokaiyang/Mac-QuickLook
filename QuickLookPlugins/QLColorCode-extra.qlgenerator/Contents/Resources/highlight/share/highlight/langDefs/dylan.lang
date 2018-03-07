@@ -1,0 +1,47 @@
+# Dylan language definition file
+#
+# Author: Andre Simon
+#   Mail: andre.simon1@gmx.de
+#   Date: 15.4.2004
+#         28.01.2008 Replaced KW_DELIM entry by regexes (ASim)
+# ------------------------------------------
+# This file is a part of highlight, a free source code converter released under the GPL.
+#
+# The file is used to describe keywords and special symbols of programming languages.
+# See README in the highlight directory for details.
+#
+# New definition files for future releases of highlight are always appreciated ;)
+#
+# ----------
+# andre.simon1@gmx.de
+# http:/www.andre-simon.de/
+
+$DESCRIPTION=Dylan
+
+$KEYWORDS(kwa)=interface library macro method class function cleanup block afterwards
+end  constant variable generic primary begin method above below from by in instance
+local  slot subclass then to virtual if when select case else elseif unless finally
+otherwise  then for until while from to define let otherwise finally exception
+handler signal import rename create use export exclude abstract concrete primary
+inherited inline open sealed domain singleton
+
+#$TAG_DELIM(kwa)=< >
+$KEYWORDS(kwa)=regex(<!?\/?\w+>?|>)
+$KEYWORDS(kwb)=regex(([-\w]+)=")
+$KEYWORDS(kwc)=regex(\&\#?\w+;)
+
+$KEYWORDS(kwb)=module synopsis author copyright
+
+$KEYWORDS(kwd)=regex((\w+)\s*\()
+
+$STRINGDELIMITERS=" '
+
+$SL_COMMENT=//
+
+$ML_COMMENT=/* */
+
+$ALLOWNESTEDCOMMENTS=false
+
+$ESCCHAR=regex(\\\d{3}|\\x\p{XDigit}{2}|\\[ntvbrfa\\\?'"])
+
+$SYMBOLS= ( ) [ ] { } , ; : & | !  = / *  %  + -

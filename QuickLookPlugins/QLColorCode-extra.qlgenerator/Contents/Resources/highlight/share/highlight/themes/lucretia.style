@@ -1,0 +1,21 @@
+# megadeth.style (inspired by the Rust In Peace cover)
+# This file is part of highlight, a universal source code converter.
+# See README in the highlight directory for documentation.
+
+$DEFAULTCOLOUR=#de9d7c
+$BGCOLOUR=#001C42
+$FONTSIZE=10
+$KW-GROUP(kwa)=#696093
+$KW-GROUP(kwb)=#29a655
+$KW-GROUP(kwc)=#427142
+$KW-GROUP(kwd)=#A59A39
+$NUMBER=#63759C
+$ESCAPECHAR=#6B924A
+$STRING=#E7F3B5
+$STRING-DIRECTIVE=#E7F3B5
+$COMMENT=#944D39
+$SL-COMMENT=#AD5D31
+$DIRECTIVE=#815d8c
+$LINE=#73758C
+$SYMBOL=#6A7969
+$MARK-LINE=#511168

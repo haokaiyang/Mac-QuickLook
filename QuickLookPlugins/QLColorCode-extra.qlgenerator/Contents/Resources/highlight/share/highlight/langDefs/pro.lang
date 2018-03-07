@@ -1,0 +1,47 @@
+# Prolog language definition file
+#
+# Author: Andre Simon
+#   Mail: andre.simon1@gmx.de
+#   Date: 08.02.04
+# ------------------------------------------
+# This file is a part of highlight, a free source code converter released under the GPL.
+#
+# The file is used to describe keywords and special symbols of programming languages.
+# See README in the highlight directory for details.
+#
+# New definition files for future releases of highlight are always appreciated ;)
+#
+# ----------
+# andre.simon1@gmx.de
+# http:/www.andre-simon.de/
+
+$DESCRIPTION=Prolog
+
+$KEYWORDS(kwa)= true fail at_end_of_stream nl repeat halt is rem mod
+
+
+$KEYWORDS(kwb)=call catch throw unify_with_occurs_check var atom integer float atomic compound nonvar number functor arg copy_term clause current_predicate asserta assertz retract
+abolish findall bagof setof current_input current_output set_input set_output open close stream_property at_end_of_stream set_stream_position get_char get_code peek_char
+peek_code put_char put_code nl get_byte peek_byte put_byte read_term read write_term write writeq write_canonical op current_op char_conversion current_char_conversion once
+atom_length atom_concat sub_atom atom_chars atom_codes char_code number_chars number_codes set_prolog_flag current_prolog_flag halt sin cos atan exp log sqrt
+
+#avoid highlighting of 0'var as string
+$KEYWORDS(kwc)=regex(0(')\w+)
+
+$KEYWORDS(kwd)=regex((\w+)\s*\()
+
+$STRINGDELIMITERS=" '
+
+$SL_COMMENT=%
+
+$ML_COMMENT=/* */
+
+$ALLOWNESTEDCOMMENTS=false
+
+$IGNORECASE=false
+
+$DIRECTIVE=#
+
+$ESCCHAR=regex(\\\d{3}|\\x\p{XDigit}{2}|\\[ntvbrfa\\\?'"])
+
+$SYMBOLS= ( ) [ ] { } , ; : & | < > !  = / *  + - .

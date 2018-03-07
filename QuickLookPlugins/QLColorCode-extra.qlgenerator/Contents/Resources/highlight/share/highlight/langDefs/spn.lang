@@ -1,0 +1,38 @@
+# SPIN SQL language definition file
+#
+# Author: André Simon
+#   Mail: andre.simon1@gmx.de
+#   Date: 28.06.20.03
+# ------------------------------------------
+# This file is a part of highlight, a free source code converter released under the GPL
+#
+# The file is used to describe keywords and special symbols of programming languages
+# See README in the highlight directory for details
+#
+# New definition files for future releases of highlight are always appreciated ;)
+#
+# ----------
+# andre.simon1@gmx.de
+# http:/www.andre-simon.de/
+
+$DESCRIPTION=SPIN SQL
+
+$KEYWORDS(kwa)=assert init priority proctype provided active break do else empty
+enabled eval fi full goto if inline len nempty nfull od of printf run skip
+timeout xr xs unless _last _pid cond_expr false np_ pc_value STDIN true accept
+end progress atomic d_step hidden ltl never notrace trace show
+
+
+$KEYWORDS(kwb)=bit bool byte chan int local mtype short typedef unsigned
+
+$STRINGDELIMITERS="
+
+$ESCCHAR=regex(\\\d{3}|\\x\p{XDigit}{2}|\\[ntvbrfa\\\?'"])
+
+$ML_COMMENT=/* */
+
+$IGNORECASE=true
+
+$SYMBOLS= ( ) [ ] { } , ; : & | < > !  = / * %  + -
+
+

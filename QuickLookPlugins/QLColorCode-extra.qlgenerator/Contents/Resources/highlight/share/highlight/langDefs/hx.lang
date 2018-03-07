@@ -1,0 +1,50 @@
+# haXe language definition file
+#
+# Author: Andre Simon
+#   Mail: andre.simon1@gmx.de
+#   Date: 24.7.2002
+#         updated 12.1.04 to add more types (ansi c, iso 99)
+# ------------------------------------------
+# This file is a part of highlight, a free source code converter released under the GPL.
+#
+# The file is used to describe keywords and special symbols of programming languages.
+# See README in the highlight directory for details.
+#
+# New definition files for future releases of highlight are always appreciated ;)
+#
+# ----------
+# andre.simon1@gmx.de
+# http:/www.andre-simon.de/
+
+$DESCRIPTION=haXe
+
+#reserved words
+$KEYWORDS(kwa)=function class static var if else while do for break return 
+continue extends implements import switch case default private public try catch
+new this throw extern enum in interface untyped cast override typedef dynamic
+package callback inline here
+
+#types
+$KEYWORDS(kwb)=Void Float Int  Bool Dynamic true false null
+
+# pattern to highlight regexes ( -/.../)
+$KEYWORDS(kwc)=regex(~\/.*?\/[igms]*)
+#~/{([a-z]+)}/g
+$KEYWORDS(kwd)=regex((\w+)\s*\()
+
+$STRINGDELIMITERS=" '
+
+$SL_COMMENT=//
+
+$ML_COMMENT=/* */
+
+$ALLOWNESTEDCOMMENTS=false
+
+$IGNORECASE=false
+
+$ESCCHAR=regex(\\\d{3}|\\x\p{XDigit}{2}|\\[ntvbrfa\\\?'"])
+
+$SYMBOLS= ( ) [ ] { } , ; . : & | < > !  = / *  %  + - ~
+
+$DIGIT=regex((?:0x|0X)[0-9a-fA-F]+|\d*[\.\_]?\d+(?:[eE][\-\+]?\d+)?[lLuUbfdm]*)
+

@@ -1,0 +1,51 @@
+# Lua embedded in TeX language definition file
+#
+# Author: Andre Simon
+#
+#   Mail: andre.simon1@gmx.de
+#   Date: 22.07.2002
+# ------------------------------------------
+# This file is a part of highlight, a free source code converter released under the GPL.
+#
+# The file is used to describe keywords and special symbols of programming languages.
+# See README in the highlight directory for details.
+#
+# New definition files for future releases of highlight are always appreciated ;)
+#
+# ----------
+# andre.simon1@gmx.de
+# http:/www.andre-simon.de/
+
+$DESCRIPTION=Lua (for LuaTeX)
+
+$KEYWORDS(kwa)=and break do else elseif
+end false for function if
+in local nil not or
+repeat return then true until while
+
+$KEYWORDS(kwb)=number string function userdata table
+assert call collectgarbage copytagmethods dofile
+dostring error foreach foreachi getglobal getn  gettagmethod  globals newtag
+next print rawget rawset setglobal settag  settagmethod sort tag tonumber
+tostring tinsert tremove type  abs  acos  asin  atan  atan2 ceil cos deg exp
+floor log  log10 max min mod rad sin sqrt tan frexp ldexp random randomseed
+openfile closefile readfrom writeto appendto remove rename flush seek tmpname
+read  write clock date execute exit getenv setlocale strbyte strchar strfind
+strlen strlower strrep strsub strupper format gsub
+
+$KEYWORDS(kwd)=regex((\w+)\s*\()
+
+$STRINGDELIMITERS=" '
+
+$ML_COMMENT=--[[ ]]
+
+# this differs from lua.lang
+$SL_COMMENT=%
+
+$IGNORECASE=false
+
+$ESCCHAR=regex(\\\d{3}|\\x\p{XDigit}{2}|\\[ntvbrfa\\\?'"])
+
+$SYMBOLS= ( ) { } [ ] , ; . : & | < > !  = / *  + - ~ # \ %
+
+

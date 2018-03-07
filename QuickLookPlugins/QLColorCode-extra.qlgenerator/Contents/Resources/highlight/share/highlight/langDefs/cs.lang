@@ -1,0 +1,67 @@
+# C# language definition file
+#
+# Author: Andre Simon
+#   Mail: andre.simon1@gmx.de
+#   Date: 16.08.2002
+#
+# 01/08/2003
+# words added
+# - return value add remove get set readonly in $KEYWORDS(kwa)
+# - object in $KEYWORDS(kwb)
+# added $DIRECTIVE=# because it also exist in c#
+#
+# 02/08/2003
+# added $MEMBERATTRDELIMITERS and $RAWSTRINGPREFIX parameter
+#
+# 10/08/2003
+# added $STRINGDELIMITERPAIR parameter
+#
+# 01/06/2004
+# removed $MEMBERATTRDELIMITERS
+#
+# ------------------------------------------
+# This file is a part of highlight, a free source code converter released under the GPL.
+#
+# The file is used to describe keywords and special symbols of programming languages.
+# See README in the highlight directory for details.
+#
+# New definition files for future releases of highlight are always appreciated ;)
+#
+# ----------
+# andre.simon1@gmx.de
+# http:/www.andre-simon.de/
+
+$DESCRIPTION=C#
+
+$KEYWORDS(kwa)= return value add remove get set readonly break case default else
+if switch catch checked finally throw try unchecked abstract base class
+delegate event explicit implicit interface internal new operator override
+private protected public sealed static this virtual false null true
+namespace using break continue do for foreach while goto in ref
+
+$KEYWORDS(kwb)= object bool byte char const decimal double enum float int long
+sbyte short string struct uint ulong ushort void
+
+$KEYWORDS(kwc)=regex(^\s*(\w+):)
+
+$KEYWORDS(kwd)=regex((\w+)\s*\()
+
+$STRINGDELIMITERS=" '
+
+$SL_COMMENT=//
+
+$ML_COMMENT=/* */
+
+$IGNORECASE=false
+
+$ESCCHAR=regex(\\\d{3}|\\x\p{XDigit}{2}|\\[ntvbrfa\\\?'"])
+
+$DIRECTIVE=#
+
+$RAWSTRINGPREFIX=@
+
+$SYMBOLS= ( ) [ ] { } , ; . : & | < > !  = / *  %  + -
+
+$CONTINUATIONSYMBOL=\
+
+$REFORMATTING=true

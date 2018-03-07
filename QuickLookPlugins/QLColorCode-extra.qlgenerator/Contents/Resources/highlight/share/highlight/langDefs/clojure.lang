@@ -1,0 +1,50 @@
+# Clojure language definition file
+#
+# Author: Pierre Larochelle
+#   Mail: pierrebombay@gmail.com
+#   Date: 11.18.08
+# ------------------------------------------
+# This file is a part of highlight, a free source code converter
+# released under the GPL.
+#
+# The file is used to describe keywords and special symbols of 
+# programming languages.
+# See README in the highlight directory for details.
+#
+#
+# ---------- 
+
+$DESCRIPTION=Clojure
+
+# Function, macro, and template definitions
+$KEYWORDS(kwa)=def defn defmacro fn defstruct defmulti defmethod remove-method
+
+# Looping
+$KEYWORDS(kwb)=for loop recur dotimes doseq
+
+# Conditionals
+$KEYWORDS(kwc)=case caselet check if let when whenlet unless
+
+# List ops
+$KEYWORDS(kwd)=first rest cons ffirst frest rrest second every? not-every? some not-any? concat map mapcat reducefilter take take-nth take-while drop nthrest drop-while reverse cycle interleave split-at split-with repeat replicate iterate range into distinct sort sort-by zipmap fnseq lazy-cons lazy-cat when-first
+
+# Namespaces
+$KEYWORDS(kde)=in-ns create-ns find-ns all-ns remove-nd import refer ns-name ns-map ns-intern ns-publics ns-imports ns-refers ns-resolve resolve ns-unmap name namespace 
+
+# General functions
+$KEYWORDS(kwf)=eval load load-file . .. doto new set! and or when when-not cond macroexpand-1 macroexpand = not= apply partial comp nil? not false? true? compliment constantly identical? identity str time comparator symbol keyword line-seq pr prn print println pr-str prn-str print-str println-str with-out-str newline with-open assert string? symbol? map? seq? vector? re-matcher re-find re-matches re-groups re-seq + - * / quot rem == < > >= <= min max inc dec zero? pos? neg? bit-and bit-or bit-xor nit-not bit-shift-right bit-shift-left gensym count conj seq list list* peek pop vector assoc get nth peek pop rseq subvec hash-map sorted-map sorted-map-by assoc dissoc get contains? find select-keys key val keys vals merge merge-with create-struct struct-map struct accessor array-map set union difference intersection select index rename join meta with-meta binding find-var with-local-vars var-get var-set ref dosync deref ensure alter ref-set commute agent deref send send-off agent-errors clear-agent-errors await await-for-timeout-ms locking -> parse
+
+$IDENTIFIER=regex([a-zA-Z_][\w\-\/]*)
+
+# The rest is taken directly from André Simon's lisp.lang definition
+$STRINGDELIMITERS="
+
+$ML_COMMENT=;| |;
+
+$SL_COMMENT=;
+
+#$IGNORECASE=false
+
+$ESCCHAR=regex(\\\d{3}|\\x\p{XDigit}{2}|\\[ntvbrfa\\\?'"])
+
+$SYMBOLS= ( ) [ ] { } , : &  < > ! + = / * '

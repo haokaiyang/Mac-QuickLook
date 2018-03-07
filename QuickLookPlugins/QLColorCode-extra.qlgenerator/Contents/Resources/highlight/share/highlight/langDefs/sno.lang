@@ -1,0 +1,39 @@
+# SNOBOL language definition file
+#
+# Author: Andre Simon
+#   Mail: andre.simon1@gmx.de
+#   Date: 15.4.2004
+# ------------------------------------------
+# This file is a part of highlight, a free source code converter released under the GPL.
+#
+# The file is used to describe keywords and special symbols of programming languages.
+# See README in the highlight directory for details.
+#
+# New definition files for future releases of highlight are always appreciated ;)
+#
+# ----------
+# andre.simon1@gmx.de
+# http:/www.andre-simon.de/
+
+$DESCRIPTION=SNOBOL
+
+$KEYWORDS(kwa)=output terminal screen input arb arbno pos rpos tab trim size rtab replace dupl
+datatype convert len define trace stoptr code rem differ ident array table gt ge le
+eq lt ne lgt any notany break span date substr opsyn integer remdr bal
+
+
+$KEYWORDS(kwc)=regex(:\w*\(\w+\)$)
+
+$KEYWORDS(kwd)=regex((\w+)\s*\()
+
+$STRINGDELIMITERS=" '
+
+$SL_COMMENT=*
+
+$ALLOWNESTEDCOMMENTS=false
+
+$ESCCHAR=regex(\\\d{3}|\\x\p{XDigit}{2}|\\[ntvbrfa\\\?'"])
+
+$IGNORECASE=false
+
+$SYMBOLS= ( ) [ ] { } , ; : & | < > !  = /  %  + -

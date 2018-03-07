@@ -1,0 +1,20 @@
+# peachpuff.style (taken from GVIM)
+# This file is part of highlight, a universal source code converter.
+# See README in the highlight directory for documentation.
+
+$DEFAULTCOLOUR=#000000
+$BGCOLOUR=#ffdab9
+$FONTSIZE=10
+$KW-GROUP(kwa)=#a52a2a bold
+$KW-GROUP(kwb)=#2e8b57 bold
+$KW-GROUP(kwc)=#275fec bold
+$KW-GROUP(kwd)=#521cc7
+$NUMBER=#c00058
+$ESCAPECHAR=#6a5acd
+$STRING=#c00058
+$STRING-DIRECTIVE=#c00058
+$COMMENT=#406090
+$DIRECTIVE=#cd00cd
+$LINE=#406090
+$SYMBOL=#000000
+$MARK-LINE=#ffffbb

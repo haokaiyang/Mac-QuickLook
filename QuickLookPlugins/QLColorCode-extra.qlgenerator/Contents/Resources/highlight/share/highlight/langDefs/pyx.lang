@@ -1,0 +1,41 @@
+# Pyrex language definition file
+# (http://nz.cosc.canterbury.ac.nz/~greg/python/Pyrex/)
+#
+# Author: Matteo Bertini
+#   Mail: matteo.bertini@gmail.com
+#   Date: 20.01.2005
+
+$DESCRIPTION=Pyrex
+
+#Functions
+$KEYWORDS(kwa)= global nextgroup pythonfunction skipwhite
+contained chr cmp coerce compile complex delattr dir divmod eval execfile
+filter getattr globals hasattr hash hex id input intern isinstance
+issubclass len list locals long map max min oct open ord pow range raw_input
+reduce reload repr round setattr slice str tuple type vars xrange
+apply sizeof abs callable exec
+
+#keywords
+$KEYWORDS(kwb)=import from self public extern struct as
+break continue del except finally pass print raise return lambda class
+try assert def for while if elif else and in is not or cdef ctypedef
+
+#Exceptions ed types
+$KEYWORDS(kwc)=arithmeticerror assertionerror attributeerror eoferror
+exception floatingpointerror ioerror importerror indexerror keyerror
+keyboardinterrupt lookuperror memoryerror nameerror notimplementederror
+oserror overflowerror runtimeerror standarderror syntaxerror systemerror
+systemexit typeerror valueerror zerodivisionerror environmenterror
+void char int float object
+
+$STRINGDELIMITERS=""" ''' " '
+
+$RAWSTRINGPREFIX=r
+
+$SL_COMMENT=#
+
+$IGNORECASE=true
+
+$ESCCHAR=regex(\\\d{3}|\\x\p{XDigit}{2}|\\[ntvbrfa\\\?'"])
+
+$SYMBOLS= ( ) [ ] { } , ; . : & | < > !  = / * %  + -

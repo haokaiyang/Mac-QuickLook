@@ -1,0 +1,42 @@
+# Qore language definition file
+#
+# Author: Andre Simon
+#   Mail: andre.simon1@gmx.de
+#   Date: 10.06.06
+# ------------------------------------------
+# This file is a part of highlight, a free source code converter released under the GPL.
+#
+# The file is used to describe keywords and special symbols of programming languages.
+# See README in the highlight directory for details.
+#
+# New definition files for future releases of highlight are always appreciated ;)
+#
+# ----------
+# andre.simon1@gmx.de
+# http:/www.andre-simon.de/
+
+$DESCRIPTION=Qore
+
+$KEYWORDS(kwa)=class private synchronized new inherits shift where do while if else for 
+foreach const namespace return my our try throw catch find delete background exists 
+thread_exit in elements keys sub context sortBy sortDescendingBy NULL NOTHING summarize 
+by subcontext break continue option
+
+$KEYWORDS(kwb)=regex([$]\w+)
+$KEYWORDS(kwc)=regex([%][\w\-]+)
+
+$KEYWORDS(kwd)=regex((\w+)\s*\()
+
+$STRINGDELIMITERS=" '
+
+$ML_COMMENT=/* */
+
+$SL_COMMENT=#
+
+$DIRECTIVE=%
+
+$ESCCHAR=regex(\\\d{3}|\\x\p{XDigit}{2}|\\[ntvbrfa\\\?'"])
+
+$IGNORECASE=false
+
+$SYMBOLS= ( ) [ ] { } , ; . : & | < > !  = / \ *  %  + - ~

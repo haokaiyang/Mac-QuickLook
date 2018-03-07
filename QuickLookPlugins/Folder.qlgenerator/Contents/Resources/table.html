@@ -1,0 +1,32 @@
+<script>write_row("<NAME/>");</script><!-- writing <tr id="<NAME/>"> -->
+
+<td class="file_name">
+	<a href="Finder:/<FOLDERPATH/>/<NAME/>">
+	<table>
+		<tr>
+		<td class="file_icon">
+		<img src="<ICON/>" height="32">
+		</td>
+		<td>
+		<script>write_name("<NAME/>");</script>
+		</td>
+		<td class="go_finder">
+		<img src="file:///<RESOURCEPATH/>/images/selecticon.png" alt="select_file" class='go_finder'>
+		</td>
+		</tr>
+	</table>
+	</a>
+</td>
+<td class="file_created">
+	<CREATED_DATE/><br /><span class = "time"><CREATED_TIME/></span>
+</td>
+<td class="file_modified" class="hide_archive_cell">
+	<MODIFIED_DATE/><br /><span class = "time"><MODIFIED_TIME/></span>
+</td>
+<td class="file_size">
+	<script>write_size("<SIZE/>");</script>
+</td>
+<td class="file_kind">
+	<KIND/>
+</td>
+</tr>

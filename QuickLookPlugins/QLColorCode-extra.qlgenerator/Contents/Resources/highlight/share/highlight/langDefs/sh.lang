@@ -1,0 +1,57 @@
+# Bash script language definition file
+#
+# Author: Andre Simon
+#   Mail: andre.simon1@gmx.de
+#   Date: 29.07.2002
+# Update: 02.10.2007 Added kwc list
+# Update: 08.10.2008
+# ------------------------------------------
+# This file is a part of highlight, a free source code converter released under the GPL.
+#
+# The file is used to describe keywords and special symbols of programming languages.
+# See README in the highlight directory for details.
+#
+# New definition files for future releases of highlight are always appreciated ;)
+#
+# ----------
+# andre.simon1@gmx.de
+# http:/www.andre-simon.de/
+
+$DESCRIPTION=Bash
+
+$KEYWORDS(kwa)=case in esac for do done function if then fi elif else select
+time  until  while
+
+# built in  commands
+$KEYWORDS(kwb)=source alias bind break builtin command continue declare dirs
+disown echo enable export fc fg getopts hash help history jobs  let local
+logout popd printf pushd pwd read readonly return set  shift shopt suspend test
+times trap type ulimit umask unalias unset wait eval bg cd echo eval exec exit
+kill read set test trap ulimit umask wait
+
+$KEYWORDS(kwc)= ls cat tac rev cp mv rm rmdir chmod chattr ln find xargs expr 
+date zdump time touch at batch cal sleep usleep hwclock clock sort tsort diff
+patch diff3 sdiff cmp comm uniq expand unexpand cat paste join head tail grep
+egrep zgrep look sed awk wc tr fold fmt ptx col column colrm nl pr gettext 
+iconv recode groff lex yacc tar shar ar cpio gzip bzip2 compress uncompress 
+zip unzip sq  file which whereis whatis vdir shred locate slocate strings 
+basename dirname split sum cksum md5sum sha1sum uuencode uudecode crypt make
+install more less host vrfy nslookup dig traceroute ping whois finger ftp 
+uucp telnet rlogin rsh rcp ssh write mail vacation tput reset clear script 
+factor bc dc jot seq yes banner printenv lp tee mkfifo pathchk dd od hexdump m4 
+
+$STRINGDELIMITERS=" ' `
+
+$CONTINUATIONSYMBOL=\
+
+$SL_COMMENT=#
+
+$IGNORECASE=false
+
+$KEYWORDS(kwb)=regex(\$\w+)
+
+$KEYWORDS(kwd)=regex(\$\{.+?\})
+
+$ESCCHAR=regex(\\\d{3}|\\x\p{XDigit}{2}|\\[ntvbrfa\\\?'"])
+
+$SYMBOLS= ( ) [ ] { } , ; : & | < > !  = / * %  + -

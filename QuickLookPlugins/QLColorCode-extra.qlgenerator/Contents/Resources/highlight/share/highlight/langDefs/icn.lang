@@ -1,0 +1,38 @@
+# Icon language definition file
+#
+# Author: André Simon
+#   Mail: andre.simon1@gmx.de
+#   Date: 08.02.04
+# ------------------------------------------
+# This file is a part of highlight, a free source code converter released under the GPL.
+#
+# The file is used to describe keywords and special symbols of programming languages.
+# See README in the highlight directory for details.
+#
+# New definition files for future releases of highlight are always appreciated ;)
+#
+# ----------
+# andre.simon1@gmx.de
+# http:/www.andre-simon.de/
+
+$DESCRIPTION=Icon
+
+$KEYWORDS(kwa)= by case  create default do else every if initial next of repeat then to until while
+break  end fail global invocable link local procedure record return static suspend
+			
+$KEYWORDS(kwb)= co-expression cset tfile integer list null real set string table window
+			
+$STRINGDELIMITERS=" '
+
+$SL_COMMENT=#
+
+$IGNORECASE=false
+
+$ESCCHAR=regex(\\\d{3}|\\x\p{XDigit}{2}|\\[ntvbrfa\\\?'"])
+
+#$KW_PREFIX(kwb)=$
+#$KW_PREFIX(kwa)=&
+$KEYWORDS(kwa)=regex(\&\w+)
+$KEYWORDS(kwb)=regex(\$\w+)
+
+$SYMBOLS= ( ) [ ] { } , ; :  | < > ! - + = / * + -

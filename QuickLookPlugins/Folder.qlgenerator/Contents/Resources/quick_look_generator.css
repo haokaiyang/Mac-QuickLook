@@ -1,0 +1,246 @@
+*{
+	margin:0px;
+	padding:0px;
+}
+
+html{
+	background-color:rgb(11%,11%,11%);
+}
+
+body{
+	margin: 0;
+	padding:0;
+	font: 10px/16px "Lucida Grande", "ヒラギノ角ゴ Pro W3";
+	color:#AAA;
+	scrollbar-base-color:#red;
+}
+
+#tool_bar{
+	background-image:url('images/tool_background.png');
+	width:100%;
+	height:60px;
+	color:#aaa;
+	position:fixed;
+	bottom:0px;
+	z-index:9;
+}
+
+#tool_bar p{
+	display:inline;
+	vertical-align:bottom;
+	margin: 0px 5px 20px 15px;
+	position:fixed;
+	bottom:0px;
+}
+
+#header{
+	background-image:url('file://<RESOURCEPATH/>/images/attribute_background.png');
+	width:100%;
+	height:150px;
+	position:fixed;
+	top:0px;
+	z-index:10;
+}
+
+#attribute{
+	margin:5px auto 10px auto;
+	width:80%;
+	min-width:400px;
+}
+
+#attribute_info{
+	margin-left:85px;
+}
+
+#attribute_icon{
+	position:absolute;
+	margin: 5px 0px 10px 0px;
+	padding-top:12px;
+}
+
+#attribute_info h1{
+	font: 20px "Lucida Grande", "ヒラギノ角ゴ Pro W6";
+	font-weight:bold;
+	margin-bottom:5px;
+	color:#fff;
+	text-shadow:#aaa 0px 2px 3px;
+}
+
+#attribute_info p{
+	font: 10px/14px "Lucida Grande", "ヒラギノ角ゴ Pro W3";
+}
+
+#list_window{
+	position:relative;
+	top:135px;
+	width:100%;
+	margin-bottom:195px;
+}
+
+.file_list{
+	clear:both;
+	margin:0 auto;
+	width:90%;
+	min-width:450px;
+	border-collapse:collapse;
+}
+
+#file_list_header_table{
+	margin:0 auto;
+	width:90%;
+}
+
+.list_header{
+	position:absolute;
+	top:120px;
+	width:100%;
+}
+
+.file_list tr{
+	height:36px;
+}
+
+#file_list_header{
+	height:15px;
+	background-image:url('file://<RESOURCEPATH/>/images/header_background.png');
+}
+
+#file_list_header th{
+	font: 10px/14px "Lucida Grande", "ヒラギノ角ゴ Pro W6";
+	font-weight:bold;
+	text-shadow: #333 0px 5px 5px;
+	color:white;
+}
+
+.file_list img{
+	vertical-align: middle;
+}
+
+.file_list th{
+	text-align:left;
+}
+
+.file_list tr:hover{
+	background-color:#555;
+}
+
+.file_list td{
+	font: 10px/12px "Lucida Grande", "ヒラギノ角ゴ Pro W3";
+}
+
+.file_icon{
+	width:40px;
+	min-width:40px;
+}
+
+.folder_icon img{
+	height:32px;
+	width:auto;
+}
+
+.file_name{
+	min-width:240px;
+	max-width:20em;
+	border-right: 1px solid #333;
+}
+
+th.file_name{
+	padding-left:40px;
+	background-image:url('file://<RESOURCEPATH/>/images/header_background_left.png');
+	background-repeat:no-repeat;
+}
+
+.file_created, .file_modified{
+	width:6em;
+	min-width:4em;
+	padding-left:3px;
+	border-right: 1px solid #333;
+}
+
+.file_modified{
+}
+
+.file_size{
+	width:5em;
+	min-width:5em;
+	padding-left:3px;
+	border-right: 1px solid #333;
+}
+
+.file_kind{
+	padding-left:3px;
+	width:12em;
+	min-width:100px;
+}
+
+th.file_kind{
+	background-image:url('file://<RESOURCEPATH/>/images/header_background_right.png');
+	background-repeat:no-repeat;
+	background-position:right;
+}
+
+a{
+	color:inherit;
+	text-decoration:none;
+}
+
+.time {
+	display:none;
+}
+
+.hidden_file {
+	display:none;
+}
+
+.file_size {
+	display:table-cell;
+}
+
+.file_name table{
+	width:100%;
+	min-width:240px;
+}
+
+.file_name td.go_finder{
+	width:20px;
+	display:table-cell;
+}
+
+.file_name img{
+}
+
+.file_name a{
+	display:block;
+}
+
+td.go_finder img{
+	visibility:hidden;
+}
+
+.file_name:hover img.go_finder{
+	visibility:visible;
+}
+
+.active_archive{
+	display:none;
+}
+
+.active_archive_inline{
+	display:none;
+}
+
+.active_archive_cell{
+	display:none;
+}
+
+.hide_archive{
+	display:block;
+}
+
+.hide_archive_inline{
+	display:inline;
+}
+
+.hide_archive_cell{
+	display:table-cell;
+}

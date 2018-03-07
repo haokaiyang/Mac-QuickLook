@@ -1,0 +1,20 @@
+# This File is part of highlight, a universal source code converter.
+# See README in the highlight directory for documentation.
+
+$DEFAULTCOLOUR=#000000
+$BGCOLOUR=#ffffff
+$FONTSIZE=10
+$KW-GROUP(kwa)=#7f0055 bold
+$KW-GROUP(kwb)=#7f0055 bold
+$KW-GROUP(kwc)=#7f0055 bold
+$KW-GROUP(kwd)=#000000
+$NUMBER=#000000
+$ESCAPECHAR=#0000ff
+$STRING=#0000ff
+$STRING-DIRECTIVE=#7f9fbf
+$COMMENT=#717ab3
+$DIRECTIVE=#3f5fbf
+$LINE=#000000
+$SL-COMMENT=#2f9956
+$SYMBOL=#000000
+$MARK-LINE=#ffffbb

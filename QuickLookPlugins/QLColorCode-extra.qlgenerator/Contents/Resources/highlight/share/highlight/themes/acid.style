@@ -1,0 +1,22 @@
+# acid.style - style
+# This File is part of highlight, a universal source code converter.
+# See README in the highlight directory for documentation.
+# This theme was made by AciD <acid@cpm-fr.com>
+
+$DEFAULTCOLOUR=#000000
+$BGCOLOUR=#eeeeee
+$FONTSIZE=8
+$KW-GROUP(kwa)=#bb7977 bold
+$KW-GROUP(kwb)=#8080c0 bold
+$KW-GROUP(kwc)=#0080c0
+$KW-GROUP(kwd)=#004466
+$NUMBER=#800080 bold
+$ESCAPECHAR=#ff00ff bold
+$STRING=#a68500
+$STRING-DIRECTIVE=#0000ff
+$COMMENT=#ff8000
+$SL-COMMENT=#f27900
+$DIRECTIVE=#0080c0 bold
+$LINE=#303030
+$SYMBOL=#ff0080 bold
+$MARK-LINE=#ffffbb

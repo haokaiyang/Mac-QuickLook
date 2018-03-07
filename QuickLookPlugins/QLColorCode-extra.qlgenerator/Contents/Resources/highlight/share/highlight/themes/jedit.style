@@ -1,0 +1,20 @@
+# jedit - style
+# This File is part of highlight, a universal source code converter.
+# See README in the highlight directory for documentation.
+
+$DEFAULTCOLOUR=#000000
+$BGCOLOUR=#ffffff
+$FONTSIZE=10
+$KW-GROUP(kwa)=#009966 bold
+$KW-GROUP(kwb)=#009966 bold
+$KW-GROUP(kwc)=#0099ff
+$KW-GROUP(kwd)=#9966ff 
+$NUMBER=#ff0000
+$ESCAPECHAR=#ff00ff
+$STRING=#ff00cc
+$STRING-DIRECTIVE=#818100
+$COMMENT=#cc0000
+$DIRECTIVE=#0000ff
+$LINE=#555555
+$SYMBOL=#000000 bold
+$MARK-LINE=#ffffbb

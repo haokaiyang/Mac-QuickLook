@@ -1,0 +1,184 @@
+<html>
+	<head>
+	<style>
+		body {
+			font-family: HelveticaNeue, sans-serif;
+			margin: 0.5em;
+		}
+		pre {
+			font-family: SourceCodePro, AndaleMono, Courier;
+		}
+		a {
+			color: #0087d4;
+			text-decoration: none;
+		}
+
+		div.container {
+			width: auto;
+			margin: 0 0 0.5em 0;
+			border-radius: 3px;
+			border: 1px solid #ddd;
+			background-color: #eee;
+		}
+		div.last {
+			margin: 0;
+		}
+		div.label {
+			font-weight: normal;
+			font-family: HelveticaNeue;
+		}
+		div.header {
+			padding: 0.5em;
+			border-radius: 3px 3px 0 0;
+			background-color: #ddd;
+		}
+		div.header > div.label {
+		}
+		div.section {
+			padding: 0.5em;
+		}
+		div.section > div.label {
+			color: #aaa;
+		}
+		div.divider {
+			border-top: 1px solid #ddd;
+		}
+		div.item {
+			float: left;
+		}
+		div.detail {
+			width: auto;
+			text-align: left;
+			color: #666;
+		}
+		div.data {
+			font-family: SourceCodePro, AndaleMono, Courier;
+		}
+		div.data > pre {
+			margin: 0;
+			font-size: 0.9em;
+		}
+		div.data > table {
+			font-size: 0.9em;
+			border-collapse: collapse;
+		}
+		div.data > table > tbody {
+		}
+		div.data > table > tbody > tr > td {
+			margin: 0em;
+			padding: 0.25em 0.5em 0.25em 0.5em;
+		}
+		div.data > table > tbody > tr > td.divider {
+			border-left: 1px solid #aaa;
+		}
+		div.data > table > tbody > tr.even {
+			background-color: #ddd;
+		}
+		div.summary {
+			color: #aaa;
+		}
+		div.summary > a {
+			color: #6aa1d3;
+		}
+
+		div#provision_info > div.header {
+			font-weight: bold;
+		}
+		div#provision_info > div.section#creation {
+			padding-bottom: 0.1em;
+		}
+		div#provision_info > div.section#expiration {
+			padding-top: 0.1em;
+		}
+		div#provision_info > div.header > div.label {
+			font-weight: bold;
+			float: left;
+		}
+		div#devices > div.header > div.label {
+			float: left;
+		}
+		div#devices > div.section {
+			overflow: auto;
+		}
+		div#devices > div.section > div.data {
+			float: left;
+		}
+		div#devices > div.header > div.label {
+			float: left;
+		}
+		div#certificates > div.header > div.label {
+			float: left;
+		}
+		div#certificates > div.section > div.data {
+			font-family: HelveticaNeue, sans-serif;
+		}
+		div#certificates > div.section > div.data > table {
+			font-size: 1em;
+		}
+		span.error {
+			color: #9a0003;
+		}
+		span.warning {
+			color: #daa520;
+		}
+
+		div#provision_info > div.debug  {
+			color:red;
+		}
+	
+	</style>
+	</head>
+	<body>
+		<div class="container" id="professional">
+			<div class="header">
+				<div class="label">__com_microsoft_outlook_firstName__ __com_microsoft_outlook_lastName__</div>
+			</div>
+			<div class="section divider">
+				<div class="label">Company</div>
+				<div class="detail">
+					__com_microsoft_outlook_company__
+				</div>
+			</div>
+			<div class="section divider">
+				<div class="label">Title</div>
+				<div class="detail">
+					__com_microsoft_outlook_jobTitle__
+				</div>
+			</div>
+			<div class="section divider">
+				<div class="label">Telephones</div>
+				<div class="detail">
+					__kMDItemPhoneNumbers__
+				</div>
+			</div>
+			<div class="section divider">
+				<div class="label">Email Addresses</div>
+				<div class="detail">
+					__kMDItemEmailAddresses__
+				</div>
+			</div>			
+			<div class="section divider">
+				<div class="label">Work Address</div>
+				<div class="detail">
+					__com_microsoft_outlook_workStreet__<br/>
+					__com_microsoft_outlook_workCity__, __com_microsoft_outlook_workState__, __com_microsoft_outlook_workZip__<br/>
+					__com_microsoft_outlook_workCountry__
+				</div>
+			</div>
+			<div class="section divider">
+				<div class="label">Home Address</div>
+				<div class="detail">
+					__com_microsoft_outlook_homeStreet__<br/>
+					__com_microsoft_outlook_homeCity__, __com_microsoft_outlook_homeState__, __com_microsoft_outlook_homeZip__<br/>
+					__com_microsoft_outlook_homeCountry__
+				</div>
+			</div>
+			<div class="section divider">
+				<div class="label">Notes</div>
+				<div class="detail">
+				__com_microsoft_outlook_notes__
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

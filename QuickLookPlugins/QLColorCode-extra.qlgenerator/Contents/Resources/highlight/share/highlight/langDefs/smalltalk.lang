@@ -1,0 +1,38 @@
+# Smalltalk language definition file
+#
+# This assumes a coding style where statements don't cross lines at inappropriate moments,
+# single spaces are used in many places, and a newly defined method name appears alone on
+# a line.
+#
+# Author: Joerg Walter
+#   Mail: jwalt@garni.ch
+#   Date: 29.10.2007
+
+# TODO: Fix "$" recognition
+
+$DESCRIPTION=Smalltalk
+
+# Yup, that's six, and strictly speaking they aren't keywords at all.
+$KEYWORDS(kwa)=self super nil true false thisContext
+
+# messages
+$KEYWORDS(kwb)=regex(\b[a-z]\w*:(?!=)|(?<= )(?<!  )(?<!\[ )(?<!\| )(?<!= )(?<!. )(?<!: )(?<!\* )(?<!- )(?<!\+ )(?<!/ )[a-z]\w*\b|[\-+/*=]|==|[<>]=|^\s*[a-z]\w+\s*$)
+
+# globals
+$KEYWORDS(kwc)=regex(\b[A-Z]\w*\b)
+
+# symbols, block parameters and local variable declarations
+$KEYWORDS(kwd)=regex(#[a-zA-Z0-9_:]+|#[\-+/*]|(?<= ):\w*\b|(?<=\[):\w*\b|\| *\w+(?: +\w+)* *\|)
+#(\| *\w+( +\w+)* *\|)
+
+$DIGIT=regex((?:0x|0X)[0-9a-fA-F]+|\d*[\.]?\d+(?:[eE][\-\+]\\d+)?[lLuU]?|\$[\w\$\#\'\"\-])
+
+$STRINGDELIMITERS='
+$ML_COMMENT="
+$ALLOWNESTEDCOMMENTS=false
+
+$IGNORECASE=false
+
+$REFORMATTING=false
+
+$SYMBOLS=:= = == . ; ( ) [ ] | ^ #( !

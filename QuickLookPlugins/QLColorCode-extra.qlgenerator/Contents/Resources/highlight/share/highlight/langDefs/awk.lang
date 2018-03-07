@@ -1,0 +1,36 @@
+# (G)AWK script language definition file
+#
+#  Author: Andreas Schoenberg
+#    Mail: asg@ftpproxy.org
+#    Date: 26.11.2002
+# Version: 1.1
+# ChangeLog: added escchar <andre.simon1@gmx.de>
+             changed format
+# ------------------------------------------
+# This file is a part of highlight, a free source code converter released under the GPL.
+#
+# The file is used to describe keywords and special symbols of programming languages.
+# See README in the highlight directory for details.
+#
+# New definition files for future releases of highlight are always appreciated ;)
+
+$DESCRIPTION=(G)AWK
+
+$KEYWORDS(kwa)=begin break close continue delete do else end exit for 
+getline gsub if index length match next print printf return split sprintf sub
+substr system tolower toupper while
+
+$KEYWORDS(kwb)=argc argind argv convfmt environ errno fieldwidths filename fnr
+fs ignorecase nf nr ofmt ofs ors rlength rs rstart rt subset
+
+$KEYWORDS(kwc)=function
+
+$STRINGDELIMITERS=" '
+
+$SL_COMMENT=#
+
+$IGNORECASE=true
+
+$ESCCHAR=regex([\\%]\d{3}|[\\%]x\d{2}|[\\%][ntvbrfa\\\?'"%])
+
+$SYMBOLS= ( ) [ ] { } , ; : & | < > !  = / *   + -

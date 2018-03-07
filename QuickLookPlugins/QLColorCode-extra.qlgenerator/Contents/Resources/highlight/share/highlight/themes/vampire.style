@@ -1,0 +1,20 @@
+# vampire.style
+# This File is part of highlight, a universal source code converter.
+# See README in the highlight directory for documentation.
+
+$DEFAULTCOLOUR=#ff0000
+$BGCOLOUR=#000000
+$FONTSIZE=10
+$KW-GROUP(kwa)=#ffffff bold
+$KW-GROUP(kwb)=#F35E1E bold
+$KW-GROUP(kwc)=#ffffff 
+$KW-GROUP(kwd)=#ffcc33
+$NUMBER=#aaff00
+$ESCAPECHAR=#ffffff
+$STRING=#bb00ff
+$STRING-DIRECTIVE=#bb00ff
+$COMMENT=#ababab italic
+$DIRECTIVE=#ababab
+$LINE=#F3E651
+$SYMBOL=#F3E651
+$MARK-LINE=#203c51

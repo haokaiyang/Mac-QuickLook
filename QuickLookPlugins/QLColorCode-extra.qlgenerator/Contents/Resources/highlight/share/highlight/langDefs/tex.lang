@@ -1,0 +1,45 @@
+# TeX/LaTeX language definition file
+#
+# Author: Andre Simon
+#   Mail: andre.simon1@gmx.de
+#   Date: 02.03.2003
+#         01.09.2009: Added nested directive
+# ------------------------------------------
+# This file is a part of highlight, a free source code converter released under the GPL.
+#
+# The file is used to describe keywords and special symbols of programming languages.
+# See README in the highlight directory for details.
+#
+# New definition files for future releases of highlight are always appreciated ;)
+# ----------
+# andre.simon1@gmx.de
+# http:/www.andre-simon.de/
+
+$DESCRIPTION=TeX and LaTeX
+
+$KEYWORDS(kwa)=regex(\\\w+)
+
+$KEYWORDS(kwb)= a4paper report ngerman dvips  graphicx latin1 inputenc  T1 fontenc
+color alltt document tabbing  tocdepth
+
+$KEYWORDS(kwc)=regex(\#\d+)
+
+$SL_COMMENT=regex((?<!\\)%.*$, 0)
+
+$ML_COMMENT=(* *)
+
+$IGNORECASE=false
+
+$SYMBOLS={ } [ ]
+
+# PerlTeX delimiters
+# Issue: } is also a Perl symbol
+$NESTED(pl)=regex(\\perl(?:re)?newcommand\{\\\w+\}\[.*\]\{) regex(\}) regex(\{)
+$NESTED(pl)=regex(\\perl(?:re)?newenvironment\{\w+\}\[.*\]\{) regex(\}) regex(\{)
+
+# LuaTeX delimiters
+# Issue: } is also a Lua symbol
+$NESTED(inc_luatex)=regex(\\directlua0?.*?\{) regex((?<!\{)\})
+
+# Sweave delimiters
+$NESTED(r)=regex(\<\<.*\>\>\=) regex(@)

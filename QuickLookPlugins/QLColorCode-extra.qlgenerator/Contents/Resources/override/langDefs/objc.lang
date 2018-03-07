@@ -1,0 +1,63 @@
+# Objective C language definition file
+#
+# Author: Andr�Simon
+#   Mail: andre.simon1@gmx.de
+#   Date: 08.02.04
+# ------------------------------------------
+# This file is a part of highlight, a free source code converter released under the GPL.
+#
+# The file is used to describe keywords and special symbols of programming languages.
+# See README in the highlight directory for details.
+#
+# New definition files for future releases of highlight are always appreciated ;)
+#
+# ----------
+# andre.simon1@gmx.de
+# http:/www.andre-simon.de/
+
+# Modified by Nathan Gray
+
+#### REMEMBER: \s includes \n!
+
+$KEYWORDS(kwa)=goto break return continue asm case default if else switch while for do sizeof typeof
+typedef inline stdcall auto cdecl class const_cast delete dynamic_cast explicit
+extern friend goto inline mutable namespace new operator pascal register reinterpret_cast private
+protected public static_cast template this throw try catch typeid using virtual volatile true false
+id Class SEL IMP BOOL oneway in out inout bycopy byref self super nil NIL TRUE FALSE
+
+$KEYWORDS(kwb)=int long short char void signed unsigned float double size_t wchar_t ptrdiff_t
+sig_atomic_t fpos_t clock_t time_t va_list jmp_buf FILE DIR div_t ldiv_t static register auto
+volatile extern const bool struct union enum
+
+#$KW_PREFIX(kwa)=@
+
+$KEYWORDS(kwa)=regex(@\w+)
+
+$KEYWORDS(fndef)=regex(^(?!typedef)[_a-zA-Z][*\w\t ]*(?:\n|[ \t])?[ \t]*[_a-zA-Z]\w*[ \t]*(?=\((?!\s*\*))|^[ \t]*[\-+][ \t]*(?:\([ \t]*[_a-zA-Z]\w*[* \t]*\))?[ \t]*[_a-zA-Z]\w*(?=[ \t]*(?:\n[ \t]*)?(?=[:{])))
+
+# Tmp. for debugging:
+#$KEYWORDS(fndef)=regex(([_a-zA-Z]\w*)\s*(?:[:{]))
+
+$KEYWORDS(kwd)=regex((\w+?)\s*\()
+
+# A method call target is any identifier inside an open bracket followed by 
+# another identifier
+$KEYWORDS(callr)=regex((?<=\[)\s*\w+(?=\s+[_a-zA-Z]))
+
+$KEYWORDS(str)=regex(@(?="))
+
+$STRINGDELIMITERS=" '
+
+$SL_COMMENT=//
+
+$ML_COMMENT=/* */
+
+$ALLOWNESTEDCOMMENTS=false
+
+$IGNORECASE=false
+
+$DIRECTIVE=#
+
+$ESCCHAR=\
+
+$SYMBOLS= ( ) [ ] { } , ; : & | < > !  = / * %  + -

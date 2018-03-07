@@ -1,0 +1,21 @@
+# night.style
+# This File is part of highlight, a universal source code converter.
+# See README in the highlight directory for documentation.
+
+$DEFAULTCOLOUR=#cc00ee
+$BGCOLOUR=#000044
+$FONTSIZE=10
+$KW-GROUP(kwa)=#ffffff bold
+$KW-GROUP(kwb)=#f1157c bold
+$KW-GROUP(kwc)=#7aec27 bold
+$KW-GROUP(kwd)=#ff06cd bold
+$NUMBER=#8ee119
+$ESCAPECHAR=#82d66d
+$STRING=#dddddd
+$STRING-DIRECTIVE=#dddddd
+$COMMENT=#59c9f9
+$SL-COMMENT=#59c9f9
+$DIRECTIVE=#00bb00
+$LINE=#e7ee5c
+$SYMBOL=#e7ee5c bold
+$MARK-LINE=#000000

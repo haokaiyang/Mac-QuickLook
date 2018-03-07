@@ -1,0 +1,20 @@
+# ide-anjuta.style
+# This File is part of highlight, a universal source code converter.
+# See README in the highlight directory for documentation.
+
+$DEFAULTCOLOUR=#000000
+$BGCOLOUR=#ffffff
+$FONTSIZE=10
+$KW-GROUP(kwa)=#000080 bold
+$KW-GROUP(kwb)=#000080
+$KW-GROUP(kwc)=#0000ff
+$KW-GROUP(kwd)=#000000
+$NUMBER=#008800
+$ESCAPECHAR=#ddbb00
+$STRING=#ddbb00
+$STRING-DIRECTIVE=#ddbb00
+$COMMENT=#ff0000 italic
+$DIRECTIVE=#678000
+$LINE=#ff0000
+$SYMBOL=#000000
+$MARK-LINE=#ffffbb

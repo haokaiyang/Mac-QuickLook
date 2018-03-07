@@ -1,0 +1,43 @@
+# MaxScript language definition file
+#
+# Author: André Simon
+#   Mail: andre.simon1@gmx.de
+#   Date: 20.11.2003
+# ------------------------------------------
+# This file is a part of highlight, a free source code converter released under the GPL.
+#
+# The file is used to describe keywords and special symbols of programming languages.
+# See README in the highlight directory for details.
+#
+# New definition files for future releases of highlight are always appreciated ;)
+#
+# ----------
+# andre.simon1@gmx.de
+# http:/www.andre-simon.de/
+
+$DESCRIPTION=MaxScript
+
+$KEYWORDS(kwa)=about animate as at by case catch collect continue coordsys
+default do else exit fn for function global group if in level local local
+mapped max of on parent persistent pivot return selection set struct then throw
+time to try undo where while with with world true false on off ok undefined
+unsupplied or and not
+
+$KEYWORDS(kwb)=utility rollout label button edittext combobox dropdownlist
+listbox spinner slider pickbutton pushbutton checkbutton macrobutton
+radiobuttons checkbox colorpicker mapbutton materialbutton progressbar timer
+bitmap rcmenu menuitem separator submenu macroscript tool plugin parameters
+
+$STRINGDELIMITERS=" 
+
+$SL_COMMENT=--
+
+$ML_COMMENT=/* */
+
+$ALLOWNESTEDCOMMENTS=false
+
+$IGNORECASE=false
+
+$ESCCHAR=regex(\\\d{3}|\\x\p{XDigit}{2}|\\[ntvbrfa\\\?'"])
+
+$SYMBOLS= ( ) [ ] { } , ; : & | < > !  = / * %  + -

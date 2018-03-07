@@ -1,0 +1,116 @@
+# SYBASE SQL language definition file
+#
+# Author: André Simon
+#   Mail: andre.simon1@gmxde
+#   Date: 28.06.20.03
+# ------------------------------------------
+# This file is a part of highlight, a free source code converter released under the GPL
+#
+# The file is used to describe keywords and special symbols of programming languages
+# See README in the highlight directory for details
+#
+# New definition files for future releases of highlight are always appreciated ;)
+# ----------
+# andre.simon1@gmxde
+# http:/wwws.andre-simon.deu/
+
+$DESCRIPTION=Sybase SQL
+
+$keywords=abs acos ascii asin atan atn2 avg ceiling char charindex char_length
+coalesce col_length col_name convert cos cot count curunreservedpgs data_pgs
+datalength dateadd datediff datename datepart db_id db_name degrees difference
+exp floor getdate host_id host_name index_col  isnull is_sec_service_on
+lct_admin log log10 lower ltrim max min mut_excl_roles object_id object_name
+patindex pi power proc_role ptn_data_pgs radians rand replicate  reserved_pgs
+reverse right role_contain role_id role_name round rowcnt rtrim show_role
+show_sec_services sign sin soundex space sqrt str stuff substring sum suser_id
+suser_name tan textptr textvalid tsequal upper used_pgs user user_id user_name
+valid_name valid_user activation add all alter and any arith_overflow as asc at
+authorization avg begin between break browse bulk by cascade char_convert check
+checkpoint close clustered commit compute confirm connect constraint consumers
+continue controlrow convert count create current cursor database dbcc
+deallocate declare default delete desc disk distinct double drop dummy dump
+else end endtran errlvl errordata errorexit escape except exclusive exec
+execute exists exit external fetch fillfactor for foreign from goto grant group
+having holdlock identity_insert identity_start if in index insert intersect
+into is isolation key kill level like lineno load max max_rows_per_page
+membership min mirror mirrorexit national noholdlock nonclustered not null
+numeric_transaction of off offsets on once online only open option or order
+over partition passwd perm permanent plan precision prepare primary print
+privileges proc procedure processexit proxy public raiserror read readtext
+reconfigure references replace return revoke role rollback rowcount rows rule
+save schema select session set setuser shared shutdown some statistics stripe
+sum syb_identity syb_restree table temp temporary textsize to tran transaction
+trigger truncate tsequal union unique unpartition update use user user_option
+using values varying view waitfor where while with work writetext absolute
+action allocate are assertion bit bit_length both cascaded case cast catalog
+char char_length character character_length coalesce collate collation column
+connection constraints corresponding cross current_date current_time
+current_timestamp current_user date day dec decimal deferrable deferred
+describe descriptor diagnostics disconnect domain  exception extract
+false first float found full get global go hour immediate indicator initially
+inner input insensitive int integer interval join language last leading left
+local lower match minute module month names natural nchar next no nullif
+numeric octet_length outer output overlaps pad partial position preserve prior
+real relative restrict right scroll second section session_user size smallint
+space sql sqlcode sqlerror sqlstate substring system_user then time timestamp
+timezone_hour timezone_minute trailing translate translation trim true unknown
+upper usage value varchar varbinary when whenever write year zone after alias
+async before boolean breadth call completion cycle data depth dictionary each
+elseif equals general ignore leave less limit loop modify new none object oid
+old operation operators others parameters pendant preorder private protected
+recursive ref referencing resignal return returns routine row savepoint search
+sensitive sequence signal similar sqlexception structure test there type under
+variable virtual visible wait without
+
+$KEYWORDS(kwb)=sp_activeroles sp_addalias sp_addauditrecord sp_addaudittable
+sp_addextendedproc sp_addexternlogin sp_addgroup sp_addlanguage sp_addlogin
+sp_addmessage sp_addobjectdef sp_addremotelogin sp_add_resource_limit
+sp_addsegment sp_addserver sp_addthreshold sp_add_time_range sp_addtype
+sp_addumpdevice sp_adduser sp_altermessage sp_autoconnect sp_bindcache
+sp_bindefault sp_bindmsg sp_bindrule sp_cacheconfig sp_cachestrategy
+sp_changedbowner sp_changegroup sp_checknames sp_checkreswords sp_checksource
+sp_chgattribute sp_clearstats sp_commonkey sp_countmetadata sp_cursorinfo
+sp_column_privileges sp_columns sp_configure sp_databases sp_datatype_info
+sp_dbcc_alterws sp_dbcc_configreport sp_dbcc_createws sp_dbcc_deletedb
+sp_dbcc_deletehistory sp_dbcc_differentialreport sp_dbcc_evaluatedb
+sp_dbcc_faultreport sp_dbcc_fullreport sp_dbcc_runcheck
+sp_dbcc_statisticsreport sp_dbcc_summaryreport sp_dbcc_updateconfig sp_dboption
+sp_defaultloc sp_depends sp_diskdefault sp_displayaudit sp_displaylevel
+sp_displaylogin sp_displayroles sp_dropalias sp_dropdevice sp_dropexeclass
+sp_dropextendedproc sp_dropexternlogin sp_dropglockpromote sp_dropgroup
+sp_dropkey sp_droplanguage sp_droplogin sp_dropmessage sp_dropobjectdef
+sp_dropremotelogin sp_drop_resource_limit sp_dropsegment sp_dropserver
+sp_dropthreshold sp_drop_time_range sp_droptype sp_dropuser sp_estspace
+sp_extendsegment sp_familylock sp_forceonline_db sp_forceonline_page
+sp_foreignkey sp_freedll sp_getmessage sp_grantlogin sp_help sp_helpartition
+sp_helpcache sp_helpconfig sp_helpconstraint sp_helpdb sp_helpdevice
+sp_helpextendedproc sp_helpexternlogin sp_helpgroup sp_helpindex sp_helpjoins
+sp_helpkey sp_helplanguage sp_helplog sp_helpobjectdef sp_helpremotelogin
+sp_help_resource_limit sp_helprotect sp_helpsegment sp_helpserver sp_helpsort
+sp_helptext sp_helpthreshold sp_helpuser sp_hidetext sp_indsuspect
+sp_listsuspect_db sp_listsuspect_page sp_lock sp_locklogin sp_logdevice
+sp_loginconfig sp_logininfo sp_logiosize sp_modifylogin
+sp_modify_resource_limit sp_modify_time_range sp_modifythreshold sp_monitor
+sp_monitorconfig sp_passthru sp_password sp_placeobject sp_plan_dbccdb
+sp_primarykey sp_processmail sp_procqmode sp_procxmode sp_recompile
+sp_remoteoption sp_remotesql sp_rename sp_renamedb sp_reportstats
+sp_revokelogin sp_role sp_serveroption sp_setlangalias sp_setpglockpromote
+sp_setpglockpromote sp_setsuspect_granularity sp_setsuspect_threshold
+sp_spaceused sp_syntax sp_sysmon sp_sysmon sp_sysmon sp_unbindcache
+sp_unbindcache_all sp_unbindefault sp_unbindmsg sp_unbindrule sp_volchanged
+sp_who sp_fkeys sp_server_info sp_special_columns sp_sproc_columns
+sp_statistics sp_stored_procedures sp_table_privileges sp_tables xp_cmdshell
+xp_deletemail xp_enumgroups xp_findnextmsg xp_logevent xp_readmail xp_sendmail
+xp_startmail xp_stopmail
+
+$STRINGDELIMITERS="
+
+$SL_COMMENT=--
+
+$ML_COMMENT=/* */
+
+$IGNORECASE=true
+
+$SYMBOLS= ( ) [ ] { } , ; : & | < > !  = / * %  + -
+

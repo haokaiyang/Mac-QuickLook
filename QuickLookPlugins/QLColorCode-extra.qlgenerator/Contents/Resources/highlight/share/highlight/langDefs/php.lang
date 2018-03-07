@@ -1,0 +1,57 @@
+# PHP3/4/5 language definition file
+#
+# Author: Andre Simon
+#         (most keywords taken from the VIM-syntax file)
+#   Mail: andre.simon1@gmx.de
+#   Date: 27.1.2003 
+#  Update 28.02.04: added "class function extends"
+#  Update 01.09.09: removed all library function names, added regex for uppercase constants
+# ------------------------------------------
+# This file is a part of highlight, a free source code converter released under the GPL.
+#
+# The file is used to describe keywords and special symbols of programming languages.
+# See README in the highlight directory for details.
+#
+# New definition files for future releases of highlight are always appreciated ;)
+#
+# ----------
+# andre.simon1@gmx.de
+# http:/www.andre-simon.de/
+
+$DESCRIPTION=PHP
+
+$KEYWORDS(kwa)= abstract   and   array   as   break 
+case   catch     cfunction   class   clone 
+const   continue   declare   default   do 
+else   elseif   enddeclare   endfor   endforeach 
+endif   endswitch   endwhile   extends   final
+for   foreach   function   global   goto
+if   implements    interface   instanceof  
+namespace    new    old_function (PHP 4 only)   or   private 
+protected    public   static   switch   throw  
+try    use   var   while   xor
+__CLASS__   __DIR__    __FILE__   __FUNCTION__   __METHOD__  __NAMESPACE__ 
+die   echo   empty   exit   eval 
+include   include_once   isset   list   require 
+require_once   return   print   unset 
+
+$KEYWORDS(kwb)=  int integer real double float string array object
+
+#$KEYWORDS(kwb)=regex([A-Z\_]+)
+
+$KEYWORDS(kwc)=regex(\$\w+)
+
+$KEYWORDS(kwd)=regex((\w+)\s*\()
+
+$STRINGDELIMITERS=" ' 
+
+$SL_COMMENT=// #
+
+$ML_COMMENT=/* */
+
+$IGNORECASE=true
+
+$ESCCHAR=regex(\\\d{3}|\\x\p{XDigit}{2}|\\[ntvbrfa\\\?'"])
+
+
+$SYMBOLS= ( ) [ ] { } , ; : & | < > !  = / *   + - . @

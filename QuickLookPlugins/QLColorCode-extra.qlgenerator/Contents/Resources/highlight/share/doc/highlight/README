@@ -1,0 +1,691 @@
+-------------------------------------------------------------------------------
+---  HIGHLIGHT MANUAL - Version 2.12   ------------------------ August 2009 ---
+-------------------------------------------------------------------------------
+
+OSI Certified Open Source Software
+
+Deutsche Anleitung: README_DE
+
+-------------------------------------------------------------------------------
+
+Highlight converts sourcecode to HTML, XHTML, RTF, LaTeX, TeX, SVG, BBCode, XML
+and terminal escape sequences with coloured syntax highlighting.
+Language definitions and colour themes are customizable.
+
+
+CONTENT:
+-------------------------------------------------------------------------------
+
+0.  Quick introduction
+1.  Platforms
+2.  Supported programming/markup languages
+3.  Features
+4.  Input/Output
+5.  Highlight file format
+6.  Language definitions
+7.  Colour themes
+8.  Keyword groups
+9.  Embedded output instructions
+10. Configuration file
+11. Advanced options
+12. Plugins
+13. SWIG interface
+14. GNU Source-highlight compatibility
+15. Contact
+
+
+
+0.  Quick introduction
+-------------------------------------------------------------------------------
+
+The following examples show how to produce a highlighted C++ file, using an
+input file called main.cpp:
+
+- Generate HTML:
+  highlight -i main.cpp -o main.cpp.html
+  highlight < main.cpp > main.cpp.html --syntax cpp
+
+You will find the HTML file and highlight.css in the working directory.
+If you use IO redirection, you must define the syntax type with --syntax.
+
+- Generate HTML with embedded CSS definitions and line numbers:
+  highlight -i main.cpp -o main.cpp.html --include-style --linenumbers
+
+- Generate HTML with inline CSS definitions:
+  highlight -i main.cpp -o main.cpp.html --inline-css
+
+- Generate HTML using "ANSI" source formatting style and "neon" colour theme:
+  highlight -i main.cpp -o main.cpp.html --reformat ansi --style neon
+
+- Generate LaTeX:
+  highlight --latex -i main.cpp -o main.cpp.tex
+
+  Other output formats:
+  XHTML (--xhtml), TeX (--tex), LaTeX (--latex), RTF (--rtf), terminal colour
+  escape codes (--ansi, --xterm256), SVG (--svg), BBCode (--bbcode), XML (--xml).
+  HTML is the default output format if no other format is specified.
+
+- Define font shape and size:
+  highlight --syntax ada --xhtml --font-size 12 --font Verdana
+  highlight --syntax ada --latex --font-size tiny --font sffamily
+
+- Define an output directory:
+  highlight -O some/target/dir/ *.cpp *.h
+
+Type "highlight --help" or "man highlight" for more details.
+
+
+
+1. PLATFORMS:
+-------------------------------------------------------------------------------
+
+Highlight is written in ISO C++. The following platforms are supported:
+- UNIX console  and GUI application
+- W32 console and GUI application
+
+The website www.andre-simon.de offers more precompiled packages for several
+operating systems (like Debian, Solaris, MacOS X).
+
+Note for the path names in this document:
+The highlight directory $HL_DIR may be one of the directories listed in INSTALL.
+For UNIX, this is usually /usr/share/highlight, for Windows, it is the path
+of the highlight executable. You redefine this directory at run time by
+the --data-dir option, or by modification of the makefile (see INSTALL).
+Highlight expects the subdirectories langDefs/ and themes/ within a data
+directory.
+Apart from $HL_DIR, the directory $CONF_DIR is the place where configuration
+files are stored (Unix: /etc/highlight/, Windows: executable path).
+
+
+
+2. SUPPORTED PROGRAMMING / MARKUP LANGUAGES:
+-------------------------------------------------------------------------------
+
+Please see README_LANGLIST for the current compilation of supported languages.
+You may also run "highlight --list-langs" to get a list of supported file
+extensions.
+
+
+
+3. FEATURES:
+-------------------------------------------------------------------------------
+
+* highlighting of keywords, types, strings, numbers, escape sequences, comments,
+  symbols and directive lines
+* recognition of nested languages within a file
+* custom keyword groups, which may be defined using regular expressions
+* coloured output in HTML, XHTML 1.1, RTF, TeX, LaTeX, SVG, BBCode, terminal 
+  escape sequences and XML format
+* customizable reformatting and indentation of C, C++, C# and Java source code
+* wrapping of long lines
+* output of line numbers
+* choice to embed the formatting information in the output HTML, LaTeX, TeX or
+  SVG file or to save them in a separate style file, which is referenced by the
+  generated documents
+* customizable colour themes
+* recursive batch processing of directories
+
+
+
+4. INPUT/OUTPUT:
+-------------------------------------------------------------------------------
+
+Apart from defining input and output files using -i and -o, it is possible to
+use IO redirection.
+If no input or output file name is defined by --input and --output options,
+highlight will use stdin and stdout for file processing.
+If multiple input files are given, highlight switches to batch mode.
+
+If no input filename is defined by --input or given at the prompt, highlight is
+not able to determine the language type by means of the file extension. Only
+some scripting languages are determined by the shebang in the first input line.
+In this case you have to pass highlight the given langage with --syntax (this
+should be the file suffix of the source file in most cases).
+Example: If you want to convert a Python file, highlight needs to load the
+py.lang language definition. The correct argument of --syntax would be "py".
+If you pass the filename directly to highlight, the program fetches the ".py"
+extension from the file name.
+
+highlight test.java                     # Option --syntax not needed
+highlight < test.java --syntax java     # --syntax option necessary
+cat test.java | highlight --syntax java
+
+If there exist multiple suffixes (like C, cc, cpp, h with C++ - files),
+you assign them to the matching language definition in the file
+$CONF_DIR/filetypes.conf.
+
+Highlight enters the batch processing mode if the --batch-recursive (-B) option
+was given or if multiple input files were defined.
+In batch mode, highlight will save the generated files with the original
+filename, appending the extension of the chosen output type.
+The -O option is useful with -B. Use --quiet to improve performance
+(recommended for usage in shell scripts).
+
+
+HTML, TeX, LaTeX and SVG output
+-------------------------------
+
+The HTML, TeX, LaTeX and SVG output formats allow to reference style definition
+files which contain the formatting information (stylesheets).
+
+In HTML and SVG output, this file contains CSS definitions and is saved as
+'highlight.css' by default.
+
+In LaTeX and TeX, this file contains macro definitions, and is saved as
+'highlight.sty' if not otherwise stated by the user.
+
+Name and path of the stylesheet may be modified with --style-outfile.
+If the --outdir option is given, all generated output, including stylesheets,
+are stored in this directory.
+
+Use the --include-style switch to force highlight to save the style
+information embedded in the output documents without referencing a stylesheet.
+
+The usage of referenced style definitions has the advantage to have all
+formatting information in a central place, which affects all referencing
+documents.
+
+If you want to process LaTeX files in UTF-8 encoding, you may have to install
+the latex ucs package (see INSTALL).
+
+Using the --style-infile option you can define a file to be included in the
+final formatting information of the document. You can enhance or redefine
+the default highlight style definitions without editing generated code.
+
+Example:
+
+/* content of user.css (add document frame and a line to linenumbers) */
+pre.hl {
+  border-width: 1px;
+  border-style:solid;
+  border-left-color: silver;
+  border-top-color: silver;
+  border-right-color: gray;
+  border-bottom-color: gray;
+  padding: 0.5cm;
+  margin: 2cm;
+}
+.hl.line {
+  /* background-color:#EEEEEE;  color:#505050; */
+  border-right:1px solid #555555;
+  font-style:normal;
+  font-weight:normal;
+  padding:1px;
+  text-decoration:none;
+}
+
+Usage: highlight -l --style-infile user.css main.cpp
+
+
+Terminal output:
+----------------
+
+highlight --ansi <inputfile> | less -R
+highlight --xterm256 <inputfile> | less -R
+
+displays coloured sourcecode in a terminal.
+
+Since there are limited colours defined for ANSI terminal output, there exists
+only one hard coded colour theme with --ansi. You should therefore use --xterm256
+to enable output in 256 colours. The 256 colour mode is supported by recent
+releases of xterm, rxvt and Putty (among others).
+
+
+Text processing:
+----------------
+
+If the language definition is specified as "txt", no highlighting takes place.
+
+highlight -S txt -L README > README.tex
+
+
+Examples
+--------
+
+The following commands write the content of hello.c to hello.html:
+
+highlight -o hello.html -i hello.c
+highlight -o hello.html hello.c
+highlight -o hello.html --syntax c < hello.c
+highlight --syntax c < hello.c > hello.html
+
+Apart from hello.html, a file highlight.css is generated in the current working
+directory.
+
+highlight -X  --batch-recursive '*.cpp' --outdir /home/you/html_code/
+This command converts all *.cpp files in the current directory and its sub-
+directories to xhtml files, and stores the output in /home/you/html_code.
+
+highlight hello.c --mark-line="5=Initialize some stuff; 15; 21=Log result"
+This command will mark the lines 5, 15 and 21 in HTML output.
+The lines 5 and 21 will show a tooltip with the given help texts.
+
+highlight -L  * --outdir /home/you/latex_code/
+This command onverts all files to LaTeX, stored in /home/you/latex_code/.
+
+highlight -c stdout -s seashell --print-style
+This command prints only the CSS information to stdout (theme: Seashell).
+
+
+
+5. HIGHLIGHT FILE FORMAT
+-------------------------------------------------------------------------------
+
+All Highlight configuration files are stored as plain ASCII text files, using
+the convention:
+
+$ParamName=ParamValue
+
+ParamName is the identifier of the parameter, ParamValue is its value.
+Parameter names are not case sensitive.
+The value may be a single character, a list of words or a regular expression.
+Lists may be split in multiple lines.
+
+Comments start with # as the first character in a line.
+
+
+
+6. LANGUAGE DEFINITIONS:
+-------------------------------------------------------------------------------
+
+
+A language definition describes all elements of a programming language which
+will be highlighted by different colours and font types.
+Save the new file in $HL_DIR/langDefs (see section 1), using the following name
+convention:
+
+<usual extension of sourcecode files>.lang
+
+Examples: PHP -> php.lang, Java -> java.lang
+
+If there exist multiple suffixes, list them in $HL_DIR/filetypes.conf.
+
+FILE FORMAT:
+
+# Regular expression to describe valid number tokens
+# Default value: (?:0x|0X)[0-9a-fA-F]+|\d*[\.]?\d+(?:[eE][\-\+]\\d+)?[lLuU]?
+$DIGIT=regex(<RE>)
+
+# Regular expression to describe valid identifier tokens
+# Default value: [a-zA-Z_]\w*
+$IDENTIFIER=regex(<RE>)
+
+# List of keywords or regular expression.
+# <group> is the name of the keyword group
+# The group must be defined in the applied colour theme to provide a matching
+# highlighting style.
+# If the regex contains multiple grouping parantheses, GROUP-NUM may be defined.
+# This parameter contains the number of the group, whose match should be
+# returned as keyword (count number from left to right)
+# The capturing states of the groups are irrelevant for counting.
+# Legal index values: 0 <= GROUP-NUM <= highest group index
+#                     0 describes the complete regex match
+# If GROUP-NUM is undefined, the group match with the highest number will be
+# returned.
+$KEYWORDS(<group>)=regex(<RE> <, GROUP-NUM>) | <List>
+
+# List of String delimiters
+$STRINGDELIMITERS=<List>
+
+# List of string delimiters which are not equal (open != close)
+$STRING_UNEQUAL=<open close>
+
+# List of escape characters in strings (ie. "\") or regular expression
+$ESCCHAR=<List> | regex(<RE>)
+
+# Escape characters may appear outside of strings
+$ALLOWEXTESCAPE=<true|false>
+
+# Prefix which disables highlighting of escape characters within a string
+$RAWSTRINGPREFIX=<character>
+
+# Delimiters of multi line comments
+# Delimiter comment_close may be omitted if $ALLOWNESTEDCOMMENTS is false
+$ML_COMMENT=<comment_begin comment_close>
+
+# List of strings which start single line comments
+$SL_COMMENT=<List> | regex(<RE>)
+
+# Prefix of preprocessor directive lines
+$DIRECTIVE=<prefix> | regex(<RE>)
+
+# Character which continues a compiler directive after a line break
+$CONTINUATIONSYMBOL=<symbol>
+
+# Source code may be reformatted (only C-style languages compatible with 
+# astyle (astyle.sf.net)
+$REFORMATTING=<true | false>
+
+# Symbols (brackets or operators)
+$SYMBOLS=<List>
+
+# Multiple line comments may be nested
+$ALLOWNESTEDCOMMENTS=<true | false>
+
+# Programming language is case sensitive
+$IGNORECASE=<true | false>
+
+# Include another language definition stored in the same data directory
+$INCLUDE=<language definition>
+
+# define the opening and closing expressions of the embedded language.
+# There may be multiple entries for the same language
+$NESTED(language)=regex(<RE open>) regex(<RE close>)
+
+See the file README_REGEX for a detailed description of the regular expression
+syntax.
+
+Example:
+--------
+
+#Content of pas.lang (Pascal/Objekt Pascal)
+
+$KEYWORDS(kwa)= absolute abstract and array as asm assembler automated begin case
+cdecl class const constructor destructor dispid dispinterface div do downto
+# [...]
+$KEYWORDS(kwb)=boolean char integer pointer real text
+true false cardinal longint byte word single double int64
+$KEYWORDS(kwc)=if else then downto do for repeat while to until with
+$KEYWORDS(kwd)=regex((\w+?)\s*\()
+$STRINGDELIMITERS=" '
+$SL_COMMENT=//
+$ML_COMMENT={ } (* *)
+$IGNORECASE=true
+$SYMBOLS= ( ) [ ] , ; : & | < > !  = / * %  + - @
+$ESCCHAR=#
+$ALLOWEXTESCAPE=true
+
+HINT: To test new language definitions or if you do not have permission to save
+      files in the default installation directory (HL_DIR), pass highlight
+      another search path with the --add-data-dir option.
+
+
+
+7. THEME DEFINITIONS
+-------------------------------------------------------------------------------
+
+Colour themes contain the formatting information of the language elements which
+are described in language definitions.
+
+The files have to be stored as *.style in HL_DIR/themes* (see section 1).
+Apply a style with the --style option.
+
+FILE FORMAT:
+
+<Colour> = #RRGGBB
+RR GG BB describe the red/green/blue hex-values which define the colour.
+Value range: 00 (none) - FF (full)
+
+<Format> = <bold> <italic> <underline>
+Bold, italic und underline are optional attributes and may be combined.
+
+# Colour of unspecified text
+$DEFAULTCOLOUR=<Colour>
+
+# Background colour
+$BGCOLOUR=<Colour>
+
+# Font size
+$FONTSIZE=<number>
+
+# Formatting of keywords, which belong to the corresponding keyword group
+$KW-GROUP(<group>)=<Colour> <Format>
+
+# Formatting of numbers
+$NUMBER=<Colour> <Format>
+
+# Formatting of escape characters
+$ESCAPECHAR=<Colour> <Format>
+
+# Formatting of strings
+$STRING=<Colour> <Format>
+
+# Formatting of comments
+$COMMENT=<Colour> <Format>
+
+# Formatting of single line comm. (optional, equals to $COMMENT if omitted)
+$SL-COMMENT=<Colour> <Format>
+
+# Formatting of compiler directives
+$DIRECTIVE=<Colour> <Format>
+
+# Formatting of strings within compiler directives
+$STRING-DIRECTIVE=<Colour> <Format>
+
+# Formatting of symbols (optional, equals to $DEFAULTCOLOUR if omitted)
+$SYMBOL=<Colour> <Format>
+
+# Formatting of line numbers
+$LINE=<Colour> <Format>
+
+# Background colour of marked lines
+$MARK-LINE=<Colour>
+
+Example:
+
+# golden.style
+$DEFAULTCOLOUR=#ddbb00
+$BGCOLOUR=#000000
+$FONTSIZE=10
+$KW-GROUP(kwa)=#ffed8a bold
+$KW-GROUP(kwb)=#ffed8a
+$KW-GROUP(kwc)=#dedede bold
+$KW-GROUP(kwd)=#ddbb00 bold
+$NUMBER=#ffffff
+$ESCAPECHAR=#ff0000
+$STRING=#ff0000
+$STRING-DIRECTIVE=#ff0000
+$COMMENT=#978345 italic
+$DIRECTIVE=#ffddaa
+$LINE=#898989
+$SYMBOL=#ababab
+$MARK-LINE=#404040
+
+
+
+8. KEYWORD GROUPS
+-------------------------------------------------------------------------------
+
+You may define custom keyword groups and corresponding highlighting styles.
+This is useful if you want to highlight functions of a third party library,
+macros, constants etc.
+
+You define a new group in two steps:
+
+ 1. Define a new group in your language definition:
+
+    $KEYWORDS(group)
+
+    The group attribute is the name of the new keyword group.
+    You may use the same group name for different group descriptions.
+
+ 2. Add a corresponding highlighting style in your colour theme:
+
+    $KW-GROUP(group) = #RRGGBB <bold> <italic> <underline>
+
+Note that every group name which is listed in a language definition should be
+defined in the used colour theme. The keyword groups "kwa"-"kwd" are predefined
+in all packaged colour themes.
+
+
+Example:
+
+# Some language definition...
+$KEYWORDS(kwa)=for repeat while [...]
+$KEYWORDS(debug)=ASSERT DEBUG
+$ML_COMMENT=/* */
+# ...
+
+# Some colour theme...
+$KW-GROUP(kwa)=#ddbb00 bold
+$KW-GROUP(debug)=#ff0000 bold
+$COMMENT=#978345 italic
+# ...
+
+
+
+9. EMBEDDED OUTPUT INSTRUCTIONS
+-------------------------------------------------------------------------------
+
+If highlight encounters the identifier @highlight within a single line comment
+in an input source file, the following special handling is applied to the line
+content: The data after @highlight will be copied to the output without
+escaping symbols of the output file format. So it is possible to add HTML tags
+or LaTeX commands without the need of external scripts. Apart from that, there
+is a set of variables that can be used to output additional information:
+
+$infile:    input file path
+$outfile:   output file path
+$font-face: font face
+$font-size: font size
+$theme:     theme path
+$title:     document title
+$encoding:  encoding
+$linenum:   line number
+$nl:        newline
+
+The comment line will not be outputted as highlighted comment, nor will it
+increase the line number count.
+Embedded instructions are only recognized in single line comments, not in multi
+line comments.
+
+Example:
+
+The following comment line is part of main.cpp:
+
+//@highlight <h1>$title</h1><br>Filename: $infile $nl
+
+highlight main.cpp --doc-title=Masterpiece
+
+This command will result in the following HTML output:
+
+<h1>Masterpiece</h1><br>Filename: main.cpp
+
+
+
+10. CONFIGURATION FILE:
+-------------------------------------------------------------------------------
+
+A plain ASCII text file may be stored in the following path, depending
+on your platform:
+
+UNIX: $HOME/.highlightrc
+W32 : <Path of highlight.exe>\highlight.conf
+
+The options in the file behave like their equivalent long command line options
+of the same name. Flags (options without parameter) expect true or false as
+value.
+
+
+Example:
+
+$style=emacs
+$linenumbers=true
+$style-outfile=format.css
+$reformat=gnu
+
+The options defined in this file may be redefined by command line parameters
+(except flags).
+
+
+
+11. ADVANCED OPTIONS
+-------------------------------------------------------------------------------
+
+Adding Exuberant Ctags information
+
+HTML output can be enhanced with descriptive tooltips based on ctags data:
+ctags *.*
+highlight --ctags-file *.cpp
+
+The default ctags-file parameter is "tags", so it is omitted in this example.
+This command will add the type, namespace and definition file path of recognized
+language tokens.
+Example: "member | class:highlight::HtmlGenerator | htmlgenerator.h"
+
+
+Marking input lines
+
+In HTML output, lines can be highlighted with a different background colour.
+A tooltip may show additional information describing the marked code section.
+
+highlight --mark-line='3;10,21' -l main.cpp
+This command highlights the lines 3, 10 and 21.
+
+highlight --mark-line='5;10=Getter and setter definitions' -l main.cpp
+This command highlights the lines 5 and 10. Line 10 also includes a tooltip
+containing "Getter and setter definitions".
+
+
+Prevent parsing of binary input files
+
+If highlight could be invoked with all kinds of input, you can disable parsing
+of binary files using --validate-input. This flag causes highlight to match the
+input file header with a list of magic numbers. If a binary file type is 
+detected, highlight quits with an error message.
+
+
+Highlight nested code without starting delimiter
+
+If a file starts with an embedded code section which misses the starting 
+delimiter, the --start-nested option will switch to the nested language mode.
+This can happen with LuaTeX files:
+highlight luatex.tex --latex -t4 -semacs --start-nested=inc_luatex
+
+The inc_luatex definition is a Lua definition with TeX line comments.
+Note that the nested code section has to end with the ending delimiter defined
+in the host language definition.
+
+
+
+12. PLUGINS
+-------------------------------------------------------------------------------
+
+See the /examples subdirectory in the highlight installation for some plugins
+which integrate highlight in Wiki and blogging software:
+
+-DokuWiki
+-MovableType
+-Wordpress
+-Serendipity
+
+
+
+13. SWIG INTERFACE
+-------------------------------------------------------------------------------
+
+A SWIG interface file is located in /examples/swig.
+See README_SWIG for installation instructions and the example scripts as
+programming reference.
+
+
+
+14. GNU SOURCE-HIGHLIGHT COMPATIBILITY
+-------------------------------------------------------------------------------
+
+The command line interface is extensively harmonised with source-highlight
+(http://www.gnu.org/software/src-highlite/).
+
+The following highlight options have the same meaning as in source-highlight:
+ --input, --output, --help, --version, --out-format, --title, --data-dir,
+ --verbose, --quiet, --ctags-file
+
+These options were added to enhance compatibility:
+ --css, --doc, --failsafe, --line-number, --line-number-ref, --no-doc, --tab,
+ --output-dir, --src-lang
+
+These switches provide a common highlighter interface for scripts, plugins etc.
+
+
+
+15. CONTACT
+-------------------------------------------------------------------------------
+
+Andre Simon
+andre.simon1@gmx.de
+as@andre-simon.de
+http://www.andre-simon.de/
+
+http://wiki.andre-simon.de/
+Because of repeated spamming abuse, you have to login to edit pages.
+The wiki login: user, Password h1gHL1te

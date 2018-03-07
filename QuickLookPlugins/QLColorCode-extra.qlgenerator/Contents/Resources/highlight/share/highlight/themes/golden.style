@@ -1,0 +1,21 @@
+# golden.style
+# This File is part of highlight, a universal source code converter.
+# See README in the highlight directory for documentation.
+
+$DEFAULTCOLOUR=#ddbb00
+$BGCOLOUR=#000000
+$FONTSIZE=10
+
+$KW-GROUP(kwa)=#ffed8a bold
+$KW-GROUP(kwb)=#ffed8a
+$KW-GROUP(kwc)=#dedede bold
+$KW-GROUP(kwd)=#ddbb00 bold
+$NUMBER=#ffffff
+$ESCAPECHAR=#3399cc
+$STRING=#ff0000
+$STRING-DIRECTIVE=#ff0000
+$COMMENT=#978345 italic
+$DIRECTIVE=#ffddaa
+$LINE=#898989
+$SYMBOL=#ababab
+$MARK-LINE=#404040

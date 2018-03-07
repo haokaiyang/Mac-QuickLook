@@ -1,0 +1,38 @@
+# SMALL language definition file
+#
+# Author: André Simon
+#   Mail: andre.simon1@gmx.de
+#   Date: 28.06.20.03
+# ------------------------------------------
+# This file is a part of highlight, a free source code converter released under the GPL
+#
+# The file is used to describe keywords and special symbols of programming languages
+# See README in the highlight directory for details
+#
+# New definition files for future releases of highlight are always appreciated ;)
+#
+# ----------
+# andre.simon1@gmx.de
+# http:/www.andre-simon.de/
+
+$DESCRIPTION=SMALL
+
+$KEYWORDS(kwa)=assert break case char const continue default defined do else enum
+exit for forward goto if native new operator public return sizeof sleep static
+stock switch while
+
+$KEYWORDS(kwb)=char defined sizeof
+
+$STRINGDELIMITERS=" '
+
+$ML_COMMENT=/* */
+
+$SL_COMMENT=//
+
+$ESCCHAR=regex(^\d{3}|^x\d{2}|^[ntvbrfa^\?'"])
+
+$IGNORECASE=true
+
+$SYMBOLS= ( ) [ ] { } , ; : & | < > !  = / * %  + - ?
+
+

@@ -1,0 +1,52 @@
+# Miranda language definition file
+#
+# Author: André Simon
+#   Mail: andre.simon1@gmx.de
+#   Date: 7.12.2006
+# ------------------------------------------
+# This file is a part of highlight, a free source code converter released under the GPL.
+#
+# The file is used to describe keywords and special symbols of programming languages.
+# See README in the highlight directory for details.
+#
+# New definition files for future releases of highlight are always appreciated ;)
+#
+# ----------
+# andre.simon1@gmx.de
+# http:/www.andre-simon.de/
+
+$DESCRIPTION=Miranda
+
+$KEYWORDS(kwa)=abstype div if mod otherwise readvals show type where 
+     with sys_message False True Appendfile Closefile Exit Stderr 
+     Stdout System Tofile abs and arctan cjustify code concat const 
+     converse cos decode digit drop dropwhile entier error exp 
+     filemode filter foldl foldl1 foldr foldr1 force fst getenv hd 
+     hugenum id index init integer iterate last lay layn letter limit
+     lines ljustify log log10 map map2 max max2 member merge min min2 
+     mkset neg numval or pi postfix product read rep repeat reverse 
+     rjustify scan seq showfloat shownum showscaled sin snd sort 
+     spaces sqrt subtract sum system take takewhile tinynum tl 
+     transpose undef until zip2 zip3 zip4 zip5 zip6 zip
+
+$KEYWORDS(kwb)=num char bool 
+
+# Regex which renders type declarations on one line using `::', `==' and `::='
+$KEYWORDS(kwd)=regex((\s*[a-zA-Z][a-zA-Z0-9_']*\s*.*\s*::\s+.*|\s*[a-zA-Z][a-zA-Z0-9_']*\s*[\* ]*\s*==\s+.*|\s*[a-zA-Z][a-zA-Z0-9_']*\s*[\* ]*\s*::=\s+.*)) 
+
+# Indentifier syntax includes the single quote
+$IDENTIFIER=regex([a-z][a-zA-Z0-9_']*)
+
+# %include %export %free %insert 
+$DIRECTIVE=% 
+
+$STRINGDELIMITERS=" 
+
+$SL_COMMENT=||
+
+$IGNORECASE=false
+
+$ESCCHAR=regex(\\\d{3}|\\x\p{XDigit}{2}|\\[ntvbrfa\\\?'"])
+
+$SYMBOLS= ( ) [ ] . , ; : & | < > ! = / * % + - ~ ^
+

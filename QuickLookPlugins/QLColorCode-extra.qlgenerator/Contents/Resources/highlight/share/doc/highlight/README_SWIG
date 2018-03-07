@@ -1,0 +1,21 @@
+
+HIGHLIGHT SWIG INTERFACE GENERATION
+-----------------------------------
+
+SWIG (http://www.swig.org/) is a tool to generate interfaces for more than 10
+programming languages, inluding Python, Perl, Java and C#.
+The interface file highlight.i contains all information to generate wrapper code
+for the highlight::CodeGenerator class. The output module gives you access to
+the highlight parser from within your favorite (scripting) language.
+
+
+See the makefile how to compile Python and Perl modules:
+
+1. make python
+   make perl
+
+2. Run the test scripts
+   python testmod.py
+   perl testmod.pl
+
+See http://wiki.andre-simon.de/ for more information.

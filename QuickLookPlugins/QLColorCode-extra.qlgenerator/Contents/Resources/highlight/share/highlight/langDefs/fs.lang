@@ -1,0 +1,47 @@
+# F# language definition file
+#
+# Author: Andre Simon
+#   Mail: andre.simon1@gmx.de
+#   Date: 07.09.2009
+# ------------------------------------------
+# This file is a part of highlight, a free source code converter released under the GPL.
+#
+# The file is used to describe keywords and special symbols of programming languages.
+# See README in the highlight directory for details.
+#
+# New definition files for future releases of highlight are always appreciated ;)
+#
+# ----------
+# andre.simon1@gmx.de
+# http:/www.andre-simon.de/
+
+$DESCRIPTION=F#
+
+$KEYWORDS(kwa)=abstract lsl and lsr as lxor assert match member asr mod begin module class mutable namespace default new delegate null do of done open downcast or downto override else rec end sig exception static false struct finally then for to fun true function try if type in val inherit when inline upcast interface while land with lor let
+
+# Types and type variables
+$KEYWORDS(kwb)=bool string int real word float unit option ref
+#$KEYWORDS(kwb)=regex('[a-zA-Z0-9_']+)
+
+# Modules
+#$KEYWORDS(kwc)=regex(\b[A-Z][a-zA-Z0-9_']*(?=\.))
+
+# Constructors
+$KEYWORDS(kwd)=regex(\b[A-Z][a-zA-Z0-9_']*)
+
+$STRINGDELIMITERS=" '
+$RAWSTRINGPREFIX=@
+
+$DIRECTIVE=#
+
+$ML_COMMENT=(* *)
+$SL_COMMENT=//
+$ALLOWNESTEDCOMMENTS=true
+
+$IGNORECASE=false
+
+$ESCCHAR=regex(\\\d{3}|\\x\p{XDigit}{2}|\\[ntvbrfa\\\?'"])
+
+$SYMBOLS= ( ) [ ] { } , ; : & | < > !  = / * %  + - . @ ? ^
+
+$DIGIT=regex((?:0x|0X|0b|0B|0o)[0-9a-fA-F]+?\w*|\d*[\.\_]?\d+(?:[eE][\-\+]\d+)?\w*)

@@ -1,0 +1,20 @@
+# blacknblue.style
+# This File is part of highlight, a universal source code converter.
+# See README in the highlight directory for documentation.
+
+$DEFAULTCOLOUR=#22a0d6
+$BGCOLOUR=#000000
+$FONTSIZE=10
+$KW-GROUP(kwa)=#1ededc bold
+$KW-GROUP(kwb)=#c06cf8 bold
+$KW-GROUP(kwc)=#00ff99
+$KW-GROUP(kwd)=#1ceddc
+$NUMBER=#cc3366
+$ESCAPECHAR=#88cf32
+$STRING=#cfc631
+$STRING-DIRECTIVE=#cfc631
+$COMMENT=#c47b6a italic
+$DIRECTIVE=#8080ff
+$SYMBOL=#ccc6c6
+$LINE=#888888
+$MARK-LINE=#404040

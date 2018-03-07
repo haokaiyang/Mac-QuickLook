@@ -1,0 +1,28 @@
+# BibTex language definition file
+#
+# Author: André Simon
+#   Mail: andre.simon1@gmx.de
+#   Date: 08.02.2004
+# ------------------------------------------
+# This file is a part of highlight, a free source code converter released under the GPL.
+#
+# The file is used to describe keywords and special symbols of programming languages.
+# See README in the highlight directory for details.
+#
+# New definition files for future releases of highlight are always appreciated ;)
+#
+# ----------
+# andre.simon1@gmx.de
+# http:/www.andre-simon.de/
+
+$DESCRIPTION=BibTeX
+
+$KEYWORDS(kwa)=address annote author title type abstract
+volume pages number note key organization school series
+chapter month department keywords howpublished
+institution journal publisher editon editor year booktitle
+
+$SL_COMMENT=%
+
+$IGNORECASE=false
+$SYMBOLS= ( ) [ ] { } , ; : & | < > !  = / *  + -

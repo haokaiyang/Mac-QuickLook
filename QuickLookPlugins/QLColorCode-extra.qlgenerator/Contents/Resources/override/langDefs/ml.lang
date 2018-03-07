@@ -1,0 +1,54 @@
+# Objective Caml language definition file
+#
+# Author: Andre Simon
+#   Mail: andre.simon1@gmx.de
+#   Date: 17.11.2003
+# ------------------------------------------
+# This file is a part of highlight, a free source code converter released under the GPL.
+#
+# The file is used to describe keywords and special symbols of programming languages.
+# See README in the highlight directory for details.
+#
+# New definition files for future releases of highlight are always appreciated ;)
+#
+# ----------
+# andre.simon1@gmx.de
+# http:/www.andre-simon.de/
+
+# Modified by Nathan Gray
+
+# Character literals
+$KEYWORDS(str)=regex('(?:[^\\]|\\.|\\[a-fA-F0-9]{2,3})')
+
+$KEYWORDS(kwa)=and as assert asr begin  class constraint do done downto else
+end exception external false for functor if in include inherit
+initializer land lazy let lor lsl lsr lxor match method mod module mutable new
+object of open or private rec sig struct then to true try type val virtual when
+while with
+
+# Types and type variables
+$KEYWORDS(kwb)=int float string char bool list exn array option format fpclass in_channel out_channel open_flag ref unit
+$KEYWORDS(kwb)=regex((?<=type )(?:'[a-z]\w*[ \t]+)*[a-z]\w*|'[a-zA-Z_]+|\b[A-Z][a-zA-Z0-9_']*)
+#$KEYWORDS(kwb)=regex((?<=type) +(?:'[a-z]\w*[ \t]+)*[a-z][\w']*)
+
+# Modules
+$KEYWORDS(callr)=regex(\b[A-Z][a-zA-Z0-9_']*(?=\.))
+
+# Function defs
+$KEYWORDS(fndef)=fun function
+$KEYWORDS(fndef)=regex(let([ \t]+rec)?[ \t]+([a-z][\w']*)[ \t]+[^=:,])
+
+$STRINGDELIMITERS="
+
+$ML_COMMENT=(* *)
+
+$ALLOWNESTEDCOMMENTS=true
+
+$IGNORECASE=false
+
+$ESCCHAR=\
+
+$SYMBOLS= ( ) [ ] { } , ; : & | < > !  = / * %  + -
+
+# This breaks keywords (kwa) for some reason:
+# $IDENTIFIER=regex(\b[a-z_][a-zA-Z0-9_']*?)

@@ -1,0 +1,95 @@
+# SQL,  PL/SQL language definition file
+#
+# Author: Andre Simon
+#
+#   Mail: andre.simon1@gmx.de
+#   Date: 5.6.2002
+#   Date: 6.12.2007 updated mssql keywords
+# ------------------------------------------
+# This file is part of highlight, a free source code converter released under the GPL.
+#
+# The file is used to describe keywords and special symbols of programming languages.
+# See README in the highlight directory for details.
+#
+# New definition files for future releases of highlight are always appreciated ;)
+#
+# ----------
+# andre.simon1@gmx.de
+# http:/www.andre-simon.de/
+
+$DESCRIPTION=PL/SQL
+
+$KEYWORDS(kwa)= add  except  percent
+all  exec  plan
+alter  execute  precision
+and  exists  primary
+any  exit  print
+as  fetch  proc
+asc  file  procedure
+authorization  fillfactor  public
+backup  for  raiserror
+begin  foreign  read
+between  freetext  readtext
+break  freetexttable  reconfigure
+browse  from  references
+bulk  full  replication
+by  function  restore
+cascade  goto  restrict
+case  grant  return
+check  group  revoke
+checkpoint  having  right
+close  holdlock  rollback
+clustered  identity  rowcount
+coalesce  identity_insert  rowguidcol
+collate  identitycol  rule
+column  if  save
+commit  in  schema
+compute  index  select
+constraint  inner  session_user
+contains  insert  set
+containstable  intersect  setuser
+continue  into  shutdown
+convert  is  some
+create  join  statistics
+cross  key  system_user
+current  kill  table
+current_date  left  textsize
+current_time  like  then
+current_timestamp  lineno  to
+current_user  load  top
+cursor  national  tran
+database  nocheck  transaction
+dbcc  nonclustered  trigger
+deallocate  not  truncate
+declare  null  tsequal
+default  nullif  union
+delete  of  unique
+deny  off  update
+desc  offsets  updatetext
+disk  on  use
+distinct  open  user
+distributed  opendatasource  values
+double  openquery  varying
+drop  openrowset  view
+dummy  openxml  waitfor
+dump  option  when
+else  or  where
+end  order  while
+errlvl  outer  with
+escape  over  writetext
+
+$KEYWORDS(kwb)= boolean char character date float integer long mlslabel number raw rowid varchar varchar2 varray
+
+$KEYWORDS(kwd)=regex((\w+)\s*\()
+
+$STRINGDELIMITERS=" '
+
+$SL_COMMENT=--
+
+$ML_COMMENT=/* */
+
+$IGNORECASE=true
+
+#$ESCCHAR=
+
+$SYMBOLS= ( ) [ ] { } , ; : & | < > !  = / * %  + -

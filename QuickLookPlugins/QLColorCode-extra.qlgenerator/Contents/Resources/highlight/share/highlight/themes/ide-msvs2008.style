@@ -1,0 +1,20 @@
+# ide-msvs2008.style
+# This File is part of highlight, a universal source code converter.
+# See README in the highlight directory for documentation.
+
+$DEFAULTCOLOUR=#000000
+$BGCOLOUR=#ffffff
+$FONTSIZE=10
+$KW-GROUP(kwa)=#0000ff
+$KW-GROUP(kwb)=#0000ff
+$KW-GROUP(kwc)=#2b91af
+$KW-GROUP(kwd)=#000000
+$NUMBER=#000000
+$ESCAPECHAR=#a31515
+$STRING=#a31515
+$STRING-DIRECTIVE=#0000ff
+$COMMENT=#008000
+$DIRECTIVE=#0000ff
+$LINE=#2b91af
+$SYMBOL=#000000
+$MARK-LINE=#ffffbb

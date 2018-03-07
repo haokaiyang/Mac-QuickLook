@@ -1,0 +1,53 @@
+# ADA 95 language definition file
+#
+# Author: Andre Simon
+#   Mail: andre.simon1@gmx.de
+#   Date: 10.06.2003
+# Update: 08.10.2008
+# ------------------------------------------
+# This file is a part of highlight, a free source code converter released under the GPL.
+#
+# The file is used to describe keywords and special symbols of programming languages.
+# See README in the highlight directory for details.
+#
+# New definition files for future releases of highlight are always appreciated ;)
+#
+# ----------
+# andre.simon1@gmx.de
+# http:/www.andre-simon.de/
+
+$DESCRIPTION=ADA95
+
+$KEYWORDS(kwa)= abort else new return abs elsif not reverse abstract end null
+accept entry select access exception  separate  aliased exit of  subtype  all
+or  and  for  others tagged  array function out task  at terminate generic
+package then  begin goto pragma type  body private if procedure case in 
+protected   until  constant is  use raise declare   range when  delay limited
+record while  delta loop rem  with digits renames do mod  requeue xor
+
+$KEYWORDS(kwb)=boolean integer natural positive float character 
+string duration short_integer long_integer short_float long_float 
+
+$KEYWORDS(kwc)=wide_character wide_string short_short_integer long_long_integer 
+short_short_float long_long_float
+
+$KEYWORDS(kwd)=true false
+
+# Workaround: distinguish string delimiters and event markers
+# (same eymbol: ')
+$KEYWORDS(kwd)=regex([\w\)]+('\w+))
+
+#workaround for special string '''
+$KEYWORDS(kwd)=regex(''')
+
+$STRINGDELIMITERS=" '
+
+#$STRINGDELIMITERS="
+
+$SL_COMMENT=--
+
+$IGNORECASE=true
+
+#$ESCCHAR=regex(\\\d{3}|\\x\p{XDigit}{2}|\\[ntvbrfa\\\?'"])
+
+$SYMBOLS= ( ) [ ] { } , ; : & | < > !  = / *  %  + - .

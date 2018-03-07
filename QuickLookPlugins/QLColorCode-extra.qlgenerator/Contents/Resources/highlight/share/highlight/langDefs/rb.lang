@@ -1,0 +1,53 @@
+# Ruby language definition file
+#
+# Author: Andre Simon
+#   Mail: andre.simon1@gmx.de
+#   Date: 24.8.2002
+# ------------------------------------------
+# This file is a part of highlight, a free source code converter released under the GPL.
+#
+# The file is used to describe keywords and special symbols of programming languages.
+# See README in the highlight directory for details.
+#
+# New definition files for future releases of highlight are always appreciated ;)
+#
+# ----------
+# andre.simon1@gmx.de
+# http:/www.andre-simon.de/
+
+$DESCRIPTION=Ruby
+
+$IDENTIFIER=regex([a-zA-Z_][\w\-]*)
+
+$DIGIT=regex((?:0x|0X|0b)[0-9a-fA-F]+|\d*[\.\_]?\d+(?:[eE][\-\+]\d+)?[lLuU]?)
+
+$KEYWORDS(kwa)=alias and begin begin break case class def defined loop
+do else elsif end end ensure false for if in module next nil not or redo rescue retry
+return require self super then true  undef unless  until when while yield true false
+nil stdin stdout stderr env argf argv data version ruby-release-date ruby-platform
+include extend eval
+
+$KEYWORDS(kwb)=regex([\$\@][\/\w]+)
+
+# pattern to highlight regexes (m//, s///, tr ///)
+$KEYWORDS(kwc)=regex(m?\/.*?\/|(s|tr)\/.*?\/.*?\/[cegimosx]*, 0)
+
+$KEYWORDS(kwc)=TRUE FALSE NIL STDIN STDOUT STDERR ENV ARGF ARGV DATA RUBY_VERSION
+RUBY_RELEASE_DATE RUBY_PLATFORM
+
+$KEYWORDS(kwd)=regex((\w+)\s*\()
+
+$IGNORECASE=false
+
+$STRINGDELIMITERS=" ' `
+
+# breaks closing parantheses:
+#$STRING_UNEQUAL=%q( ) %Q( ) %( ) %x( )
+
+$SL_COMMENT=#
+
+$ML_COMMENT= =begin =end
+
+$SYMBOLS= ( ) [ ] { } , ; : . & | < > ! - +  / * = ? %
+
+$ESCCHAR=regex(\\\d{3}|\\x\p{XDigit}{2}|\\[ntvbrfa\\\?'"])

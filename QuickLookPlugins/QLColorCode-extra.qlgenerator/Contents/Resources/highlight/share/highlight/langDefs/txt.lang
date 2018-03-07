@@ -1,0 +1,22 @@
+# Plain Text definition file
+#
+# Author: Andre Simon
+#   Mail: andre.simon1@gmx.de
+#   Date: 25.05.03
+# ------------------------------------------
+# This file is a part of highlight, a free source code converter released under the GPL.
+#
+# The file is used to describe keywords and special symbols of programming languages.
+# See README in the highlight directory for details.
+#
+# New definition files for future releases of highlight are always appreciated ;)
+#
+# ----------
+# andre.simon1@gmx.de
+# http:/www.andre-simon.de/
+#
+# This file contains no keywords, it causes highlight to convert plain text to the given output format
+
+$DESCRIPTION=Plain text
+
+$DISABLEHIGHLIGHTING=true

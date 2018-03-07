@@ -1,0 +1,20 @@
+# vim.style
+# This File is part of highlight, a universal source code converter.
+# See README in the highlight directory for documentation.
+
+$DEFAULTCOLOUR=#ffffff
+$BGCOLOUR=#000000
+$FONTSIZE=10
+$KW-GROUP(kwa)=#B26818
+$KW-GROUP(kwb)=#00ff00
+$KW-GROUP(kwc)=#B26818
+$KW-GROUP(kwd)=#ffffff
+$NUMBER=#ff0000
+$ESCAPECHAR=#ff22ff
+$STRING=#ff0000
+$STRING-DIRECTIVE=#ff0000
+$COMMENT=#0000ff
+$DIRECTIVE=#ff22ff
+$LINE=#0000ff
+$SYMBOL=#ffffff
+$MARK-LINE=#404040

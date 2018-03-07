@@ -1,0 +1,21 @@
+# contrast.style
+# This File is part of highlight, a universal source code converter.
+# See README in the highlight directory for documentation.
+
+$DEFAULTCOLOUR=#ff3366
+$BGCOLOUR=#5c2602
+$FONTSIZE=10
+$KW-GROUP(kwa)=#ffffff 
+$KW-GROUP(kwb)=#ffffff bold
+$KW-GROUP(kwc)=#11f80c bold
+$KW-GROUP(kwd)=#fff700 bold
+$NUMBER=#3bd9a1
+$ESCAPECHAR=#11f80c
+$STRING=#11f80c
+$STRING-DIRECTIVE=#11f80c
+$COMMENT=#7f9fff
+$SL-COMMENT=#7f9fff
+$DIRECTIVE=#7b44e0
+$LINE=#adadad
+$SYMBOL=#dedede bold
+$MARK-LINE=#256e11

@@ -1,0 +1,105 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+ "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+ <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+ <title>%name%</title>
+   <link rel="stylesheet" href="file://%resource_path%/style.css"/>
+  <script src="file://%resource_path%/prototype.js" type="text/javascript"></script>
+	<script src="file://%resource_path%/scriptaculous.js" type="text/javascript"></script>
+  <script src="file://%resource_path%/config.js" type="text/javascript"></script>
+  <script src="file://%resource_path%/betterzipql.js" type="text/javascript"></script>
+  <script type="text/javascript">
+	<!--
+		var resPath = "file://%resource_path%";
+		%config%
+
+		function saveConfig (a)
+		{
+			Effect.toggle ('controls', 'blind');
+			a.href  = "bzqlconfig://save";
+			a.href += "/keepHeaderFixed=" + ($("keepHeaderFixed").checked ? "1" : "0");
+			a.href += "/showHiddenFiles=" + ($("showHiddenFiles").checked ? "1" : "0"); 
+			a.href += "/showPackageContents=" + ($("showPackageContents").checked ? "1" : "0");
+			a.href += "/colDate=" + ($("colDate").checked ? "1" : "0");
+			a.href += "/colSize=" + ($("colSize").checked ? "1" : "0");
+			a.href += "/colPacked=" + ($("colPacked").checked ? "1" : "0");
+			a.href += "/colKind=" + ($("colKind").checked ? "1" : "0");
+			a.href += "/colAttributes=" + ($("colAttributes").checked ? "1" : "0");
+		}	
+
+		window.onresize = function (event) 
+		{
+    	syncTableWidths ();
+		}
+	// -->
+	</script>
+</head>
+
+<body onLoad="loadDone();">
+	<div id="headwrap" class="abs">
+		<table style="width: 100%; padding-top: 2px; "><tr>
+			<td style="width: 140px"><img src="%icon%" height="128" width="128"></td>
+			<td style="padding: 2px; vertical-align: top;">
+				<h1 data-text="%name%" class="inset">%name%</h1>
+				<table>
+					<tr><td class="r">%Path%:</td><td>%path%</td></tr>
+					<tr><td class="r">%Kind%:</td><td>%kind%</td></tr>
+					<tr><td class="r">%Date Modified%:</td><td>%time%</td></tr>
+					<tr><td class="r">%Size%:</td><td>%unco%</td></tr>
+					<tr><td class="r">%Packed%:</td><td>%comp%</td></tr>
+				</table>
+			</td>
+			<td style="padding: 2px; vertical-align: top;width: 180px">
+
+				<div id="betterzip">
+					<a href="http://macitbetter.com/">Powered by BetterZip<br/>
+						<span>Better archiving for your Mac.</span><br/>
+					</a>
+				</div>
+				<div style="clear:both;"></div>
+
+				<div id="config">
+					<div id="disclosure" onClick="return Effect.toggle ('controls');">%Configuration%</div>
+					<div id="controls" style="display: none;">
+						<h3>%Layout%</h3>
+						<ul>
+							<li><input type="checkbox" id="keepHeaderFixed" onClick="tgglHead()" />
+								<label for ="keepHeaderFixed">%Keep header fixed%</label></li>
+						</ul>
+						<hr noshade />
+						<h3>%Item Visibility%</h3>
+						<ul>
+							<li><input type="checkbox" id="showHiddenFiles" onClick="tgglHidden()" />
+								<label for ="showHiddenFiles">%Show hidden files%</label></li>
+							<li><input type="checkbox" id="showPackageContents" onClick="tgglPackages()"/>
+								<label for ="showPackageContents">%Show package contents%</label></li>
+						</ul>
+						<hr noshade />
+						<h3>%Columns%</h3>
+						<ul>
+							<li><input type="checkbox" id="colDate" onClick="tgglColumns()"/>
+							<label for ="colDate">%Date modified%</label></li>
+							<li><input type="checkbox" id="colSize" onClick="tgglColumns()"/>
+							<label for ="colSize">%Size%</label></li>
+							<li><input type="checkbox" id="colPacked" onClick="tgglColumns()"/>
+							<label for ="colPacked">%Packed%</label></li>
+							<li><input type="checkbox" id="colKind" onClick="tgglColumns()"/>
+							<label for ="colKind">%Kind%</label></li>
+							<li><input type="checkbox" id="colAttributes" onClick="tgglColumns()"/>
+							<label for ="colAttributes">%Attributes%</label></li>
+						</ul>
+						<div id="save"><a href="#" onClick="saveConfig(this);return true;"><strong>%Save as Default%</strong></a></div>
+						<p style="text-align: center;"><span style="color: #999;">%(Saving will close this window)%</span></p>
+					</div>
+				</div>
+			</td>
+		</tr></table>
+		<p style="text-align: center; width: 400px; font-size: 12px; margin: auto; margin-top: 50px;">
+			%The listing is encrypted%
+		</p>
+	</div>
+	
+</body>
+</html>

@@ -1,0 +1,56 @@
+# Some regex tests
+#
+# Author: Andre Simon
+# Mail: andre.simon1@gmx.de
+# http:/www.andre-simon.de/
+
+$DESCRIPTION=Regex tests
+
+$KEYWORDS(kwa)=goto break return continue asm case default if else switch while for do sizeof
+
+#Identifiers beginning with capital
+#$KEYWORDS(kwa)=regex([A-Z]\w+)
+
+# Method names
+#$KEYWORDS(kwc)=regex((\w+)\(\w*\))
+
+#script variables beginning with $
+#$KEYWORDS(kwd)=regex(\$\w+)
+
+#script variables beginning with $, enclosing name in {}
+#$KEYWORDS(kwe)=regex((\$\{\w+\}))
+
+# tags
+#$TAG_RE(kwe)=regex(\<.*\>)
+
+# prompt input 
+$KEYWORDS(kwd)=regex(^\:.*)
+
+#$STRINGDELIMITERS=" '
+#$STRINGDELIMITERS=regex(["'])
+
+#$SL_COMMENT=//
+#$SL_COMMENT=regex(//.*$)
+
+# Comment beginning in coloumn 1
+#$SL_COMMENT=regex(^#.*)
+#$SL_COMMENT=regex(^COM\s.*)  
+
+$ML_COMMENT=COMMENT END
+
+#$SL_COMMENT=COM
+
+#$ML_COMMENT=/* */
+#Geht nicht weil re nicht mehrzeilig
+#$ML_COMMENT=regex(\".*\")
+
+$ALLOWNESTEDCOMMENTS=false
+
+#$IGNORECASE=false
+
+#$DIRECTIVE=#
+# Pascal directive:
+#$DIRECTIVE=regex(\{\$.*\})
+
+#$ESCCHAR=regex(\\\d{3}|\\x\p{XDigit}{2}|\\[ntvbrfa\\\?'"])
+#$ESCCHAR=regex(\\.)

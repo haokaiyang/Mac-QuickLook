@@ -1,0 +1,40 @@
+# Javascript language definition file
+#
+# Author: Andre Simon
+#   Mail: andre.simon1@gmx.de
+#   Date: 26.1.2002
+# ------------------------------------------
+# This file is a part of highlight, a free source code converter released under the GPL.
+#
+# The file is used to describe keywords and special symbols of programming languages.
+# See README in the highlight directory for details.
+#
+# New definition files for future releases of highlight are always appreciated ;)
+#
+# ----------
+# andre.simon1@gmx.de
+# http:/www.andre-simon.de/
+
+$DESCRIPTION=Javascript
+
+$KEYWORDS(kwa)= abstract break class const continue debugger default
+delete enum export extends  finally  instanceof import implements in goto
+native package private protected public super   throw throws transient
+typeof void false with for this switch try while if do else return null case catch true
+ new prototype var function
+
+$KEYWORDS(kwb)= boolean byte char double float int long short static
+
+$KEYWORDS(kwd)=regex((\w+)\s*\()
+
+$SL_COMMENT= //
+
+$ML_COMMENT= /* */
+
+$STRINGDELIMITERS= " '
+
+$IGNORECASE=false
+
+$ESCCHAR=regex(\\\d{3}|\\x\p{XDigit}{2}|\\[ntvbrfa\\\?'"])
+
+$SYMBOLS= ( ) [ ] { } , ; : & | < > !  = / * %  + - .

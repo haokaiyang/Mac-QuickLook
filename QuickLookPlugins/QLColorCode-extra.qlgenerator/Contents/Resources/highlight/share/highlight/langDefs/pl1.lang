@@ -1,0 +1,123 @@
+# PL/1 script language definition file
+#
+# Author: Andre Simon
+#   Mail: andre.simon1@gmx.de
+#   Date: 04.03.2003
+# ------------------------------------------
+# This file is a part of highlight, a free source code converter released under the GPL.
+#
+# The file is used to describe keywords and special symbols of programming languages.
+# See README in the highlight directory for details.
+#
+# New definition files for future releases of highlight are always appreciated ;)
+#
+# ----------
+# andre.simon1@gmx.de
+# http:/www.andre-simon.de/
+
+$DESCRIPTION=PL/1
+
+$KEYWORDS(kwa)=call chksucc close dcl do end if open put read
+
+# functions
+$KEYWORDS(kwb)=afpbdoc afpbfld afpbgrp afpbpag afpbpar afpbrow afpbtbl afpcare
+afpdfld afpdfnt afpdrow afpeare afpedoc afpefld afpegrp afpend afpepag afpepar
+afperow afpetbl afpiobj afpiovl afpipsg afpinit afpinvm afppare afppbox afppchs
+afpprul afpptag afpptxt afpqatt afpqpos afpsclr afpsfnt afpsics afpslib afpsout
+afpspos afpsrth afpsuni afpswsp afpterm afpxare afp_reuse_option afpapi_handle
+afp_alignment_char afp_alignment_option afp_alignment_position afp_area_frame
+afp_area_handle afp_area_rotation afp_area_width afp_bottom_thickness
+afp_bot_rule_offset afp_box_depth afp_box_width afp_character_spacing
+afp_character_string afp_code_page afp_color afp_column_width_array
+afp_concatenate afp_current_handle afp_descriptive_name afp_desc_name_length
+afp_direction afp_document_handle afp_doc_page_depth afp_doc_page_width
+afp_field_id afp_first_line_indent afp_first_line_offset afp_font_id
+afp_font_library afp_font_width afp_format_option afp_group_name
+afp_inline_option afp_left_margin afp_left_thickness afp_line_length
+afp_line_spacing afp_max_area_depth afp_max_table_depth afp_medium_map_name
+afp_min_subrow_depth_array afp_number_columns afp_number_subrows
+afp_object_depth afp_object_library afp_object_mapping_option afp_object_name
+afp_object_rotation afp_object_width afp_object_x_offset afp_object_y_offset
+afp_output_filemode afp_output_filename afp_output_filetype
+afp_output_record_size afp_ovly_name afp_page_depth afp_page_handle
+afp_page_orientation afp_page_width afp_paragraph_frame afp_paragraph_handle
+afp_point_size afp_position_option afp_pseg_library afp_pseg_name afp_replace
+afp_right_margin afp_right_thickness afp_rotation afp_row_arrange_array
+afp_row_id afp_rt_rule_offset afp_rule_length afp_rule_thickness
+afp_shading_intensity afp_shading_pattern afp_string_length afp_style
+afp_table_handle afp_table_rotation afp_table_width afp_tag_name afp_tag_value
+afp_text_orientation afp_top_thickness afp_trace afp_underline
+afp_unit_of_measure afp_vertical_format afp_weight afp_word_spacing
+afp_x_coordinate afp_x_ref_coord_sys afp_y_coordinate afp_y_ref_coord_sys
+afp_errdata afp_area_depth afp_current_table_depth afp_paragraph_depth
+afp_remaining_length afp_remaining_string afp_ret_code afp_severity_code
+afp_table_depth do_afpbdoc do_afpbfld do_afpbgrp do_afpbpag do_afpbpar
+do_afpbrow do_afpbtbl do_afpcare do_afpdfld do_afpdfnt do_afpdrow do_afpeare
+do_afpedoc do_afpefld do_afpegrp do_afpend do_afpepag do_afpepar do_afperow
+do_afpetbl do_afpinit do_afpinvm do_afpiobj do_afpiovl do_afpipsg do_afppare
+do_afppbox do_afppchs do_afpprul do_afpptag do_afpptxt do_afpqatt do_afpqpos
+do_afpsclr do_afpsfnt do_afpsics do_afpslib do_afpsout do_afpspos do_afpsrth
+do_afpsuni do_afpswsp do_afpterm do_afpxare afp_default black blue bold brown
+center center_and_trim char cm condensed cyan default_map double_dot errer
+expanded extrabold extracond extraexp extralight fals fatal focenter fojustify
+foleft foright green inch italic light l_ft magenta media medium mm noerror
+normal noshade orient0 orient180 orient270 orient90 orientdoc point_to_pel
+position_and_trim red roman rotate0 rotate180 rotate270 rotate90 rotate_default
+r_ght scale_to_fit screen semibold semicond semiexp semilight severe stndard
+tru txtor0_0 txtor180_270 txtor270_0 txtor90_180 u1440 u240 ultrabold ultracond
+ultraexp ultralight verbottom vercenter vertop warning xabs xdirection xrel
+yabs ydirection yellow ylines yrel er_abort er_aparent er_applmem er_areamem
+er_areanotfnd er_area_off_page er_attsmem er_back er_beggrp er_beginfld
+er_beginrow er_blkmem er_blktype er_codepage er_createpara er_createtable
+er_dcffenv er_dcfmem er_deffield er_deffont er_defrow er_depth_exceeded
+er_docexists er_dparent er_end er_enddoc er_endfld er_endgrp er_endpage
+er_endpara er_endrow er_endtable er_end_of_page er_fail er_fieldndef
+er_fieldnotfnd er_fldatsmem er_fldmem er_fontatsmem er_fontdefs er_fontindex
+er_fontmem er_fontnotfnd er_fontsize er_formatter_abend er_incobj er_incovly
+er_incpseg er_inullptr er_invfont er_invmm er_invpseg er_invsubrow er_ivalign
+er_ivarealen er_ivarearot er_ivareawid er_ivarshade er_ivarshint er_ivblkp
+er_ivblock er_ivboxdepth er_ivboxwidth er_ivbxshade er_ivbxshint er_ivcodepg
+er_ivcolor er_ivcolorp er_ivcolwid er_ivcontrol er_ivcspace er_ivcspacep
+er_ivdatas er_ivddname er_ivdepth er_ivdesclen er_ivdescnm er_ivdirection
+er_ivfldbot er_ivfldfr er_ivfldlft er_ivfldor er_ivfldrght er_ivfmode er_ivfont
+er_ivfontid er_ivfontlib er_ivfontrot er_ivformat er_ivgrpname er_ivhor
+er_ivinline er_ivlinesp er_ivlmar er_ivlthick er_ivnumcols er_ivnumrows
+er_ivobjdepth er_ivobjlib er_ivobjmap er_ivobjrot er_ivobjwidth er_ivobjxpos
+er_ivobjypos er_ivoutds er_ivparabof er_ivparadep er_ivparaform er_ivparaind
+er_ivparalen er_ivparalof er_ivparalsp er_ivparamar er_ivparaoff er_ivpgdep
+er_ivpgwid er_ivprshade er_ivprshint er_ivpseglib er_ivptsize er_ivrequest
+er_ivrmar er_ivrotate er_ivrowdep er_ivrowfr er_ivrowid er_ivrulelen er_ivshade
+er_ivshint er_ivspace er_ivstrlen er_ivstyle er_ivtabldep er_ivtablerot
+er_ivtagname er_ivtagvalue er_ivtblbot er_ivtbllft er_ivtblrght er_ivtbltop
+er_ivthick er_ivtype er_ivunitp er_ivunits er_ivver er_ivweight er_ivwidth
+er_ivwspace er_ivxpos er_ivxposp er_ivxref er_ivypos er_ivyposp er_ivyref
+er_linelen_overf er_loadmod er_marg_overf er_mbarea er_negative er_nestgrps
+er_noactgrp er_noattptr er_noatts er_nobeggrp er_nocursor er_nofldptr
+er_nofontptr er_norowptr er_notacst er_notact er_notact_bgrp er_notact_def
+er_notact_efld er_notact_egrp er_notact_epar er_notact_erow er_notact_etbl
+er_notact_inc er_notact_incobj er_notact_incps er_notact_invmm er_notact_mov
+er_notact_out er_notact_ptag er_notact_put er_notact_puta er_notact_putd
+er_notact_putf er_notact_putl er_notact_sbox er_notact_set er_notact_setcol
+er_notact_setisp er_notact_setwsp er_notact_sfld er_notact_slibs er_notact_srow
+er_notend er_notended er_notfound er_notinit er_notstrt er_no_definition
+er_no_formatter_handle er_no_object er_no_shade er_no_storage er_nullcontrol
+er_nullptr er_off_page er_overflow er_pagexists er_paraexists er_pparent
+er_putarea er_putbox er_putline er_putstr er_puttag er_puttext er_qatts
+er_qfont_notfound er_read_lib er_replace er_rowatsmem er_rowmem er_rownotfnd
+er_row_too_deep er_setcolor er_setcspac er_setfont er_setlibs er_setlthck
+er_setout er_setpgor er_setunits er_setwordsp er_startfont er_tablexists
+er_term er_too_big er_too_wide er_trace er_write_output
+
+$KEYWORDS(kwd)=regex((\w+)\s*\()
+
+$STRINGDELIMITERS="
+
+$SL_COMMENT=--
+
+$ML_COMMENT=/* */
+
+$IGNORECASE=true
+
+
+$SYMBOLS= ( ) [ ] { } , ; : & | < > !  = / * %  + -
+
