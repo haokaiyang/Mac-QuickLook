@@ -57,7 +57,7 @@ Then, run `qlmanage -r` reload QuickLook
 [quicklook-gpx](https://github.com/vibrog/quicklook-gpx)|QuickLook plugin for GPX files|.gpx|
 [WebPQuickLook](https://github.com/emin/WebPQuickLook) | preview WebP image files | .webp |
 [ePub-quicklook](https://github.com/jaketmp/ePub-quicklook)| extract the cover images from EPUB files to use as the file icon, and present a nice overview of the EPUB in QuickLook | .epub |
-[QuickPub](https://github.com/Crazor/QuickPub)|A QuickLook generator for ePub cover pages|.epub|
+~~[QuickPub](https://github.com/Crazor/QuickPub)|A QuickLook generator for ePub cover pages|.epub|~~
 [qltext-jp](https://github.com/mzp/qltext-jp)|A quicklook plugin for Japanese text file(e.g. Shift JIS, EUC-JP, or UTF-8)| |
 [QuickNFO](https://github.com/planbnet/QuickNFO) | Quicklook Plugin for NFO files | .nfo |
 [QuickJSON](https://github.com/johan/QuickJSON) |  pretty-print (node.js style) JSON | .json |
