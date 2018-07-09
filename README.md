@@ -39,7 +39,7 @@ Then, run `qlmanage -r` reload QuickLook
 [quicklookjson](http://www.sagtau.com/quicklookjson.html) | preview json file | .json |
 [QuickLookPrettyJSON](https://github.com/tomnewton/QuickLookPrettyJSON) | preview json file | .json |
 [QLVideo](https://github.com/Marginal/QLVideo)         | display thumbnails, static QuickLook previews, cover art and metadata for most types of video files | .asf, .avi, .flv, .mkv, .rm, .webm, .wmf |
-[QLAddict](https://github.com/tattali/QLAddict) | A QuickLook plugin that lets you view subtitles .srt files like Addic7ed.com on mac | .src |
+[QLAddict](https://github.com/tattali/QLAddict) | A QuickLook plugin that lets you view subtitles .srt files like Addic7ed.com on mac | .srt |
 [QLCommonMark](https://github.com/digitalmoksha/QLCommonMark) |QuickLook generator for beautifully rendering CommonMark documents on macOS| markdown file |
 [inloop-qlplayground](https://github.com/inloop/qlplayground) | QuickLook generator for the Xcode Playgrounds |.playground|
 [qlplayground](https://github.com/norio-nomura/qlplayground) | QuickLook plugin for Swift files.| .playground, .swift |
