@@ -110,7 +110,8 @@ Then, run `qlmanage -r` reload QuickLook
 [qlvorbis](https://github.com/clemmece/qlvorbis)|A QuickLook plugin for ogg vorbis files.| |
 [bmpQuickLook](https://github.com/hirobe/bmpQuickLook)|for Max OSX to show Windows BMP files.| .bmp |
 [SublimeSnippetQL](https://github.com/hetima/SublimeSnippetQL)|QuickLook Plugin for sublime-snippet and tmSnippet.|.sublime-snippet|
-[Folder]()| | |
+[Java-Class-QuickLook](https://github.com/jaroslawhartman/Java-Class-QuickLook)|MacOS QuickLook plugin to decompile Java Class files|.class|
+[QLMarkdownGFM](https://github.com/Watson1978/QLMarkdownGFM)| Quicklook plugin for Github Flavored Markdown| .md|
 
 
 ## Packages
@@ -128,3 +129,4 @@ Then, run `qlmanage -r` reload QuickLook
 [ImageFolderQLGenerator](http://hasseg.org/imageFolderQLGenerator/)|This is a Quick Look Plugin (or Quick Look Generator) that creates thumbnails and previews for folders that contain image files| |
 [QLTorrent](http://technocrank.com/downloads/) |  isplays the contents of a metainfo “.torrent” file| .torrent |
 [quicklook-ipa](https://code.google.com/archive/p/quicklook-ipa/) |display iPhone / iPad / iPod Touch applications| |
+[ProcreateViewer](https://github.com/jaromvogel/ProcreateViewer) |QuickLook plugin for mac that allows you to see full previews of .procreate files in Finder.|.procreate|

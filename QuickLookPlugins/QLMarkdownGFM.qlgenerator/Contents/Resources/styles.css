@@ -1,0 +1,183 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-family: sans-serif;
+    color: #333;
+}
+
+body {
+    margin: 2em;
+}
+
+h1 {
+    padding-bottom: .3em;
+    font-size: 2.25em;
+    line-height: 1.2;
+    border-bottom: 1px solid #eee;
+}
+
+h2 {
+    padding-bottom: 0.3em;
+    font-size: 1.75em;
+    line-height: 1.225;
+    border-bottom: 1px solid #eee;
+}
+
+h3 {
+    font-size: 1.5em;
+    line-height: 1.43;
+}
+
+h4 {
+    font-size: 1.25em;
+}
+
+h5 {
+    font-size: 1em;
+}
+
+h6 {
+    color: #777;
+    font-size: 1em;
+}
+
+img {
+    border: 0;
+}
+
+hr {
+    box-sizing: content-box;
+    height: 4px;
+    padding: 0;
+    margin: 16px 0;
+    background-color: #e7e7e7;
+    border: 0 none;
+}
+
+table {
+    margin-left: 0.5em;
+    border-collapse: collapse;
+    border-spacing: 0;
+    display: block;
+    width: 100%;
+    overflow: auto;
+}
+
+tr {
+    background-color: #fff;
+    border-top: 1px solid #ccc;
+}
+
+tr:nth-child(2n) {
+    background-color: #f8f8f8;
+}
+
+th {
+    font-weight: 700;
+    padding: 6px 13px;
+    border: 1px solid #ddd;
+}
+
+td {
+    padding: 6px 13px;
+    border: 1px solid #ddd;
+}
+
+pre {
+    overflow: auto;
+    padding: 16px;
+    margin-bottom: 16px;
+    font-size: 85%;
+    line-height: 1.45;
+    background-color: #f7f7f7;
+    border-radius: 3px;
+    word-wrap: normal;
+}
+
+dt {
+    font-style: italic;
+    font-weight: 600;
+}
+
+dd {
+    padding: 0 16px;
+    margin-bottom: 16px;
+}
+
+code,
+kbd,
+pre,
+samp {
+    font-family: monospace, monospace;
+}
+
+small {
+    font-size: 90%;
+}
+
+a {
+    color: #4183c4;
+    text-decoration: none;
+}
+
+a:active,
+a:hover {
+    outline: 0;
+}
+
+blockquote {
+    padding: 0 15px;
+    margin-left: 0;
+    color: #777;
+    border-left: 4px solid #ddd;
+}
+
+img {
+    max-width: 100%;
+    box-sizing: border-box;
+}
+
+code,
+tt {
+    font-size: 85%;
+    background-color: rgba(0, 0, 0, 0.04);
+    border-radius: 3px;
+}
+
+code br,
+tt br {
+    display: none;
+}
+
+del code {
+    text-decoration: inherit;
+    vertical-align: text-top;
+}
+
+pre code {
+    font-size: 100%;
+    background-color: #f7f7f7;
+}
+
+li {
+    margin-left: 0;
+}
+
+.task-list-item {
+    list-style-type: none;
+    margin-left: -1.5em;
+}
+
+.task-list-item .task-list-item {
+    margin: 0;
+}
+
+.task-list-item ul li {
+    margin-left: 1em;
+}
+
+input[type=checkbox] {
+    margin-right: 8px;
+}
