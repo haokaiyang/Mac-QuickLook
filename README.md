@@ -127,6 +127,6 @@ Then, run `qlmanage -r` reload QuickLook
 [phew](https://github.com/sveinbjornt/Phew)| FLIF image viewer and QuickLook plugin for macOS | FLIF|
 [Animated GIF](sourceforge.net/projects/animgifqlgen/) | preview of Animated GIFs. | .gif |
 [ImageFolderQLGenerator](http://hasseg.org/imageFolderQLGenerator/)|This is a Quick Look Plugin (or Quick Look Generator) that creates thumbnails and previews for folders that contain image files| |
-[QLTorrent](http://technocrank.com/downloads/) |  isplays the contents of a metainfo “.torrent” file| .torrent |
+[QLTorrent](http://technocrank.com/downloads/) |  Displays the contents of a metainfo “.torrent” file| .torrent |
 [quicklook-ipa](https://code.google.com/archive/p/quicklook-ipa/) |display iPhone / iPad / iPod Touch applications| |
 [ProcreateViewer](https://github.com/jaromvogel/ProcreateViewer) |QuickLook plugin for mac that allows you to see full previews of .procreate files in Finder.|.procreate|
