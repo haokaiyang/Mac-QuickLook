@@ -9,8 +9,8 @@
 
 ### Using [HomeBrew Cask](http://caskroom.github.io/)
 
-- install : ```brew cask install + <package name>```
-- uninstall : ```brew cask uninstall + <package name>```
+- install : ```brew cask install <package name>```
+- uninstall : ```brew cask uninstall <package name>```
 
 ### Manually
 - install : Move the downloaded .qlgenerator file to `~/Library/QuickLook` (only for yourself) or `/Library/QuickLook` (for everyone)
