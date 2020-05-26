@@ -117,6 +117,7 @@ Then, run `qlmanage -r` reload QuickLook
 ## Packages
 | Name | descript | support file |
 | - | - | - |
+[glance](https://github.com/samuelmeuli/glance) |🔎 All-in-one Quick Look plugin |Source code(.cpp, .js, .json, .py, .swift, .yml and many more)、Markdown(.md, .markdown, .mdown, .mkdn, .mkd, .Rmd)、Archive(.tar, .tar.gz, .zip)、Jupyter Notebook(.ipynb)、Tab-separated values(.tab, .tsv) 
 [lookdown](https://github.com/qvacua/lookdown)|A simple Markdown preview App for OS X with QuickLook support| markdown|
 [Suspicious Package](http://www.mothersruin.com/software/SuspiciousPackage/)| Inspecting macOS Installer Packages) | .pkg |
 [QLXPlaneObj](https://github.com/Marginal/QLXPlaneObj) | display thumbnails and QuickLook previews for X-Plane 3D Object files |  .obj |
