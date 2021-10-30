@@ -28,7 +28,7 @@ Then, run `qlmanage -r` reload QuickLook
 [BodymovinQL](https://github.com/fabionuno/BodymovinQL) | A macOS QuickLook plugin to generate previews for Adobe After Effects animations exported as JSON with Bodymovin | Adobe After Effects animations exported as JSON |
 [CertQuickLook](https://code.google.com/archive/p/cert-quicklook/) | preview of various unprotected certificate tokens. | X509 certificates, DER or PEM (ASCII-armored) |
 [ProvisionQL](https://github.com/ealeksandrov/ProvisionQL)   |  quicklook for apps and provisioning profile files | .ipa, .xcarchive, .mobileprovision, .appex, .provisionprofile |
-[QLColorCode](https://github.com/n8gray/QLColorCode)   | A Quick Look plugin for source code with syntax highlighting | Support for lots of languages |
+[QLColorCode](https://github.com/anthonygelibert/QLColorCode)   | A Quick Look plugin for source code with syntax highlighting | Support for lots of languages |
 [QLColorCode-extra](https://github.com/BrianGilbert/QLColorCode-extra) | | |
 [qlImageSize](https://github.com/Nyx0uf/qlImageSize)   | QuickLook plugin to display the dimensions and size of an image in the title bar instead of the filename. Also preview some unsupported formats like WebP & bpg | .bpm, .bpg, .exr, .icns, .ico, .jpg, .pbm, .pgm, .png, .ppm, .psd, .sgi, .svg, .tga, .tiff, .gif, .webp, .jp2 |
 [qlmarkdown](https://github.com/toland/qlmarkdown)    | QuickLook generator for Markdown files | .md, .markdown |
