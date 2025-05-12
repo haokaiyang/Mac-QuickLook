@@ -7,16 +7,23 @@
 
 ## How to install/uninstall QuickLook plugins
 
+
+### Manually (modern)
+- install : Move the downloaded .app file to `~/Applications` (only for yourself) or `/Applications` (for everyone)  
+Then, run the .app to register the plugin
+- uninstall : Open `Applications` , remove .app  
+Then, run `qlmanage -r` reload QuickLook
+
+
+### Manually (older)
+- install : Move the downloaded .qlgenerator file to `~/Library/QuickLook` (only for yourself) or `/Library/QuickLook` (for everyone)
+- uninstall : Open `/Library/QuickLook` , remove package  
+Then, run `qlmanage -r` reload QuickLook
+
 ### Using [HomeBrew Cask](http://caskroom.github.io/)
 
 - install : ```brew install --cask <package name>```
 - uninstall : ```brew uninstall --cask <package name>```
-
-### Manually
-- install : Move the downloaded .qlgenerator file to `~/Library/QuickLook` (only for yourself) or `/Library/QuickLook` (for everyone)
-- uninstall : Open `/Library/QuickLook` ,remove package
-
-Then, run `qlmanage -r` reload QuickLook
 
 ## Plugins
 
@@ -33,6 +40,7 @@ Then, run `qlmanage -r` reload QuickLook
 [qlImageSize](https://github.com/Nyx0uf/qlImageSize)   | QuickLook plugin to display the dimensions and size of an image in the title bar instead of the filename. Also preview some unsupported formats like WebP & bpg | .bpm, .bpg, .exr, .icns, .ico, .jpg, .pbm, .pgm, .png, .ppm, .psd, .sgi, .svg, .tga, .tiff, .gif, .webp, .jp2 |
 [qlmarkdown](https://github.com/toland/qlmarkdown)    | QuickLook generator for Markdown files | .md, .markdown |
 [MultiMarkdown QuickLook](https://github.com/fletcher/MMD-QuickLook)| Improved QuickLook generator for MultiMarkdown files | markdown, OPML |
+[Mkv Quicklook](https://github.com/Oil3/Mkv-Quicklook)| Lets you play Matroska .mkv files in Finder and QuickLook Preview just like any other video, instantly and with audio | matroska, MKV |
 [QLMobi](https://github.com/bfabiszewski/QLMobi) | Quick Look plugin for Kindle ebook formats| prc, mobi, azw, azw3, azw4 and some pdb files |
 [qlstephen](https://github.com/whomwah/qlstephen)     | QLStephen is a QuickLook plugin that lets you view plain text files without a file extension. Files like: README,CHANGELOG,INSTALL... |  |
 [QuickLookASE](https://github.com/rsodre/QuickLookASE) | Mac quicklook for ASE files (Adobe Swatch Exchange) | .ase |
@@ -56,6 +64,7 @@ Then, run `qlmanage -r` reload QuickLook
 [QuickLookR](https://github.com/hrbrmstr/QuickLookR)|macOS QuickLook plugin for R save(), saveRDS() & feather files|.rdata, .rda, .rds|
 [quicklook-gpx](https://github.com/vibrog/quicklook-gpx)|QuickLook plugin for GPX files|.gpx|
 [WebPQuickLook](https://github.com/emin/WebPQuickLook) | preview WebP image files | .webp |
+[WebM QuickLook Preview extension](https://github.com/Oil3/Webm-QuickLook-Plug-In) | Lets you play .webm files in Finder and QuickLook Preview just like any other video, instantly and with audio  | .webm |
 [ePub-quicklook](https://github.com/jaketmp/ePub-quicklook)| extract the cover images from EPUB files to use as the file icon, and present a nice overview of the EPUB in QuickLook | .epub |
 ~~[QuickPub](https://github.com/Crazor/QuickPub)~~|A QuickLook generator for ePub cover pages|.epub|
 [qltext-jp](https://github.com/mzp/qltext-jp)|A quicklook plugin for Japanese text file(e.g. Shift JIS, EUC-JP, or UTF-8)| |
