@@ -34,6 +34,8 @@ Then, run `qlmanage -r` reload QuickLook
 [BetterZ-QuickLook-plugin-theme-for-Lion](https://github.com/farfanoide/BetterZ-QuickLook-plugin-theme-for-Lion)|Light theme for better zip's quick look plugin to better integrate with new UI in Mac OS X Lion.| |
 [BodymovinQL](https://github.com/fabionuno/BodymovinQL) | A macOS QuickLook plugin to generate previews for Adobe After Effects animations exported as JSON with Bodymovin | Adobe After Effects animations exported as JSON |
 [CertQuickLook](https://code.google.com/archive/p/cert-quicklook/) | preview of various unprotected certificate tokens. | X509 certificates, DER or PEM (ASCII-armored) |
+[HDF5QL](https://github.com/hacknus/HDF5QL) | Quicklook Preview of HDF5 files. | .hdf5, .h5 |
+[DotTHzQL](https://github.com/hacknus/DotTHzQL) | Quicklook Preview of dotTHz files. | .thz, .thzimg, .thzswp |
 [ProvisionQL](https://github.com/ealeksandrov/ProvisionQL)   |  quicklook for apps and provisioning profile files | .ipa, .xcarchive, .mobileprovision, .appex, .provisionprofile |
 [QLColorCode](https://github.com/anthonygelibert/QLColorCode)   | A Quick Look plugin for source code with syntax highlighting | Support for lots of languages |
 [QLColorCode-extra](https://github.com/BrianGilbert/QLColorCode-extra) | | |
