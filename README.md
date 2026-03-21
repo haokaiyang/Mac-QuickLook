@@ -126,6 +126,7 @@ Then, run `qlmanage -r` reload QuickLook
 [SublimeSnippetQL](https://github.com/hetima/SublimeSnippetQL)|QuickLook Plugin for sublime-snippet and tmSnippet.|.sublime-snippet|
 [Java-Class-QuickLook](https://github.com/jaroslawhartman/Java-Class-QuickLook)|MacOS QuickLook plugin to decompile Java Class files|.class|
 [QLMarkdownGFM](https://github.com/Watson1978/QLMarkdownGFM)| Quicklook plugin for Github Flavored Markdown| .md|
+[QLOPML](https://github.com/relikd/QLOPML) | Quicklook plugin for .opml files. E.g., RSS reader outline files. | .opml |
 
 
 ## Packages
@@ -147,3 +148,6 @@ Then, run `qlmanage -r` reload QuickLook
 [quicklook-ipa](https://code.google.com/archive/p/quicklook-ipa/) |display iPhone / iPad / iPod Touch applications| |
 [ProcreateViewer](https://github.com/jaromvogel/ProcreateViewer) |QuickLook plugin for mac that allows you to see full previews of .procreate files in Finder.|.procreate|
 [QuickFits](https://eurus.one/) | Fast FITS image preview for astrophotographers. |.fits, .fit |
+[QLAppBundle](https://github.com/relikd/QLAppBundle) | QuickLook plugin for app bundles (.ipa, .tipa, .appex, .xcarchive, .apk, .apkm) | .ipa, .tipa, .appex, .xcarchive, .apk, .apkm |
+[QLJSON](https://github.com/relikd/QLJSON) | QuickLook extension for JSON files | .json |
+[QLMarkdown](https://github.com/relikd/QLMarkdown) | QuickLook plugin for .md, .markdown files. | .md, .markdown |
