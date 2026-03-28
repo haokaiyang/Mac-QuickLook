@@ -115,7 +115,7 @@ Then, run `qlmanage -r` reload QuickLook
 [FEI-SER-Quicklook](https://github.com/subangstrom/FEI-SER-Quicklook) |  provides a thumbnail and preview rendering of a ser file generated from TIA | .ser |
 [VoxQL](https://github.com/heptal/VoxQL)|QuickLook Generator for MagicaVoxel files| .vox |
 [ltquicklooks](https://github.com/laptrinhcomvn/ltquicklooks) | | |
-[QuickLookCodeSnippet](https://github.com/douglashill/QuickLookCodeSnippet) | A QuickLook generator for Xcode’s .codesnippet plist files| .codesnippet |
+[QuickLookCodeSnippet](https://github.com/douglashill/QuickLookCodeSnippet) | A QuickLook generator for Xcode's .codesnippet plist files| .codesnippet |
 [rust-quicklook](https://github.com/yingDev/rust-quicklook)|or Rust language|.rs|
 [QLGradle](https://github.com/Urucas/QLGradle)|Quicklook plugin for .gradle files|.gradle|
 [XournalQL](https://github.com/catch22/XournalQL)|QuickLook plugin for Xournal documents.|.xoj|
@@ -135,6 +135,7 @@ Then, run `qlmanage -r` reload QuickLook
 [Syntax Highlight](https://github.com/sbarex/SourceCodeSyntaxHighlight) | macOS 10.15+ Quick Look Extension for source code files | Source code (.py, .cpp, .c, .java, .js, .go, .r, .rs, .swift and many more, including some plain files without an extension)
 [QLMarkdown](https://github.com/sbarex/QLMarkdown) | Quick Look Extension for Markdown | Markdown (.md, .rmd, .qmd, .mdx, .mdc, .apib)
 [lookdown](https://github.com/qvacua/lookdown)|A simple Markdown preview App for OS X with QuickLook support| markdown|
+[MacMD Viewer](https://macmdviewer.com)| Native macOS Markdown viewer with QuickLook extension, supporting GFM, Mermaid diagrams, and syntax highlighting for 190+ languages | .md, .markdown, .mdown, .mkd, .mkdn |
 [Suspicious Package](http://www.mothersruin.com/software/SuspiciousPackage/)| Inspecting macOS Installer Packages) | .pkg |
 [QLXPlaneObj](https://github.com/Marginal/QLXPlaneObj) | display thumbnails and QuickLook previews for X-Plane 3D Object files |  .obj |
 [QLdds](https://github.com/Marginal/QLdds) | display thumbnails, QuickLook previews and metadata for "DirectDraw Surface" (DDS) texture files. | DirectX 8/9 DDS,DirectX 10 DDS extensions,Cubemaps |
@@ -144,7 +145,7 @@ Then, run `qlmanage -r` reload QuickLook
 [phew](https://github.com/sveinbjornt/Phew)| FLIF image viewer and QuickLook plugin for macOS | FLIF|
 [Animated GIF](https://sourceforge.net/projects/animgifqlgen/) | preview of Animated GIFs. | .gif |
 [ImageFolderQLGenerator](http://hasseg.org/imageFolderQLGenerator/)|This is a Quick Look Plugin (or Quick Look Generator) that creates thumbnails and previews for folders that contain image files| |
-[QLTorrent](http://technocrank.com/downloads/) |  Displays the contents of a metainfo “.torrent” file| .torrent |
+[QLTorrent](http://technocrank.com/downloads/) |  Displays the contents of a metainfo ".torrent" file| .torrent |
 [quicklook-ipa](https://code.google.com/archive/p/quicklook-ipa/) |display iPhone / iPad / iPod Touch applications| |
 [ProcreateViewer](https://github.com/jaromvogel/ProcreateViewer) |QuickLook plugin for mac that allows you to see full previews of .procreate files in Finder.|.procreate|
 [QuickFits](https://eurus.one/) | Fast FITS image preview for astrophotographers. |.fits, .fit |
