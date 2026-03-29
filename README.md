@@ -44,6 +44,7 @@ Then, run `qlmanage -r` reload QuickLook
 [QLColorCode-extra](https://github.com/BrianGilbert/QLColorCode-extra) | | |
 [qlImageSize](https://github.com/Nyx0uf/qlImageSize)   | QuickLook plugin to display the dimensions and size of an image in the title bar instead of the filename. Also preview some unsupported formats like WebP & bpg | .bpm, .bpg, .exr, .icns, .ico, .jpg, .pbm, .pgm, .png, .ppm, .psd, .sgi, .svg, .tga, .tiff, .gif, .webp, .jp2 |
 [qlmarkdown](https://github.com/toland/qlmarkdown)    | QuickLook generator for Markdown files | .md, .markdown |
+[markdown-quicklook](https://github.com/ruspg/markdown-quicklook) | Rendered Markdown preview with syntax highlighting, YAML front matter, configurable fonts/colors, and a menu bar toggle. Build-from-source wrapper for PreviewMarkdown. macOS 13+ App Extension (not legacy .qlgenerator) | .md, .markdown |
 [MultiMarkdown QuickLook](https://github.com/fletcher/MMD-QuickLook)| Improved QuickLook generator for MultiMarkdown files | markdown, OPML |
 [Mkv Quicklook](https://github.com/Oil3/Mkv-Quicklook)| Lets you play Matroska .mkv files in Finder and QuickLook Preview just like any other video, instantly and with audio | matroska, MKV |
 [QLMobi](https://github.com/bfabiszewski/QLMobi) | Quick Look plugin for Kindle ebook formats| prc, mobi, azw, azw3, azw4 and some pdb files |
