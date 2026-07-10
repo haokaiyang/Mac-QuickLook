@@ -153,3 +153,4 @@ Then, run `qlmanage -r` reload QuickLook
 [QLAppBundle](https://github.com/relikd/QLAppBundle) | QuickLook plugin for app bundles (.ipa, .tipa, .appex, .xcarchive, .apk, .apkm) | .ipa, .tipa, .appex, .xcarchive, .apk, .apkm |
 [QLJSON](https://github.com/relikd/QLJSON) | QuickLook extension for JSON files | .json |
 [QLMarkdown](https://github.com/relikd/QLMarkdown) | QuickLook plugin for .md, .markdown files. | .md, .markdown |
+[Burrete](https://github.com/SergeiNikolenko/Burrete) | macOS molecular Quick Look extension and workspace | .pdb, .ent, .pdbqt, .pqr, .cif, .mmcif, .sdf, .mol, .mol2, .xyz, .gro, .xtc, .trr, .dcd, .smi, .csv, .tsv |
