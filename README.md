@@ -137,6 +137,7 @@ Then, run `qlmanage -r` reload QuickLook
 [QLMarkdown](https://github.com/sbarex/QLMarkdown) | Quick Look Extension for Markdown | Markdown (.md, .rmd, .qmd, .mdx, .mdc, .apib)
 [lookdown](https://github.com/qvacua/lookdown)|A simple Markdown preview App for OS X with QuickLook support| markdown|
 [MacMD Viewer](https://macmdviewer.com)| Native macOS Markdown viewer with QuickLook extension, supporting GFM, Mermaid diagrams, and syntax highlighting for 190+ languages | .md, .markdown, .mdown, .mkd, .mkdn |
+[TypeFire](https://typefire.ai)| Markdown viewer, editor and Quick Look extension in one native app; the extension is registered on install, renders GFM tables, task lists, code and local images, and runs no script and makes no network request | .md, .markdown |
 [Suspicious Package](http://www.mothersruin.com/software/SuspiciousPackage/)| Inspecting macOS Installer Packages) | .pkg |
 [QLXPlaneObj](https://github.com/Marginal/QLXPlaneObj) | display thumbnails and QuickLook previews for X-Plane 3D Object files |  .obj |
 [QLdds](https://github.com/Marginal/QLdds) | display thumbnails, QuickLook previews and metadata for "DirectDraw Surface" (DDS) texture files. | DirectX 8/9 DDS,DirectX 10 DDS extensions,Cubemaps |
