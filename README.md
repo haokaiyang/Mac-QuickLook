@@ -153,3 +153,4 @@ Then, run `qlmanage -r` reload QuickLook
 [QLAppBundle](https://github.com/relikd/QLAppBundle) | QuickLook plugin for app bundles (.ipa, .tipa, .appex, .xcarchive, .apk, .apkm) | .ipa, .tipa, .appex, .xcarchive, .apk, .apkm |
 [QLJSON](https://github.com/relikd/QLJSON) | QuickLook extension for JSON files | .json |
 [QLMarkdown](https://github.com/relikd/QLMarkdown) | QuickLook plugin for .md, .markdown files. | .md, .markdown |
+[Fuji RAF Preview & Recipe](https://apps.apple.com/app/id6761335653) | Quick Look thumbnails and previews for Fujifilm RAF files on macOS 13 to 15 (macOS 26 previews RAF itself), plus the Fujifilm recipe and EXIF. Paid, Mac App Store. | .raf |
